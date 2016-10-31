@@ -9,8 +9,15 @@
 
 ####任务
 
-task01 ------ 零基础HTML编码
+#####[task01 ------ 零基础HTML编码](https://github.com/Andyliwr/FE_learning_load/tree/master/task01)
+
+吴艳倩 ------ done
 
 李迪康 ------ done
 
-吴艳倩 ------ done
+
+#####[task02 ------ 零基础HTML及CSS编码（一）](https://github.com/Andyliwr/FE_learning_load/tree/master/task02)
+
+吴艳倩 ------ not start
+
+李迪康 ------ not start
