@@ -19,7 +19,10 @@ body{
 }*/
 .container{
     margin: 0 10%;
-    height: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+    margin-bottom: 70px;
 }
 a:link, a:visited{
     color: #39f;
@@ -108,10 +111,14 @@ footer {
     display: block;
     height: 70px;
     background-color: #374252;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 footer p {
     color: white;
+    margin: 0;
 }
 
 /*.loading {
