@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/css_sprite.css" />
+    <title>雪碧图</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>
+            <!--::before-->
+            CSS Sprite
+            <!--::after-->
+        </h1>
+        <p><code>CSS Sprite</code>是只将页面会使用到的多张图片或者图标组成成一张大图，然后使用 <code>background-size</code>、<code>background-postion</code>去精准的定位到每张图片。从而达到减少页面请求资源次数的目的。</p>
+    </header>
+    <div class="content">
+        <p>这是没有使用定位的图片的样子.</p>
+        <img src="images/icon.png" alt="image not found">
+        <br>
+        <p>这是使用了定位的样子</p>
+        <div class="sprite-display">
+            <span>1</span><icon class="icon_1"></icon>
+            <br>
+            <span>2</span><icon class="icon_2"></icon>
+            <br>
+            <span>3</span><icon class="icon_3"></icon>
+            <br>
+            titile <icon class="title_icon"></icon>
+            <br>
+            question <icon class="question_icon"></icon>
+            <br>
+            tel <icon class="tel_icon"></icon>
+            <br>
+            case <icon class="case_icon"></icon>
+            <br>
+            discount <icon class="discount_icon"></icon>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2016 <a href="https://github.com/Andyliwr">lidikang</a> and <a href="https://github.com/wispyoureyes">wuyanqian</a> Design. All Right Reserved.</p>
+    </footer>
+</div>
+</body>
+</html>
