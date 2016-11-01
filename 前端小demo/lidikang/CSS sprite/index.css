@@ -22,7 +22,7 @@ body{
     min-height: 100%;
     height: auto !important;
     position: relative;
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
 }
 a:link, a:visited{
     color: #39f;
@@ -154,4 +154,13 @@ body.embedded header {
 
 body.embedded {
     margin: 0;
+}
+
+/* about content */
+.container .content{
+    height: 100%;
+    position: absolute;
+    padding-bottom: 70px;
+    background: #fff;
+    width: 100%;
 }
