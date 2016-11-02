@@ -10,8 +10,8 @@ html{
   	height: 100%;
 }
 body{
+    display: table-cell;
 	height: 100%;
-	overflow: auto;
 	font-size: 14px;
 	font-weight: normal;
 	font-family: "Arial";
