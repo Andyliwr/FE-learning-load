@@ -14,7 +14,7 @@ body{
     display: table-cell;
     font-size: 14px;
     font-weight: normal;
-    font-family: "Arial";
+    font-family: "微软雅黑";
 }
 /* global css */
 .pull-right{
@@ -42,8 +42,28 @@ body{
 .text-yellow{
     color: #f5e327;
 }
+.text-blue{
+    color: #11456b;
+}
+.text-blod{
+    font-weight: bold;
+}
+/* about bootstrap gird */
+.col-md-4{
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+.col-md-4:last-child{
+    margin-right: 0;
+}
+@media(max-width: 768px) {
+    .col-md-4{
+        width: 100%;
+    }
+}
 .container{
-    
+    padding: 0px 40px;
 }
 .container > header{
     height: 60px;
@@ -58,4 +78,213 @@ body{
 .container > header nav .pull-right{
     line-height: 60px;
     font-size: 18px;
+}
+.container .about-section{
+    margin-top: 30px;
+}
+.container .about-section .big-img{
+    width: 100%;
+    float: left;
+    padding-right: 30%;
+    box-sizing: border-box;
+}
+.container .about-section .big-img .img-container{
+    width: 90%;
+    position: relative;
+}
+.container .about-section .big-img .img-container img{
+    width: 100%;
+}
+.container .about-section .big-img .img-container .fade-left, .fade-right{
+    height: 100%;
+    width: 30%;
+    opacity: 0.3;
+    position: absolute;
+}
+.container .about-section .big-img .img-container .fade-left{
+    background-color: green;
+    left: 0px;
+    top: 0px;
+}
+.container .about-section .big-img .img-container .fade-right{
+    background-color: red;
+    right: 0px;
+    top: 0px;
+}
+.container .about-section .big-img .w3-container{
+    width: 90%;
+    margin-top: 40px;
+}
+.container .about-section .big-img .w3-container .what{
+    font-size: 16px;
+    color: #418c59;
+}
+.container .about-section .big-img .w3-container .when{
+    font-size: 16px;
+    color: #d2994f;
+}
+.container .about-section .big-img .w3-container .how{
+    font-size: 16px;
+    color: #cc7680;
+}
+.container .about-section .big-img .w3-container .tongji{
+    list-style: none;
+    padding-left: 10px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.container .about-section .big-img .w3-container .tongji > li{
+    line-height: 18px;
+}
+.container .about-section .big-img .w3-container .des{
+    color: rgba(35, 24, 21, 0.7);
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 6px;
+}
+.container .about-section .about-right{
+    width: 30%;
+    float: left;
+    margin-left: -30%;
+    padding-top: 40px;
+}
+.container .about-section .about-right .bigger-size{
+    font-size: 28px !important;
+}
+.container .about-section .about-right .text-uppercase{
+    font-size: 24px;
+    color: #000;
+    line-height: 30px;
+}
+.container .about-section .about-right .des{
+    color: #676767;
+    font-family: "楷体";
+    line-height: 12px;
+    word-spacing: 2px;
+    padding-top: 4px;
+    font-size: 12px;
+}
+.container .about-section .about-right .big-font{
+    font-size: 116px;
+    margin: 16px 0px 16px -15px;
+}
+.container .about-section .about-right .text-red{
+    color: #cc8091;
+    font-size: 56px;
+}
+.container .about-section .about-right .inline-div{
+    display: inline-block;
+    height: 40px;
+    position: relative;
+}
+.container .about-section .about-right .has-bellow{
+    position: absolute;
+    top: 0px;
+    font-size: 22px;
+    color: #cc8091;
+}
+.container .about-section .about-right .bellow-text{
+    position: absolute;
+    bottom: 0px;
+    font-size: 12px;
+    color: #888;
+    vertical-align: text-bottom;
+}
+@media(max-width: 768px) {
+    .container .about-section .about-right{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/*技术展示板块*/
+.container .jishu-section{
+    width: 100%;
+    margin-top: 40px;
+}
+.container .jishu-section .jishu-area{
+    width: 100%;
+    float: left;
+    padding-right: 52%;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+.container .jishu-section .jishu-area .text-yellow{
+    font-size: 60px;
+    margin-left: -14px;
+    padding-right: 16px;
+}
+.container .jishu-section .jishu-area .text-blue{
+    font-size: 30px;
+}
+.container .jishu-section .jishu-area .main-content{
+    padding-top: 20px;
+}
+.container .jishu-section .jishu-area .main-content .float-text{
+    float: left;
+    display: inline-block;
+    margin-left: 0px;
+}
+.container .jishu-section .jishu-area .main-content img.pull-right{
+    margin: 20px 0px 12px 12px;
+}
+.container .jishu-section .jishu-area header{
+    border-bottom: 2px solid #11456b;
+    padding-bottom: 10px;
+}
+.container .jishu-section .jishu-list{
+    width: 50%;
+    float: left;
+    margin-left: -50%;
+    padding-top: 56px;
+}
+.container .jishu-section .jishu-list .fade-img > img{
+    width: 100%;
+    height: 275px;
+}
+.container .jishu-section .jishu-list .fade-img .fade{
+    width: 100%;
+    height: 60px;
+    margin-top: -64px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.container .jishu-section .jishu-list .fade-img .fade .left-border{
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    border-left: 2px solid #72b16a;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    color: #fff;
+    padding-left: 10px;
+}
+.container .jishu-section .jishu-list .fade-img .fade .left-border .text-italic{
+    font-size: 12px;
+    padding-left: 6px;
+}
+.container .jishu-section .jishu-list .list{
+    background-color: #fbdbc7;
+    padding: 20px;
+}
+.container .jishu-section .jishu-list .list ul{
+    list-style: inside url('../images/sanjiao.png');
+}
+.container .jishu-section .jishu-list .list ul li{
+    line-height: 30px;
+}
+.container .jishu-section .jishu-list .list .yinyong{
+    width: 100%;
+    margin-top: 40px;
+}
+.container .jishu-section .jishu-list .list .yinyong .yinyong-left{
+    width: 50%;
+    display: inline-block;
+}
+.container .jishu-section .jishu-list .list .yinyong .yinyong-des{
+    width: 40%;
+    display: inline-block;
+}
+.container .jishu-section .jishu-list .list .yinyong .yinyong-des .text-red{
+    font-size: 40px;
 }
