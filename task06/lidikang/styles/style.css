@@ -1,0 +1,61 @@
+/* task04 stylesheet, created by lidikang on 2016/11/02 */
+/* reset styles */
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+    padding: 0;
+    margin: 0;
+}
+html{
+    display: table;
+    min-width:100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: table-cell;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Arial";
+}
+/* global css */
+.pull-right{
+    float: right;
+}
+.clearfix{
+    display: none;
+    clear: both;
+}
+.text-red{
+    color: #d45d5c;
+}
+.text-green{
+    color: #75b86b;
+}
+.text-italic{
+    font-style: italic;
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-yellow{
+    color: #f5e327;
+}
+.container{
+    
+}
+.container > header{
+    height: 60px;
+    border-bottom: 3px solid #938e8c;
+}
+.container > header nav > a{
+    line-height: 60px;
+}
+.container > header nav > a > img{
+    height: 60px;
+}
+.container > header nav .pull-right{
+    line-height: 60px;
+    font-size: 18px;
+}
