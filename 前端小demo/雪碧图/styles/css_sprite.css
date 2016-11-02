@@ -1,0 +1,65 @@
+.new_icon, .title_icon, .icon_1, .icon_2, .icon_3, .icon_4, .icon_5, .icon_6, .answer_icon, .question_icon, .shizhan_icon, .shizhan_jt, .tel_icon, .discount_icon, .case_icon, .method_icon {
+    background: url(../images/icon.png);
+    background-size: 200px 100px;
+}
+
+.icon_1, .icon_2, .icon_3, .icon_4, .icon_5, .icon_6, .title_icon, .question_icon, .answer_icon, .tel_icon, .case_icon, .discount_icon {
+    position: relative;
+    top: 4px;
+    margin-right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.icon_1 {
+    background-position: 0px -32px
+}
+
+.icon_2 {
+    background-position: -22px -32px
+}
+
+.icon_3 {
+    background-position: -42px -32px
+}
+
+.icon_4 {
+    background-position: -64px -32px
+}
+
+.icon_5 {
+    background-position: -86px -32px
+}
+
+.icon_6 {
+    background-position: -108px -32px
+}
+
+.title_icon {
+    background-position: -99px -4px
+}
+
+.question_icon {
+    background-position: -25px -54px
+}
+
+.answer_icon {
+    background-position: -5px -56px
+}
+
+.tel_icon {
+    background-position: -64px 0;
+}
+
+.case_icon {
+    background-position: -32px 0;
+}
+
+.discount_icon {
+    background-position: 0 0;
+}
+
+.method_icon {
+    background-position: -135px 0;
+}

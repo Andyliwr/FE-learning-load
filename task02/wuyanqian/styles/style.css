@@ -1,0 +1,168 @@
+
+/*task02 stylesheet,create by wuyanqian on 2016/11/02*/
+/*reset css*/
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "微软雅黑"；
+	
+	}
+
+header>nav>img{
+	height:70px;
+	margin-left: 30px;
+}
+nav{
+	background:#333;
+}
+
+.nav-right{
+	float: right;
+}
+.nav-right>ul>li{
+	list-style:square;
+	display: inline;
+	line-height: 70px;
+	margin-right: 20px;
+}
+.nav-right::after: {
+	content:"";
+	display:block;
+	clear:both;
+}
+.nav-right>ul>li>a{
+	text-decoration: none;
+	color: #fff;
+}
+.content{
+	background: #eee;
+}
+.content>section,aside{
+	margin: 20px;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 3px 3px 6px #ddd;
+}
+.content>section>h2{
+	font-weight: bold;
+	font-size: 28px;
+	padding: 8px 0px;
+}
+.content>section>h3{
+	font-size: 22px;
+	color:#555;
+	padding: 6px 0px;
+}
+
+.content>section>p{
+	padding:6px 0px;
+	text-indent:2em;
+	line-height:24px;
+}
+.author-info{
+	color:#666;
+}
+.content>section>ul>li{
+	list-style:none;
+	margin:8px 12px;
+}
+.beautiful-img>li{
+	text-align:center;
+	width:800px;
+	border:1px solid #ddd;
+	padding: 6px;
+}
+.beautiful-img>li>p{
+	margin:6px 0px;
+
+}
+.beautiful-img>li>img{
+	padding: 6px;
+}
+.content>section>ol{
+	margin:0px 54px;
+}
+
+.content>section>ol>li{
+	margin:6px 0px;
+}
+.content>section>table{
+	margin: 12px 0px;
+	width: 100%;
+	text-align: left;
+	border-collapse:collapse;
+	border:none;
+}
+.content>section>table>thead{
+	background-color: #444
+}
+.content>section>table>thead{
+	height: 40px;
+	color: #fff;
+}
+.content>section>table>tfoot{
+	background: #ddd
+}
+.content>section>table>tfoot,tbody>tr{
+	color:#444;
+	height: 40px;
+}
+
+.title-aside{
+	border-left: 6px solid #aaa;
+	line-height: 24px;
+	padding: 0px 10px;
+	margin:6px 0px;
+}
+.form-group{
+	padding-left:200px;
+}
+.tips{
+	width: 200px;
+	text-align: right;
+	display: inline-block;
+	margin: 12px;
+}
+.error-msg{
+	padding-left:230px; 
+	color: #666;
+}
+.vertical-middle{
+	width: 200px;
+	text-align: right;
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-100%);
+}
+.content > aside > form textarea{
+	width: 60%;
+}
+.content>aside>form input[type="submit"]{
+	width: 100%;
+	text-align: center;
+	padding: 12px 20px;
+	margin: 20px 0px;
+	border-radius: 4px;
+	background-color:rgb(51, 122, 183); 
+	color:#fff;
+	border:none;
+}
+
+.content > aside > form input[type="submit"]:hover{
+	 background-color: rgb(15, 127, 222);}
+footer{
+
+	display: block;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	background: #333;
+}
+footer p{
+	line-height: 60px
+}

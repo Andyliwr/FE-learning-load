@@ -1,0 +1,54 @@
+/* task03 stylesheet, created by lidikang on 2016/11/01 */
+/* reset styles */
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+	padding: 0;
+	margin: 0;
+}
+html{
+	display: table;
+  	min-width:100%;
+  	height: 100%;
+}
+body{
+	height: 100%;
+	overflow: auto;
+	font-size: 14px;
+	font-weight: normal;
+	font-family: "Arial";
+}
+.container{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+.container::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.container .main{
+	width: 100%;
+	float: left;
+	height: 300px;
+}
+.container .main .content{
+	margin-left: 220px;
+	margin-right: 140px;
+	height: 300px;
+	background: #eee;
+}
+.container .left{
+	float: left;
+	height: 300px;
+	background: blue;
+	width: 200px;
+	margin-left: -100%;
+}
+.container .right{
+	float: left;
+	height: 300px;
+	background: red;
+	width: 120px;
+	margin-left: -120px;
+}
