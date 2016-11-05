@@ -10,8 +10,8 @@ html{
   	height: 100%;
 }
 body{
+    display: table-cell;
 	height: 100%;
-	overflow: auto;
 	font-size: 14px;
 	font-weight: normal;
 	font-family: "Arial";
@@ -33,22 +33,51 @@ body{
 	height: 300px;
 }
 .container .main .content{
-	margin-left: 220px;
+	margin-left: 260px;
 	margin-right: 140px;
 	height: 300px;
-	background: #eee;
+	padding: 20px;
+	border: 1px solid #666;
+}
+.container .main .content h1{
+	font-size: 18px;
+	padding: 6px;
+}
+.container .main .content h2{
+	font-size: 14px;
+	padding: 4px;
+}
+.container .main .content p{
+	margin-top: 10px;
+	padding-left: 4px;
 }
 .container .left{
 	float: left;
-	height: 300px;
-	background: blue;
+	height: 80px;
 	width: 200px;
 	margin-left: -100%;
+	border: 1px solid #666;
+	padding: 20px;
+}
+.container .left span{
+	position: relative;
+	bottom: 50%;
+	left: 10px;
+	transform: translateY(-50%);
 }
 .container .right{
 	float: left;
-	height: 300px;
-	background: red;
-	width: 120px;
-	margin-left: -120px;
+	height: 400px;
+	width: 80px;
+	/*由于border的原因得额外再补2px，-120px-2px*/
+	margin-left: -122px;
+	padding: 20px;
+	border: 1px solid #666;
+	text-align: center;
+}
+.container .right img{
+	margin-bottom: 20px;
+}
+.container .right img:last-child{
+	margin-bottom: 20px;
 }

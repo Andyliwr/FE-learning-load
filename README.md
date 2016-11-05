@@ -18,6 +18,6 @@
 
 #####[task02 ------ 零基础HTML及CSS编码（一）](https://github.com/Andyliwr/FE_learning_load/tree/master/task02)
 
-吴艳倩 ------ not start
+吴艳倩 ------ done
 
 李迪康 ------ done
