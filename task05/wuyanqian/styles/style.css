@@ -1,0 +1,196 @@
+/*task05 stylesheet,create by wuyanqian on 2016/11/02*/
+/*reset css*/
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li,input,select,textarea,option,span,label{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "微软雅黑"；
+	
+	}
+
+header>nav>img{
+	height:70px;
+	margin-left: 30px;
+}
+nav{
+	background:#333;
+}
+
+.nav-right{
+	float: right;
+}
+.nav-right>ul>li{
+	list-style:square;
+	display: inline;
+	line-height: 70px;
+	margin-right: 20px;
+}
+.nav-right::after: {
+	content:"";
+	display:block;
+	clear:both;
+}
+.nav-right>ul>li>a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+		box-sizing: border-box;
+		background: #eee;
+}
+.content{
+	box-sizing: border-box;
+	float: left;
+	width: 100%;
+}
+.content>section{
+	margin: 20px 420px 20px 20px;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 3px 3px 6px #ddd;
+
+}
+.content>section>h2{
+	font-weight: bold;
+	font-size: 28px;
+	padding: 8px 0px;
+}
+.content>section>h3{
+	font-size: 22px;
+	color:#555;
+	padding: 6px 0px;
+}
+
+.content>section>p{
+	padding:6px 0px;
+	text-indent:2em;
+	line-height:24px;
+}
+.author-info{
+	color:#666;
+}
+.content>section>ul>li{
+	list-style:none;
+	margin:8px 12px;
+}
+.beautiful-img>li{
+	text-align:center;
+	width:800px;
+	border:1px solid #ddd;
+	padding: 6px;
+}
+.beautiful-img>li>p{
+	margin:6px 0px;
+
+}
+.beautiful-img>li>img{
+	padding: 6px;
+}
+.content>section>ol{
+	margin:0px 54px;
+}
+
+.content>section>ol>li{
+	margin:6px 0px;
+}
+.content>section>table{
+	margin: 12px 0px;
+	width: 100%;
+	text-align: left;
+	border-collapse:collapse;
+	border:none;
+}
+.content>section>table>thead{
+	background-color: #444
+}
+.content>section>table>thead{
+	height: 40px;
+	color: #fff;
+}
+.content>section>table>tfoot{
+	background: #ddd
+}
+.content>section>table>tfoot,tbody>tr{
+	color:#444;
+	height: 40px;
+}
+.right{
+	float: left;
+	box-sizing: border-box;
+	width: 400px;
+	margin-left:-400px;
+}
+aside{
+	margin: 20px 20px 20px 0px;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 3px 3px 6px #ddd;
+}
+
+.title-aside{
+	border-left: 6px solid #aaa;
+	line-height: 24px;
+	padding: 0px 10px;
+	margin:6px 0px;
+}
+.form-group{
+	padding-left:0px;
+}
+.tips{
+	width: 8em;
+	text-align: right;
+	display: inline-block;
+	margin: 12px 0;
+}
+.error-msg{
+	padding-left:60px; 
+	color: #666;
+}
+.vertical-middle{
+	width: 8em;
+	text-align: right;
+	display: inline-block;
+}
+.describe{
+	box-sizing: border-box;
+	display:inline-block;
+	width: 8em;
+	vertical-align: top;
+}
+.right > aside > form textarea{
+	display: inline-block;
+	height: 60px;
+	width:50%;
+}
+.right>aside>form input[type="submit"]{
+	width: 100%;
+	text-align: center;
+	padding: 12px 20px;
+	margin: 20px 0px;
+	border-radius: 4px;
+	background-color:rgb(51, 122, 183); 
+	color:#fff;
+	border:none;
+}
+
+.right > aside > form input[type="submit"]:hover{
+	 background-color: rgb(20, 60, 222);}
+.container::after{
+	content: "";
+	clear:both;
+	display: block;
+}
+footer{
+
+	display: block;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	background: #333;
+}
+footer p{
+	line-height: 60px
+}
