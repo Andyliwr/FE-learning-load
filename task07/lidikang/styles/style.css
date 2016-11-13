@@ -1,0 +1,91 @@
+/* task07 stylesheet, created by lidikang on 2016/11/13 */
+/* reset css */
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+    padding: 0;
+    margin: 0;
+}
+html{
+    display: table;
+    min-width:100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: table-cell;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "微软雅黑";
+}
+/* common style */
+.pull-right{
+	float: right;
+}
+.pull-right::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a, a:hover{
+	text-decoration: none !important;
+}
+.row{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+header nav{
+	background-color: #fff;
+	height: 60px;
+}
+header nav > a{
+	line-height: 60px;
+	height: 60px;
+	margin-left: 50px;
+	display: inline-block;
+	color: #000;
+	font-size: 20px;
+}
+header nav > a > img{
+	margin-top: -6px;
+}
+header nav > a > span{
+	line-height: 60px;
+	padding-left: 10px;
+    vertical-align: middle;
+}
+header nav .nav-right{
+	padding-right: 50px;
+}
+header nav .nav-right > ul{
+	display: inline-block;
+}
+header nav .nav-right > ul > li{
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	line-height: 60px;
+}
+header nav .nav-right > ul > li.active{
+	animation: bottomAnimation 1s;
+	border-bottom: solid #e74f4d;
+}
+/* li下边框动画效果 */
+@keyframes bottomAnimation
+{
+	0%   {border-bottom-width: 0px;}
+	25%  {border-bottom-width: 1px;}
+	50%  {border-bottom-width: 2px;}
+	100% {border-bottom-width: 4px;}
+}
+header nav .nav-right > a > img{
+	height: 20px;
+	margin-top: -6px;
+}
+header nav .nav-right > a > span{
+	margin-left: 6px;
+	color: #e74f4d;
+}
+
+/* 巨幕 style */
+.jumbotron > img{
+	
+}
