@@ -197,7 +197,17 @@ header nav .nav-right > a > span{
 	border: none;
     /*define the right select icon*/
   	background: url('../images/select.png') no-repeat scroll right center #fff;
-  	background-size: 20px 20px;
+  	background-size: 25px 20px;
+  	text-indent: 6px;
+}
+/* 我也不会怎么写option的样式，等我去研究下 */
+.find-activity .select-group select option{
+	text-indent: 10px;
+  	background: url('../images/correct.png') no-repeat scroll left center #bf4e48;
+}
+.find-activity .select-group select option:hover {
+    background-color: #f80;
+    color: #fff;
 }
 #country-select, #province-select, #city-select, .find-activity .select-group > button{
 	width: 23%;
@@ -207,4 +217,36 @@ header nav .nav-right > a > span{
 	border: none;
 	background-color: #e24848;
 	color: #fff;
+}
+.display-activity{
+	background-color: #f8f8f8;
+	height: 450px;
+	padding-top: 50px;
+}
+.display-activity .col-md-3{
+	text-align: center;
+}
+.display-activity .col-md-3 > img{
+	width: 200px;
+}
+.display-activity .col-md-3 .activity-des{
+	margin-top: 10px;
+}
+.display-activity .col-md-3 .activity-des.shanghai{
+	/* 给上海活动专门定义类，定义不同的样式，从这个任务开始我给你写详细的注释，也不用英文注释装逼了 */
+	margin-top: 0px;
+}
+.display-activity .col-md-3 .activity-des.shanghai > p > strong{
+	/* 设置字体水平间距的方法 */
+	letter-spacing: 15px;
+	/*只设置上面的属性，字体不居中*/
+	margin-left: -15px;
+}
+.display-activity .col-md-3 .activity-des > p{
+	color: #888;
+}
+.display-activity .col-md-3 .activity-des > p > strong{
+	/* strong 是语义化强调，会默认将字体加粗，这里去掉*/
+	font-weight: normal;
+	color: #000;
 }
