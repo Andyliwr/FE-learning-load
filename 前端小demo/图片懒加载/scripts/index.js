@@ -67,5 +67,8 @@ var lazyload = {
     }
 };
 window.onscroll = function(){
-    lazyload.loadImg(document.querySelectorAll('.content > img'), true);
+    lazyload.loadImg(document.querySelectorAll('.content > img'), true); //滚动时根据需要加载图片，加载图片的动画效果为淡入，设置第二个参数为true
+};
+window.onload = function() {
+    lazyload.loadImg(document.querySelectorAll('.content > img'), true); //页面加载后，可视区域的图片显示为实际图片
 };
