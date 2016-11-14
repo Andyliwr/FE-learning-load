@@ -61,8 +61,10 @@ header nav .nav-right > ul{
 header nav .nav-right > ul > li{
 	display: inline-block;
 	width: 80px;
+	height: 60px;
 	text-align: center;
 	line-height: 60px;
+	box-sizing: border-box;
 }
 header nav .nav-right > ul > li.active{
 	animation: bottomAnimation 1s;
@@ -86,6 +88,123 @@ header nav .nav-right > a > span{
 }
 
 /* 巨幕 style */
+.jumbotron{
+	position: relative;
+}
 .jumbotron > img{
 	width: 100%;
+}
+.jumbotron .fade_div{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background: #fff;
+    opacity: 0.1;
+}
+.jumbotron .jumbotron_text{
+	position: absolute;
+    top: 40%;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    color: #fff;
+
+}
+.jumbotron .jumbotron_text > h1{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.jumbotron .jumbotron_text > p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.jumbotron .jumbotron_text > button{
+	width: 230px;
+    height: 40px;
+    background-color: #e24848;
+    border: none;
+    font-size: 18px;
+}
+
+/* advantage style*/
+.advantage .col-md-3{
+	text-align: center;
+    height: 200px;
+    padding: 3% 0% 1% 0%;
+    box-sizing: border-box;
+}
+.advantage .col-md-3 > img{
+	margin-bottom: 30px;
+}
+.advantage .col-md-3 .advantage-des{
+	padding: 0 20%;
+    border-right: 2px solid #ddd;
+    height: 40px;
+}
+.advantage .col-md-3 .advantage-des.last-child{
+    border-right: none;
+}
+.what-unknown{
+	background-color: #eee;
+    height: 300px;
+    text-align: center;
+    padding-top: 60px;
+}
+.what-unknown > img{
+	width: 80px;
+    margin-bottom: 30px;
+}
+.what-unknown .huge-text{
+	font-size: 40px;
+	color: #999;
+}
+.find-activity{
+	background: url(../images/selectBg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: center;
+	padding: 4% 10%;
+	height: 300px;
+}
+.find-activity > h1{
+	margin-top: 0;
+	margin-bottom: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+.find-activity > hr{
+	width: 30px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.find-activity .tips{
+	color: #fff;
+}
+.find-activity .select-group{
+	margin-top: 30px;
+}
+.find-activity .select-group select{
+	/*remove select default style*/
+	appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    margin-right: 2%;
+	height: 30px;
+	border: none;
+    /*define the right select icon*/
+  	background: url('../images/select.png') no-repeat scroll right center #fff;
+  	background-size: 20px 20px;
+}
+#country-select, #province-select, #city-select, .find-activity .select-group > button{
+	width: 23%;
+}
+.find-activity .select-group > button{
+	height: 30px;
+	border: none;
+	background-color: #e24848;
+	color: #fff;
 }
