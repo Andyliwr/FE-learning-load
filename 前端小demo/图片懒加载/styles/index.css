@@ -11,7 +11,7 @@ body{
     font-weight: normal;
     color: #333;
     line-height: 1.4em;
-    overflow: hidden;
+    overflow: auto;
 }
 /*body {
     width: 960px;
@@ -111,9 +111,9 @@ footer {
     display: block;
     height: 70px;
     background-color: #374252;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
 }
 
 footer p {
@@ -158,10 +158,10 @@ body.embedded {
 
 /* about content */
 .container .content{
-    height: 100%;
     position: absolute;
     background: #fff;
     width: 100%;
+    height: auto;
     padding: 1em 1em 70px 1em;
     box-sizing: border-box;
 }
