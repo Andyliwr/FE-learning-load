@@ -87,5 +87,5 @@ header nav .nav-right > a > span{
 
 /* 巨幕 style */
 .jumbotron > img{
-	
+	width: 100%;
 }
