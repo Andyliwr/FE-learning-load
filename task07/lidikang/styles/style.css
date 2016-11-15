@@ -1,3 +1,4 @@
+
 /* task07 stylesheet, created by lidikang on 2016/11/13 */
 /* reset css */
 html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
@@ -31,6 +32,17 @@ a, a:hover{
 .row{
 	margin-left: 0 !important;
 	margin-right: 0 !important;
+}
+.all-container{
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+@media(min-width: 1400px) {
+	.all-container{
+		width: 1400px;
+		margin: 0 auto;
+	}
 }
 header nav{
 	background-color: #fff;
@@ -93,6 +105,12 @@ header nav .nav-right > a > span{
 }
 .jumbotron > img{
 	width: 100%;
+}
+/* 消除小屏幕下的细线 */
+@media (max-width:768px) {
+	.jumbotron > img{
+		margin-bottom: -2px;
+	}
 }
 .jumbotron .fade_div{
 	position: absolute;
@@ -331,6 +349,8 @@ header nav .nav-right > a > span{
 */
 .banner .col-md-8 .align2 .white-bg  hr{
 	color: #000;
+	background-color: #000;
+	height: 1px;
 }
 .banner .col-md-4 .align1{
 	height: 450px;
@@ -387,4 +407,163 @@ header nav .nav-right > a > span{
 .banner .col-md-4 .align2 > img{
 	height: 400px;
 	width: 100%;
+}
+.contactus{
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 100px;
+	height: 600px;
+}
+.contactus > h1{
+	font-size: 20px;
+	margin: 0;
+}
+.contactus > hr{
+	width: 30px;
+	height: 2px;
+	background-color: #e24848;
+	margin-top: 5px;
+}
+.contactus > p.des{
+	color: #666;
+}
+.contactus .row{
+	padding: 80px 10% 0 10%;
+}
+.contactus .row .col-md-4{
+	text-align: left;
+}
+.contactus .row .col-md-4 .protocal-container{
+	margin-bottom: 40px;
+}
+.contactus .row .col-md-4 .protocal-container > h2{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.contactus .row .col-md-4 .protocal-container .more-p{
+	float: right;
+}
+.contactus .row .col-md-4 .protocal-container .more-p .down-icon{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	transform: rotate(45deg);
+	position: relative;
+	top: -1px;
+	margin-right: 6px;
+}
+.contactus .row .col-md-4 .protocal-container .protocal{
+	font-size: 12px;
+	color: #666;
+}
+.contactus .row .col-md-8{
+	padding-left: 4%;
+}
+.contactus .row .col-md-8 form .form-group{
+	width: 100%;
+	background-color: #ededef;
+	text-align: left;
+}
+.contactus .row .col-md-8 form .form-group > label{
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 12px;
+}
+.contactus .row .col-md-8 form .form-group > label[for="whatlife"]{
+	vertical-align: top;
+}
+.contactus .row .col-md-8 form .form-group > input{
+	border: none;
+	background-color: #ededef;
+}
+.contactus .row .col-md-8 form .form-group > textarea{
+	border: none;
+	background-color: #ededef;
+}
+.contactus .row .col-md-8 form .horizontal{
+	height: 40px;
+	margin-bottom: 10px;
+}
+.contactus .row .col-md-8 form .horizontal .form-group{
+	width: 48%;
+	float: left;
+	height: 40px;
+}
+.contactus .row .col-md-8 form .horizontal .form-group:first-child{
+	margin-right: 4%;
+}
+/* 清楚浮动 */
+.contactus .row .col-md-8 form .horizontal .form-group::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.contactus .row .col-md-8 form > button{
+	width: 100%;
+	background-color: #ededef;
+	border: none;
+	margin-top: 30px;
+	height: 40px;
+}
+/*底部样式*/
+footer{
+	height: 400px;
+	background: #33363f;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	padding-top: 60px;
+}
+footer > h1{
+	font-size: 30px;
+	margin-bottom: 10px; 
+}
+footer .form-group{
+	margin-top: 30px;
+}
+footer .form-group input{
+	height: 36px;
+	width: 360px;
+	border: none;
+	background-color: #fff;
+	color: #000;
+	padding-left: 10px;
+}
+footer .way-contact{
+	margin-top: 30px;
+}
+footer .way-contact img{
+	margin-right: 10px;
+	cursor: pointer;
+}
+footer .form-group button{
+	height: 36px;
+	width: 80px;
+	border: none;
+	background-color: #6f7279;
+}
+footer .bottom{
+	height: 50px;
+	vertical-align: middle;
+	padding: 0 5%;
+	position: absolute;
+	bottom: 0;
+	background-color: #30303a;
+	width: 100%;
+	color: #fff;
+	text-align: left;
+}
+footer .bottom > span{
+	line-height: 50px;
+}
+footer .bottom > span.pull-right{
+	float: right;
+}
+footer .bottom > span.pull-right:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
