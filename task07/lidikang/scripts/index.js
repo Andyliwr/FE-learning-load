@@ -14,6 +14,22 @@ window.onload = function () {
     }, false);
 
     lazyload.loadImg(document.querySelectorAll('.display-activity img'), true); //页面加载后，可视区域的图片显示为实际图片
+
+    //给三小圆点增加个技能，这个不好写注释，你不懂我讲给你听吧>_<
+    document.querySelectorAll('.banner .col-md-4 .align1 .spanBtnP .spanBtn').forEach(function(item, index){
+        item.onclick = function(){
+            var tabArray = document.querySelectorAll('.banner .col-md-4 .align1 .tab');
+            for(var i=0; i<tabArray.length; i++){
+                if(this.dataset.index == (i+1)){
+                    document.querySelector(".banner .col-md-4 .align1 .tab[data-index='"+ (i+1) +"']").style.display = "block";
+                    document.querySelector(".banner .col-md-4 .align1 .spanBtnP .spanBtn[data-index='"+ (i+1) +"']").style.backgroundColor = "#666";
+                }else{
+                    document.querySelector(".banner .col-md-4 .align1 .tab[data-index='"+ (i+1) +"']").style.display = "none";
+                    document.querySelector(".banner .col-md-4 .align1 .spanBtnP .spanBtn[data-index='"+ (i+1) +"']").style.backgroundColor = "#fff";
+                }
+            }
+        }
+    });
 };
 window.onscroll = function () {
     lazyload.loadImg(document.querySelectorAll('.display-activity img'), true); //滚动时根据需要加载图片，加载图片的动画效果为淡入，设置第二个参数为true

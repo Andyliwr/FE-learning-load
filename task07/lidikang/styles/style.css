@@ -240,7 +240,7 @@ header nav .nav-right > a > span{
 	/* 设置字体水平间距的方法 */
 	letter-spacing: 15px;
 	/*只设置上面的属性，字体不居中*/
-	margin-left: -15px;
+	margin-left: 15px;
 }
 .display-activity .col-md-3 .activity-des > p{
 	color: #888;
@@ -249,4 +249,144 @@ header nav .nav-right > a > span{
 	/* strong 是语义化强调，会默认将字体加粗，这里去掉*/
 	font-weight: normal;
 	color: #000;
+}
+.banner .col-md-8, .banner .col-md-4{
+	/*bootstrap的row，container都是默认带padding，这里去掉*/
+	padding: 0;
+}
+.banner .col-md-8 .align1{
+	background: url('../images/big_img1.jpg') no-repeat;
+	background-size: cover;
+	height: 450px;
+	text-align: center;
+	color: #fff;
+	/*这里要加个相对定位，否则白色的小三角可就跑了*/
+	position: relative;
+}
+/*写图片左边的白色三家按钮*/
+.banner .col-md-8 .align1::after{
+	content: "";
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	/*居中*/
+	top: 50%;
+	transform: translateY(-50%);
+	/*画呀画呀画三角，画得我想吐*/
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 30px solid #fff;
+	border-left: 0px solid transparent;
+}
+.banner .col-md-8 .align1 > p{
+	font-size: 16px;
+}
+.banner .col-md-8 .align1 > h1{
+	font-size: 40px;
+	margin: 0;
+	padding-top: 14%;
+}
+.banner .col-md-8 .align1 > p.huge-text{
+	font-size: 90px;
+	margin-top: -20px;
+}
+.banner .col-md-8 .align2{
+	height: 400px;
+}
+.banner .col-md-8 .align2 .col-md-6{
+	height: 100%;
+	text-align: center;
+	padding-top: 18%;
+}
+.banner .col-md-8 .align2 .col-md-6 p{
+	font-size: 18px;
+}
+.banner .col-md-8 .align2 .col-md-6 > hr{
+	width: 30px;
+}
+.banner .col-md-8 .align2 .col-md-6 > button{
+	width: 120px;
+	height: 40px;
+}
+.banner .col-md-8 .align2 .red-bg{
+	background-color: #e24848;
+	color: #fff;
+}
+.banner .col-md-8 .align2 .red-bg > button{
+	background-color: #e24848;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.banner .col-md-8 .align2 .white-bg{
+	border: 1px solid #fff;
+}
+.banner .col-md-8 .align2 .white-bg > button{
+	border: 1px solid #e24848;
+	background: #fff;
+	color: #e24848;
+}
+/*现在是凌晨37分，我的心情已经接近崩溃，本来打电话想告诉你，昨天晚上代码上线出现了严重错误，队长陪着我查了两个小时
+**饭都没顾上吃，感觉人生一个大写的失败>_<，希望自己干了蠢事都能长记性，下次能做得更好。当然更希望你能把生活中开心和
+**快乐都和我讲讲，也许不能都帮到你，可是我会认真听的。
+*/
+.banner .col-md-8 .align2 .white-bg  hr{
+	color: #000;
+}
+.banner .col-md-4 .align1{
+	height: 450px;
+}
+.banner .col-md-4 .align1 .tab{
+	display: none;
+	text-align: center;
+	padding: 100px 30px 40px 30px;
+}
+.banner .col-md-4 .align1 .tab:first-child{
+	/*默认显示第一个，后面的用js去控制*/
+	display: block;
+}
+.banner .col-md-4 .align1 .tab > h1{
+	font-size: 18px;
+}
+.banner .col-md-4 .align1 .tab > h1 .indexNum{
+	font-size: 18px;
+	color: #e24848;
+}
+.banner .col-md-4 .align1 .tab > p.des{
+	font-size: 12px;
+	color: #666;
+	text-align: left;
+	line-height: 20px;
+	margin-bottom: 60px;
+}
+.banner .col-md-4 .align1 .tab > button{
+	width: 100px;
+	border: 1px solid #e24848;
+	height: 30px;
+	color: #e24848;
+	background: #fff;
+}
+.banner .col-md-4 .align1 .spanBtnP{
+	text-align: center;
+}
+.banner .col-md-4 .align1 .spanBtnP .spanBtn{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #777;
+	margin-right: 10px;
+	/*移上去的时候变成手型*/
+	cursor: pointer;
+}
+.banner .col-md-4 .align1 .spanBtnP .spanBtn:first-child{
+	background-color: #666;
+}
+.banner .col-md-4 .align2{
+	height: 400px;
+}
+.banner .col-md-4 .align2 > img{
+	height: 400px;
+	width: 100%;
 }
