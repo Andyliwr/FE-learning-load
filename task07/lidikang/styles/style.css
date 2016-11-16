@@ -14,7 +14,7 @@ body{
     display: table-cell;
     font-size: 14px;
     font-weight: normal;
-    font-family: "微软雅黑";
+	font-family: "微软雅黑", serif;
 }
 /* common style */
 .pull-right{
@@ -29,8 +29,8 @@ a, a:hover{
 	text-decoration: none !important;
 }
 .row{
-	margin-left: 0px !important;
-	margin-right: 0px !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 header nav{
 	background-color: #fff;
@@ -73,7 +73,7 @@ header nav .nav-right > ul > li.active{
 /* li下边框动画效果 */
 @keyframes bottomAnimation
 {
-	0%   {border-bottom-width: 0px;}
+	0%   {border-bottom-width: 0;}
 	25%  {border-bottom-width: 1px;}
 	50%  {border-bottom-width: 2px;}
 	100% {border-bottom-width: 4px;}
@@ -98,8 +98,8 @@ header nav .nav-right > a > span{
 	position: absolute;
     height: 100%;
     width: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 999;
     background: #fff;
     opacity: 0.1;
@@ -133,7 +133,7 @@ header nav .nav-right > a > span{
 .advantage .col-md-3{
 	text-align: center;
     height: 200px;
-    padding: 3% 0% 1% 0%;
+    padding: 3% 0 1% 0;
     box-sizing: border-box;
 }
 .advantage .col-md-3 > img{
@@ -162,8 +162,7 @@ header nav .nav-right > a > span{
 	color: #999;
 }
 .find-activity{
-	background: url(../images/selectBg.jpg);
-	background-repeat: no-repeat;
+	background: url(../images/selectBg.jpg) no-repeat;
 	background-size: 100%;
 	text-align: center;
 	padding: 4% 10%;
@@ -234,7 +233,7 @@ header nav .nav-right > a > span{
 }
 .display-activity .col-md-3 .activity-des.shanghai{
 	/* 给上海活动专门定义类，定义不同的样式，从这个任务开始我给你写详细的注释，也不用英文注释装逼了 */
-	margin-top: 0px;
+	margin-top: 0;
 }
 .display-activity .col-md-3 .activity-des.shanghai > p > strong{
 	/* 设置字体水平间距的方法 */
@@ -275,10 +274,9 @@ header nav .nav-right > a > span{
 	top: 50%;
 	transform: translateY(-50%);
 	/*画呀画呀画三角，画得我想吐*/
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	border-right: 30px solid #fff;
-	border-left: 0px solid transparent;
+	border: 25px solid transparent;
+	border-right: 30px #fff;
+	border-left-width: 0;
 }
 .banner .col-md-8 .align1 > p{
 	font-size: 16px;
@@ -327,7 +325,7 @@ header nav .nav-right > a > span{
 	background: #fff;
 	color: #e24848;
 }
-/*现在是凌晨37分，我的心情已经接近崩溃，本来打电话想告诉你，昨天晚上代码上线出现了严重错误，队长陪着我查了两个小时
+/*现在是凌晨37分，我的心情已经接近崩溃，本来打电话想告诉你，昨天晚上代码上线出现了严重错误，队长陪着我查了两个小时，
 **饭都没顾上吃，感觉人生一个大写的失败>_<，希望自己干了蠢事都能长记性，下次能做得更好。当然更希望你能把生活中开心和
 **快乐都和我讲讲，也许不能都帮到你，可是我会认真听的。
 */
