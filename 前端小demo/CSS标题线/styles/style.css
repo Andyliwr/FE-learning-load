@@ -1,0 +1,58 @@
+/* created by lidikang(andyliwr@qq.com) on 2016/11/17 */
+
+/* 很多数字都需要自己去调整，原理是使用一个和背景色相同的span覆盖在细线的上面 */
+.content .function1 .title{
+	position: relative;
+	text-align: center;
+	height: 36px;
+	line-height: 1;
+}
+.content .function1 .title .caption{
+	position: relative;
+    z-index: 2;
+    padding: 0 32px;
+    font-size: 24px;
+    background-color: #fff;
+}
+.content .function1 .title .line{
+	position: absolute;
+    /*自己更具caption的font-size做调整*/
+    top: 13px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+}
+
+/* 不能使用float做三列布局，因为宽度不固定，尝试使用伪元素 */
+.content .function2 .title {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+}
+.content .function2 .title .caption {
+    position: relative;
+    display: inline-block;
+}
+.content .function2 .title .caption .line {
+    position: absolute;
+    top: 11px;
+    width: 600px;
+    height: 1px;
+    background-color: #999;
+}
+.content .function2 .title .caption .line-l {
+    right: 100%;
+    margin-right: 15px;
+}
+.content .function2 .title .caption .line-r {
+    left: 100%;
+    margin-left: 15px;
+}
+
