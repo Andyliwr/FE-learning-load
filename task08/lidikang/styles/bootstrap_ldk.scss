@@ -1,4 +1,51 @@
-.body{
-	font-size: 12px;
-	color: #000;
+/* 纯css写出来不算啥，本宝宝要用高级的sass写这个，50行代码就OK了 */
+.container{
+	width: 100%;
+	max-width: 1400px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.row:before, .row:after{
+	content: "";
+	display: table;
+	clear: both;
+	margin-bottom: 20px;
+}
+[class*='col-xs-'], [class*='col-sm-'], [class*='col-md-'], [class*='col-lg-']{
+    float: left;
+    min-height: 1px; 
+    width: 8.33%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* sass简直是天才的想法，css神器 */
+@for $i from 1 through 12 {
+  .col-xs-#{$i} { width: 8.333% * $i; }
+}
+@media (min-width: 768px){
+	@for $i from 1 through 12 {
+	  .col-sm-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 992px){
+	@for $i from 1 through 12 {
+	  .col-md-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 1200px){
+	@for $i from 1 through 12 {
+	  .col-lg-#{$i} { width: 8.333% * $i; }
+	}
+}
+/* 一些其他样式 */
+.outline, .outline *{
+    outline: 1px solid #F6A1A1; 
+}
+[class*='col-'] > p {
+	background-color: #FFC2C2; 
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+	color: white; 
 }
