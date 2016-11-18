@@ -1,2 +1,4 @@
 #忽略idea的配置文件夹
 .idea/
+#忽略task08下的node_modules
+task08/lidikang/styles/node_modules/
