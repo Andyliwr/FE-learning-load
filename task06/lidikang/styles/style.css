@@ -91,6 +91,8 @@ body{
 .container .about-section .big-img .img-container{
     width: 90%;
     position: relative;
+    /*解决切图细线的问题*/
+    font-size: 0;
 }
 .container .about-section .big-img .img-container img{
     width: 100%;
