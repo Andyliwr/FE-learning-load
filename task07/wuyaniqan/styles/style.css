@@ -1,0 +1,53 @@
+@charset "utf-8";
+html,body,div,header,nav,a,img{
+	margin:0px;
+	padding:0px;
+}
+html{
+	width: 100%;
+	height: 100%
+}
+body{
+	font-size:14px;
+	font-family: "微软雅黑"；
+	font-weight:normal;
+	min-width: 1280px;
+	height: 100%;
+}
+nav{
+	height:56px;
+}
+.navleft{
+	margin-left: 60px;
+	display:inline-block;
+}
+.navright{
+	line-height: 56px;
+	float: right;
+	display:inline-block;
+	margin-right: 30px;
+}
+.navrightlink{
+
+}
+.navright>a{
+	text-decoration: none;
+	color:#787b83;
+	margin-right:46px;
+}
+.navright .linkactiv{
+	width: 64px;
+	text-decoration: none;
+	text-align: center;
+	color:#e74f4d;
+	border-bottom: 4px solid #e74f4d;
+	display: inline-block;
+	box-sizing: border-box;
+}
+ .navright .navlogin{
+	color:#e74f4d;
+	margin-right: 60px;
+}
+.navloginimg{
+	margin-right:-46px;
+}

@@ -44,7 +44,7 @@
 
 #####[task06 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task06)
 
-吴艳倩 ------ predev
+吴艳倩 ------ done
 
 李迪康 ------ done
 
