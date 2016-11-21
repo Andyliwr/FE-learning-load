@@ -1,0 +1,11 @@
+.content{
+    text-align: center;
+    /*overflow: auto;*/
+}
+.content > img{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}

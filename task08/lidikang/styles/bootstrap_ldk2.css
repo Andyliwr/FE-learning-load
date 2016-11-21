@@ -1,0 +1,218 @@
+/*纯css写bootstrap的栅格
+**As we can see, the basic grid contains just a few elements.
+    + a container
+    + rows
+    + columns
+    + gutters (the space between columns)
+*/
+/*The purpose of the container is to set the width of the entire grid. The width of the container is generally 
+**100%, but you might want to set a max-width for larger displays.
+*/
+.container{
+	width: 100%;
+	max-width: 1400px;
+	padding: 0 10px;
+}
+/*
+**The purpose of the row element is to keep the columns inside it from overflowing onto other rows.To achieve 
+**this, we'll use the clearfix hack to make sure everything inside the row stays inside the row. 
+*/
+.row:before, .row:after{
+	content: "";
+	display: table;
+	clear: both;
+	margin-bottom: 20px;
+}
+/*Floats, inline-blocks, display-table, display-flex. These are all different ways of positioning columns in CSS. 
+**From my personal experience, the least error prone and most widely used of these methods is the 'float' method. 
+**If our columns are empty however, our floated columns will stack on top of each other. To prevent this, we'll 
+**give our columns a min-height of 1px as well as float them. 
+**To find the width of one column, all we have to do is divide the total number of columns by the width of the 
+**container. In our case, the width of the container is 100%, and we want 6 columns, so 100/6 = 16.66, so our 
+**base column width is 16.66%
+*/
+[class*='col-xs-'], [class*='col-sm-'], [class*='col-md-'], [class*='col-lg-']{
+    float: left;
+    min-height: 1px; 
+    width: 8.33%;
+    height: 50px;
+}
+/*Before the 'border-box' box-sizing model, giving percentage-width elements a static padding was a real pain. 
+**Luckily, using the 'border-box' model, we can create gutters with ease.
+*/
+.container{
+	box-sizing: border-box;
+}
+[class*='col-xs-'], [class*='col-md-'], [class*='col-lg-'], [class*='col-sm-']{
+    /*-- our gutter --*/
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*Adjusting our grid for mobile layouts is pretty easy. All we have to do is adjust the widths of the columns.
+**For simplicities sake, I'm going to double the widths of the columns for screens under 800px.The only thing to 
+**watch out for is a few exceptions where the last column in the row hangs off the end. Such as in the case of 
+**the .col-2 columns and the .col-1 beside the .col-5 column.To counter this, we'll make the last .col-2 and 
+**.col-1 in the row 100% wide. 
+*/
+.col-xs-1{
+    width: 8.33%;
+}
+.col-xs-2{
+    width: 16.66%; 
+}
+.col-xs-3{
+    width: 25%; 
+}
+.col-xs-4{
+    width: 33.33%;
+}
+.col-xs-5{
+    width: 41.66%;
+}
+.col-xs-6{
+    width: 50%;
+}
+.col-xs-7{
+    width: 58.33%;
+}
+.col-xs-8{
+    width: 66.66%;
+}
+.col-xs-9{
+    width: 75%;
+}
+.col-xs-10{
+    width: 83.33%;
+}
+.col-xs-11{
+    width: 91.66%;
+}
+.col-xs-12{
+    width: 100%;
+}
+@media (min-width: 786px){
+	.col-sm-1{
+	    width: 8.33%;
+	}
+	.col-sm-2{
+	    width: 16.66%; 
+	}
+	.col-sm-3{
+	    width: 25%; 
+	}
+	.col-sm-4{
+	    width: 33.33%;
+	}
+	.col-sm-5{
+	    width: 41.66%;
+	}
+	.col-sm-6{
+	    width: 50%;
+	}
+	.col-sm-7{
+	    width: 58.33%;
+	}
+	.col-sm-8{
+	    width: 66.66%;
+	}
+	.col-sm-9{
+	    width: 75%;
+	}
+	.col-sm-10{
+	    width: 83.33%;
+	}
+	.col-sm-11{
+	    width: 91.66%;
+	}
+	.col-sm-12{
+	    width: 100%;
+	}
+}
+@media (min-width: 992px){
+	.col-md-1{
+	    width: 8.33%;
+	}
+	.col-md-2{
+	    width: 16.66%; 
+	}
+	.col-md-3{
+	    width: 25%; 
+	}
+	.col-md-4{
+	    width: 33.33%;
+	}
+	.col-md-5{
+	    width: 41.66%;
+	}
+	.col-md-6{
+	    width: 50%;
+	}
+	.col-md-7{
+	    width: 58.33%;
+	}
+	.col-md-8{
+	    width: 66.66%;
+	}
+	.col-md-9{
+	    width: 75%;
+	}
+	.col-md-10{
+	    width: 83.33%;
+	}
+	.col-md-11{
+	    width: 91.66%;
+	}
+	.col-md-12{
+	    width: 100%;
+	}
+}
+@media (min-width:1200px){
+	.col-lg-1{
+	    width: 8.33%;
+	}
+	.col-lg-2{
+	    width: 16.66%; 
+	}
+	.col-lg-3{
+	    width: 25%; 
+	}
+	.col-lg-4{
+	    width: 33.33%;
+	}
+	.col-lg-5{
+	    width: 41.66%;
+	}
+	.col-lg-6{
+	    width: 50%;
+	}
+	.col-lg-7{
+	    width: 58.33%;
+	}
+	.col-lg-8{
+	    width: 66.66%;
+	}
+	.col-lg-9{
+	    width: 75%;
+	}
+	.col-lg-10{
+	    width: 83.33%;
+	}
+	.col-lg-11{
+	    width: 91.66%;
+	}
+	.col-lg-12{
+	    width: 100%;
+	}
+}
+/* 一些其他样式 */
+.outline, .outline *{
+    outline: 1px solid #F6A1A1; 
+}
+[class*='col-'] > p {
+	background-color: #FFC2C2; 
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+	color: white; 
+}

@@ -1,0 +1,569 @@
+
+/* task07 stylesheet, created by lidikang on 2016/11/13 */
+/* reset css */
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+    padding: 0;
+    margin: 0;
+}
+html{
+    display: table;
+    min-width:100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: table-cell;
+    font-size: 14px;
+    font-weight: normal;
+	font-family: "微软雅黑", serif;
+}
+/* common style */
+.pull-right{
+	float: right;
+}
+.pull-right::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a, a:hover{
+	text-decoration: none !important;
+}
+.row{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.all-container{
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+@media(min-width: 1400px) {
+	.all-container{
+		width: 1400px;
+		margin: 0 auto;
+	}
+}
+header nav{
+	background-color: #fff;
+	height: 60px;
+}
+header nav > a{
+	line-height: 60px;
+	height: 60px;
+	margin-left: 50px;
+	display: inline-block;
+	color: #000;
+	font-size: 20px;
+}
+header nav > a > img{
+	margin-top: -6px;
+}
+header nav > a > span{
+	line-height: 60px;
+	padding-left: 10px;
+    vertical-align: middle;
+}
+header nav .nav-right{
+	padding-right: 50px;
+}
+header nav .nav-right > ul{
+	display: inline-block;
+}
+header nav .nav-right > ul > li{
+	display: inline-block;
+	width: 80px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	box-sizing: border-box;
+}
+header nav .nav-right > ul > li.active{
+	animation: bottomAnimation 1s;
+	border-bottom: solid #e74f4d;
+}
+/* li下边框动画效果 */
+@keyframes bottomAnimation
+{
+	0%   {border-bottom-width: 0;}
+	25%  {border-bottom-width: 1px;}
+	50%  {border-bottom-width: 2px;}
+	100% {border-bottom-width: 4px;}
+}
+header nav .nav-right > a > img{
+	height: 20px;
+	margin-top: -6px;
+}
+header nav .nav-right > a > span{
+	margin-left: 6px;
+	color: #e74f4d;
+}
+
+/* 巨幕 style */
+.jumbotron{
+	position: relative;
+}
+.jumbotron > img{
+	width: 100%;
+}
+/* 消除小屏幕下的细线 */
+@media (max-width:768px) {
+	.jumbotron > img{
+		margin-bottom: -2px;
+	}
+}
+.jumbotron .fade_div{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff;
+    opacity: 0.1;
+}
+.jumbotron .jumbotron_text{
+	position: absolute;
+    top: 40%;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    color: #fff;
+
+}
+.jumbotron .jumbotron_text > h1{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.jumbotron .jumbotron_text > p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.jumbotron .jumbotron_text > button{
+	width: 230px;
+    height: 40px;
+    background-color: #e24848;
+    border: none;
+    font-size: 18px;
+}
+
+/* advantage style*/
+.advantage .col-md-3{
+	text-align: center;
+    height: 200px;
+    padding: 3% 0 1% 0;
+    box-sizing: border-box;
+}
+.advantage .col-md-3 > img{
+	margin-bottom: 30px;
+}
+.advantage .col-md-3 .advantage-des{
+	padding: 0 20%;
+    border-right: 2px solid #ddd;
+    height: 40px;
+}
+.advantage .col-md-3 .advantage-des.last-child{
+    border-right: none;
+}
+.what-unknown{
+	background-color: #eee;
+    height: 300px;
+    text-align: center;
+    padding-top: 60px;
+}
+.what-unknown > img{
+	width: 80px;
+    margin-bottom: 30px;
+}
+.what-unknown .huge-text{
+	font-size: 40px;
+	color: #999;
+}
+.find-activity{
+	background: url(../images/selectBg.jpg) no-repeat;
+	background-size: 100%;
+	text-align: center;
+	padding: 4% 10%;
+	height: 300px;
+}
+.find-activity > h1{
+	margin-top: 0;
+	margin-bottom: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+.find-activity > hr{
+	width: 30px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.find-activity .tips{
+	color: #fff;
+}
+.find-activity .select-group{
+	margin-top: 30px;
+}
+.find-activity .select-group select{
+	/*remove select default style*/
+	appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    margin-right: 2%;
+	height: 30px;
+	border: none;
+    /*define the right select icon*/
+  	background: url('../images/select.png') no-repeat scroll right center #fff;
+  	background-size: 25px 20px;
+  	text-indent: 6px;
+}
+/* 我也不会怎么写option的样式，等我去研究下 */
+.find-activity .select-group select option{
+	text-indent: 10px;
+  	background: url('../images/correct.png') no-repeat scroll left center #bf4e48;
+}
+.find-activity .select-group select option:hover {
+    background-color: #f80;
+    color: #fff;
+}
+#country-select, #province-select, #city-select, .find-activity .select-group > button{
+	width: 23%;
+}
+.find-activity .select-group > button{
+	height: 30px;
+	border: none;
+	background-color: #e24848;
+	color: #fff;
+}
+.display-activity{
+	background-color: #f8f8f8;
+	height: 450px;
+	padding-top: 50px;
+}
+.display-activity .col-md-3{
+	text-align: center;
+}
+.display-activity .col-md-3 > img{
+	width: 200px;
+}
+.display-activity .col-md-3 .activity-des{
+	margin-top: 10px;
+}
+.display-activity .col-md-3 .activity-des.shanghai{
+	/* 给上海活动专门定义类，定义不同的样式，从这个任务开始我给你写详细的注释，也不用英文注释装逼了 */
+	margin-top: 0;
+}
+.display-activity .col-md-3 .activity-des.shanghai > p > strong{
+	/* 设置字体水平间距的方法 */
+	letter-spacing: 15px;
+	/*只设置上面的属性，字体不居中*/
+	margin-left: 15px;
+}
+.display-activity .col-md-3 .activity-des > p{
+	color: #888;
+}
+.display-activity .col-md-3 .activity-des > p > strong{
+	/* strong 是语义化强调，会默认将字体加粗，这里去掉*/
+	font-weight: normal;
+	color: #000;
+}
+.banner .col-md-8, .banner .col-md-4{
+	/*bootstrap的row，container都是默认带padding，这里去掉*/
+	padding: 0;
+}
+.banner .col-md-8 .align1{
+	background: url('../images/big_img1.jpg') no-repeat;
+	background-size: cover;
+	height: 450px;
+	text-align: center;
+	color: #fff;
+	/*这里要加个相对定位，否则白色的小三角可就跑了*/
+	position: relative;
+}
+/*写图片左边的白色三家按钮*/
+.banner .col-md-8 .align1::after{
+	content: "";
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	/*居中*/
+	top: 50%;
+	transform: translateY(-50%);
+	/*画呀画呀画三角，画得我想吐*/
+	border: 25px solid transparent;
+	border-right: 30px #fff;
+	border-left-width: 0;
+}
+.banner .col-md-8 .align1 > p{
+	font-size: 16px;
+}
+.banner .col-md-8 .align1 > h1{
+	font-size: 40px;
+	margin: 0;
+	padding-top: 14%;
+}
+.banner .col-md-8 .align1 > p.huge-text{
+	font-size: 90px;
+	margin-top: -20px;
+}
+.banner .col-md-8 .align2{
+	height: 400px;
+}
+.banner .col-md-8 .align2 .col-md-6{
+	height: 100%;
+	text-align: center;
+	padding-top: 18%;
+}
+.banner .col-md-8 .align2 .col-md-6 p{
+	font-size: 18px;
+}
+.banner .col-md-8 .align2 .col-md-6 > hr{
+	width: 30px;
+}
+.banner .col-md-8 .align2 .col-md-6 > button{
+	width: 120px;
+	height: 40px;
+}
+.banner .col-md-8 .align2 .red-bg{
+	background-color: #e24848;
+	color: #fff;
+}
+.banner .col-md-8 .align2 .red-bg > button{
+	background-color: #e24848;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.banner .col-md-8 .align2 .white-bg{
+	border: 1px solid #fff;
+}
+.banner .col-md-8 .align2 .white-bg > button{
+	border: 1px solid #e24848;
+	background: #fff;
+	color: #e24848;
+}
+/*现在是凌晨37分，我的心情已经接近崩溃，本来打电话想告诉你，昨天晚上代码上线出现了严重错误，队长陪着我查了两个小时，
+**饭都没顾上吃，感觉人生一个大写的失败>_<，希望自己干了蠢事都能长记性，下次能做得更好。当然更希望你能把生活中开心和
+**快乐都和我讲讲，也许不能都帮到你，可是我会认真听的。
+*/
+.banner .col-md-8 .align2 .white-bg  hr{
+	color: #000;
+	background-color: #000;
+	height: 1px;
+}
+.banner .col-md-4 .align1{
+	height: 450px;
+}
+.banner .col-md-4 .align1 .tab{
+	display: none;
+	text-align: center;
+	padding: 100px 30px 40px 30px;
+}
+.banner .col-md-4 .align1 .tab:first-child{
+	/*默认显示第一个，后面的用js去控制*/
+	display: block;
+}
+.banner .col-md-4 .align1 .tab > h1{
+	font-size: 18px;
+}
+.banner .col-md-4 .align1 .tab > h1 .indexNum{
+	font-size: 18px;
+	color: #e24848;
+}
+.banner .col-md-4 .align1 .tab > p.des{
+	font-size: 12px;
+	color: #666;
+	text-align: left;
+	line-height: 20px;
+	margin-bottom: 60px;
+}
+.banner .col-md-4 .align1 .tab > button{
+	width: 100px;
+	border: 1px solid #e24848;
+	height: 30px;
+	color: #e24848;
+	background: #fff;
+}
+.banner .col-md-4 .align1 .spanBtnP{
+	text-align: center;
+}
+.banner .col-md-4 .align1 .spanBtnP .spanBtn{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #777;
+	margin-right: 10px;
+	/*移上去的时候变成手型*/
+	cursor: pointer;
+}
+.banner .col-md-4 .align1 .spanBtnP .spanBtn:first-child{
+	background-color: #666;
+}
+.banner .col-md-4 .align2{
+	height: 400px;
+}
+.banner .col-md-4 .align2 > img{
+	height: 400px;
+	width: 100%;
+}
+.contactus{
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 100px;
+	height: 600px;
+}
+.contactus > h1{
+	font-size: 20px;
+	margin: 0;
+}
+.contactus > hr{
+	width: 30px;
+	height: 2px;
+	background-color: #e24848;
+	margin-top: 5px;
+}
+.contactus > p.des{
+	color: #666;
+}
+.contactus .row{
+	padding: 80px 10% 0 10%;
+}
+.contactus .row .col-md-4{
+	text-align: left;
+}
+.contactus .row .col-md-4 .protocal-container{
+	margin-bottom: 40px;
+}
+.contactus .row .col-md-4 .protocal-container > h2{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.contactus .row .col-md-4 .protocal-container .more-p{
+	float: right;
+}
+.contactus .row .col-md-4 .protocal-container .more-p .down-icon{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	transform: rotate(45deg);
+	position: relative;
+	top: -1px;
+	margin-right: 6px;
+}
+.contactus .row .col-md-4 .protocal-container .protocal{
+	font-size: 12px;
+	color: #666;
+}
+.contactus .row .col-md-8{
+	padding-left: 4%;
+}
+.contactus .row .col-md-8 form .form-group{
+	width: 100%;
+	background-color: #ededef;
+	text-align: left;
+}
+.contactus .row .col-md-8 form .form-group > label{
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 12px;
+}
+.contactus .row .col-md-8 form .form-group > label[for="whatlife"]{
+	vertical-align: top;
+}
+.contactus .row .col-md-8 form .form-group > input{
+	border: none;
+	background-color: #ededef;
+}
+.contactus .row .col-md-8 form .form-group > textarea{
+	border: none;
+	background-color: #ededef;
+}
+.contactus .row .col-md-8 form .horizontal{
+	height: 40px;
+	margin-bottom: 10px;
+}
+.contactus .row .col-md-8 form .horizontal .form-group{
+	width: 48%;
+	float: left;
+	height: 40px;
+}
+.contactus .row .col-md-8 form .horizontal .form-group:first-child{
+	margin-right: 4%;
+}
+/* 清楚浮动 */
+.contactus .row .col-md-8 form .horizontal .form-group::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.contactus .row .col-md-8 form > button{
+	width: 100%;
+	background-color: #ededef;
+	border: none;
+	margin-top: 30px;
+	height: 40px;
+}
+/*底部样式*/
+footer{
+	height: 400px;
+	background: #33363f;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	padding-top: 60px;
+}
+footer > h1{
+	font-size: 30px;
+	margin-bottom: 10px; 
+}
+footer .form-group{
+	margin-top: 30px;
+}
+footer .form-group input{
+	height: 36px;
+	width: 360px;
+	border: none;
+	background-color: #fff;
+	color: #000;
+	padding-left: 10px;
+}
+footer .way-contact{
+	margin-top: 30px;
+}
+footer .way-contact img{
+	margin-right: 10px;
+	cursor: pointer;
+}
+footer .form-group button{
+	height: 36px;
+	width: 80px;
+	border: none;
+	background-color: #6f7279;
+}
+footer .bottom{
+	height: 50px;
+	vertical-align: middle;
+	padding: 0 5%;
+	position: absolute;
+	bottom: 0;
+	background-color: #30303a;
+	width: 100%;
+	color: #fff;
+	text-align: left;
+}
+footer .bottom > span{
+	line-height: 50px;
+}
+footer .bottom > span.pull-right{
+	float: right;
+}
+footer .bottom > span.pull-right:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
