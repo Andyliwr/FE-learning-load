@@ -33,7 +33,7 @@ nav{
 .navright>a{
 	text-decoration: none;
 	color:#787b83;
-	margin-right: 46px;
+	margin-right:46px;
 }
 .navright .linkactiv{
 	width: 64px;
@@ -46,5 +46,8 @@ nav{
 }
  .navright .navlogin{
 	color:#e74f4d;
-	margin-right: 0;
+	margin-right: 60px;
+}
+.navloginimg{
+	margin-right:-46px;
 }
