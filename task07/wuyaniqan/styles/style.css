@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 html,body,div,header,nav,a,img{
 	margin:0px;
 	padding:0px;
@@ -47,7 +47,4 @@ nav{
  .navright .navlogin{
 	color:#e74f4d;
 	margin-right: 60px;
-}
-.navloginimg{
-	margin-right:-46px;
 }
