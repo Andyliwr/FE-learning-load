@@ -1,0 +1,124 @@
+/*task09 stylesheet, created by lidikang on 2016/11/23*/
+
+/*引入自定义的bootstrap的栅格*/
+.container{
+	width: 100%;
+	/*max-width: 1400px;*/
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.row:before, .row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='col-xs-'], [class*='col-sm-'], [class*='col-md-'], [class*='col-lg-']{
+    float: left;
+    min-height: 1px; 
+    width: 8.33%;
+    box-sizing: border-box;
+}
+/*sass简直是天才的想法，css神器*/
+@for $i from 1 through 12 {
+  .col-xs-#{$i} { width: 8.333% * $i; }
+}
+@media (min-width: 768px){
+	@for $i from 1 through 12 {
+	  .col-sm-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 992px){
+	@for $i from 1 through 12 {
+	  .col-md-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 1200px){
+	@for $i from 1 through 12 {
+	  .col-lg-#{$i} { width: 8.333% * $i; }
+	}
+}
+
+/*重置样式，用来避免各种浏览器默认样式的差异带来的影响*/
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, tr, td, ol, ul, li{
+	padding: 0;
+	margin: 0;
+}
+html{
+	display: table;
+  	min-width:100%;
+  	height: 100%;
+}
+body{
+	display: table-cell;
+	height: 100%;
+	overflow: auto;
+	/*设置body背景图*/
+	/*background: url('../../images/body_bg_page.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: center top;*/
+}
+/*雪碧图样式*/
+.logo-icon, .search-icon, .user-icon{
+	background: url('../../images/sprite.png') no-repeat;
+}
+/*公共样式*/
+.pull-right{
+	float: right;
+	:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+/*开始自己的样式--header*/
+header{
+	height: 60px;
+	background-color: #2189c0;
+	padding: 0 4%;
+	nav{
+		.logo-icon{
+			background-size: 390%;
+		    background-position: -6px -60px;
+		    display: inline-block;
+		    width: 50px;
+		    height: 50px;
+		    /*使logo垂直居中*/
+		    margin-top: 5px;
+		}
+		.pull-right{
+			width: 400px;
+			input.search-icon{
+			    width: 300px;
+			    height: 30px;
+			    border: none;
+			    border-radius: 20px;
+			    background-color: #fff;
+			    background-size: 60%;
+			    background-position: -100px -23px;
+			    padding: 4px 10%;
+			    margin-top: 15px;
+			    margin-right: 28px;
+			}
+			a[href="/login"]{
+				/*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
+				position: absolute;
+			    height: 60px;
+			    padding-top: 18px;
+			    color: #fff;
+			    /*去除a标签默认的下划线*/
+			    text-decoration: none;
+			    font-size: 14px;
+	    		.user-icon{
+				    display: inline-block;
+				    width: 24px;
+				    height: 24px;
+				    vertical-align: middle;
+				    background-size: 850%;
+				    background-position: -154px -30px;
+				    margin-right: 6px;
+	    		}
+			}
+		}
+		
+	}
+}
