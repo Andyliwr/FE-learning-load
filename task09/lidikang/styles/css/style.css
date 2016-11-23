@@ -178,7 +178,8 @@ header {
     /*使logo垂直居中*/
     margin-top: 5px; }
   header nav .pull-right {
-    width: 400px; }
+    width: 400px;
+    /*去除google浏览器给获取了焦点的input加的默认边框*/ }
     header nav .pull-right input.search-icon {
       width: 300px;
       height: 30px;
@@ -190,6 +191,8 @@ header {
       padding: 4px 10%;
       margin-top: 15px;
       margin-right: 28px; }
+    header nav .pull-right input.search-icon:focus {
+      outline: none; }
     header nav .pull-right a[href="/login"] {
       /*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
       position: absolute;
@@ -207,3 +210,16 @@ header {
         background-size: 850%;
         background-position: -154px -30px;
         margin-right: 6px; }
+
+/*主体的样式*/
+.content {
+  /*熟悉的俩列布局*/ }
+  .content .content_right {
+    width: 100%;
+    float: left;
+    padding-left: 250px;
+    box-sizing: border-box; }
+  .content .content_left {
+    float: left;
+    width: 250px;
+    margin-left: -100%; }

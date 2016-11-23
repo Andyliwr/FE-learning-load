@@ -99,6 +99,10 @@ header{
 			    margin-top: 15px;
 			    margin-right: 28px;
 			}
+			/*去除google浏览器给获取了焦点的input加的默认边框*/
+			input.search-icon:focus {
+				outline: none;
+			}
 			a[href="/login"]{
 				/*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
 				position: absolute;
@@ -120,5 +124,20 @@ header{
 			}
 		}
 		
+	}
+}
+/*主体的样式*/
+.content{
+	/*熟悉的俩列布局*/
+	.content_right{
+		width: 100%;
+		float: left;
+		padding-left: 250px;
+		box-sizing: border-box;
+	}
+	.content_left{
+		float: left;
+		width: 250px;
+		margin-left: -100%;
 	}
 }
