@@ -30,6 +30,21 @@ window.onload = function () {
             }
         }
     });
+
+    document.getElementById('search').addEventListener('click', function(){
+        var contury = document.getElementById('country-select').value();
+        var provience = document.getElementById('provice-select').value();
+        $.ajax({
+            type: 'POST',
+            url: '/findCtiyActivity?contyry='+ contury + '?provice='+ provience,
+            success: function(data){
+                //data
+            },
+            error: function(){
+                //
+            }
+        });
+    });
 };
 window.onscroll = function () {
     lazyload.loadImg(document.querySelectorAll('.display-activity img'), true); //滚动时根据需要加载图片，加载图片的动画效果为淡入，设置第二个参数为true

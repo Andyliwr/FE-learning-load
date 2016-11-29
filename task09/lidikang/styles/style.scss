@@ -58,8 +58,15 @@ body{
 	background-position: center top;*/
 }
 /*雪碧图样式*/
-.logo-icon, .search-icon, .user-icon{
+.logo-icon, .search-icon, .user-icon, .personalTable-icon, .gray-right-icon, white-down-icon, .white-file-icon, .gray-file-icon{
 	background: url('../../images/sprite.png') no-repeat;
+}
+.personalTable-icon, gray-right-icon, white-down-icon, .white-file-icon, .gray-file-icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: text-bottom;
+	margin-right: 6px;
 }
 /*公共样式*/
 .pull-right{
@@ -139,5 +146,58 @@ header{
 		float: left;
 		width: 250px;
 		margin-left: -100%;
+		background-color: #2b2e3d;
+		/*等高布局*/
+		padding-bottom: 9999px;
+		margin-bottom: -9999px;
+		overflow: hidden;
+		padding-left: 60px;
+		.content_left_user{
+			color: #fff;
+			padding: 20px 0px;
+			.circle_out{
+				width: 60px;
+				height: 60px;
+				border: 2px solid #b9babe;
+				border-radius: 30px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+				.circle-inside{
+					background-color: #b9babe;
+					width: 50px;
+					height: 50px;
+					margin: 5px;
+					border-radius: 25px;
+				}
+			}
+			.user_info{
+				margin-top: 10px;
+				span{
+					display: inline-block;
+					font-size: 14px;
+					width: 60px;
+					text-align: left;
+					color: #727b8c;
+					.num{
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.content_left_ul{
+			list-style: none;
+			color: #6c7b8e;
+			li.hasSubUl{
+				color: #fff;
+				.personalTable-icon{
+					background-size: 900%;
+					background-position: -30px -1px;
+				}
+				ul.subUl{
+					list-style: none;
+				}
+			}
+		}
 	}
 }

@@ -2,4 +2,4 @@
 .idea/
 #忽略task08下的node_modules
 /task08/lidikang/styles/node_modules/
-/task09/lidikang/node_modules
+/task09/lidikang/node_modules/
