@@ -13,7 +13,8 @@ var lazyload = {
         var cHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight,
             //浏览器可视窗口距离页面顶部的距离
             sX = window.pageXOffset || document.body.scrollTop || document.documentElement.scrollTop,
-            //表示图片在什么时候进行加载，默认为 0 表示当图片进入可视区域立即加载；设为正数表示图片距离 threshold像素进入可视区域进行加载；设为负数表示图片进入可视区域threshold像素时进行加载。
+            //表示图片在什么时候进行加载，默认为 0 表示当图片进入可视区域立即加载；
+            //设为正数表示图片距离 threshold像素进入可视区域进行加载；设为负数表示图片进入可视区域threshold像素时进行加载。
             threshold = 10,
             //元素到页面顶部的距离
             oTop = this.getOffsetTop(element),
