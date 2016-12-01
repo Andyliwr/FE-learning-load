@@ -48,8 +48,8 @@
 
 李迪康 ------ done
 
-#####[task07 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task06)
+#####[task07 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task07)
 
-吴艳倩 ------ ready to do
+吴艳倩 ------ done
 
 李迪康 ------ done
