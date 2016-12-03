@@ -1,0 +1,126 @@
+@charset "utf-8";
+/*2016.12.01 create by wuyanqian*/
+/*css reset*/
+html,body,p,div,a,article,section,img{
+	padding: 0;
+	margin: 0;
+}
+html{
+	width: 100%;
+}
+body{
+	width: 100%;
+}
+.container{
+	width: 100%;
+	max-width: 1400px;
+	padding:0 10px;
+	box-sizing: border-box;
+}
+.row{
+	height: 100px;
+	width: 100%;
+	margin-left:-10px;
+	margin-right:-10px;  
+	display: table;
+
+}
+
+.row:before{
+	clear: both;
+	content: "";
+	display: table;
+}
+.row:before{
+	clear: both;
+	content: "";
+	display: table;
+	margin-bottom: 20px;
+}
+.line{
+	border:1px solid #ff8b00;
+}
+[class*='col-xs-'],[class*='col-sm-'],[class*='col-md-'],[class*='col-lg-']{
+	float: left;
+	min-height:1px;
+	height: 100px;
+	width: 8.33%;
+	box-sizing: border-box; 
+	padding: 10px;
+}
+.col-xs-1{
+	width: 8.33%;
+}
+.col-xs-2{
+	width: 16.66%;
+}
+.col-xs-3{
+	width: 24.99%;
+}
+.col-xs-4{
+	width: 33.332%;
+}
+.col-xs-5{
+	width: 41.665%;
+}
+.col-xs-6{
+	width: 49.998%;
+}
+.col-xs-8{
+	width: 58.331%%;
+}
+.col-xs-8{
+	width:66.664%;
+}
+.col-xs-9{
+	width: 74.997%;
+}
+.col-xs-10{
+	width: 83.33%;
+}
+.col-xs-11{
+	width: 91.663%;
+}
+.col-xs-12{
+	width: 99.996%;
+}
+
+@media (min-width: 768px){
+.col-sm-1{
+	width: 8.33%;
+}
+.col-sm-2{
+	width: 16.66%;
+}
+.col-sm-3{
+	width: 24.99%;
+}
+.col-sm-4{
+	width: 33.332%;
+}
+.col-sm-5{
+	width: 41.665%;
+}
+.col-sm-6{
+	width: 49.998%;
+}
+.col-sm-8{
+	width: 58.331%;
+}
+.col-sm-8{
+	width:66.664%;
+}
+.col-sm-9{
+	width: 74.997%;
+}
+.col-sm-10{
+	width: 83.33%;
+}
+.col-sm-11{
+	width: 91.663%;
+}
+.col-sm-12{
+	width: 99.996%;
+}
+}
+
