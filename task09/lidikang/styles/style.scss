@@ -1,0 +1,496 @@
+/*task09 stylesheet, created by lidikang on 2016/11/23*/
+
+/*引入自定义的bootstrap的栅格*/
+.container{
+	width: 100%;
+	/*max-width: 1400px;*/
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.row:before, .row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='col-xs-'], [class*='col-sm-'], [class*='col-md-'], [class*='col-lg-']{
+    float: left;
+    min-height: 1px; 
+    width: 8.33%;
+    box-sizing: border-box;
+}
+/*sass简直是天才的想法，css神器*/
+@for $i from 1 through 12 {
+  .col-xs-#{$i} { width: 8.333% * $i; }
+}
+@media (min-width: 768px){
+	@for $i from 1 through 12 {
+	  .col-sm-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 992px){
+	@for $i from 1 through 12 {
+	  .col-md-#{$i} { width: 8.333% * $i; }
+	}
+}
+@media (min-width: 1200px){
+	@for $i from 1 through 12 {
+	  .col-lg-#{$i} { width: 8.333% * $i; }
+	}
+}
+
+/*重置样式，用来避免各种浏览器默认样式的差异带来的影响*/
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, tr, td, ol, ul, li{
+	padding: 0;
+	margin: 0;
+}
+html{
+	display: table;
+  	min-width:100%;
+  	height: 100%;
+}
+body{
+	display: table-cell;
+	height: 100%;
+	overflow: auto;
+	/*设置body背景图*/
+	/*background: url('../../images/body_bg_page.jpg') no-repeat;
+	background-size: 100% auto;
+	background-position: center top;*/
+}
+/*雪碧图样式*/
+.logo-icon, .search-icon, .x-icon, .user-icon, .personalTable-icon, .gray-right-icon, .gray-left-icon, .white-down-icon, .white-file-icon, .gray-file-icon, .gray-fileSet-icon, .white-fileSet-icon, .collect-icon, .share-icon, .gallery-icon, .grownHistory-icon, .myInfo-icon, .revert-icon, .hostory-icon{
+	background: url('../../images/sprite.png') no-repeat;
+}
+.search-icon{
+	background-size: 900%;
+	background-position: -30px -1px;
+}
+//这里是专门用于左边导航的雪碧图
+.personalTable-icon, .gray-right-icon, .white-down-icon, .white-file-icon, .gray-file-icon, .gray-fileSet-icon, .white-fileSet-icon, .collect-icon, .share-icon, .gallery-icon, .grownHistory-icon, .myInfo-icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: text-bottom;
+	margin-right: 6px;
+}
+.personalTable-icon{
+	background-size: 900%;
+	background-position: -30px -1px;
+}
+.gray-right-icon{
+	background-size: 900%;
+	background-position: -84px -2px;
+}
+.white-down-icon{
+	background-size: 800%;
+	background-position: -74px -25px;
+}
+.gray-fileSet-icon{
+	background-size: 900%;
+	background-position: -30px -27px;
+}
+.white-fileSet-icon{
+	background-size: 900%;
+	background-position: -59px -27px;
+}
+.white-file-icon{
+	background-size: 900%;
+	background-position: -4px -3px;
+}
+.gray-file-icon{
+	background-size: 900%;
+	background-position: -60px -3px;
+}
+.collect-icon{
+	background-size: 1000%;
+	background-position: -155px -5px;
+}
+.share-icon{
+	background-size: 900%;
+	background-position: -4px -27px;
+}
+.gallery-icon{
+	background-size: 1100%;
+	background-position: -173px -85px;
+}
+.grownHistory-icon{
+	background-size: 1000%;
+	background-position: -125px -77px;
+}
+.myInfo-icon{
+	background-size: 700%;
+	background-position: -107px -19px;
+}
+.revert-icon{
+	background-size: 700%;
+	background-position: -125px -94px;
+}
+/*公共样式*/
+.pull-right{
+	float: right;
+	:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+/*动画专属地带*/
+@keyframes width0To500 {
+	from {width: 0}
+	to {width: 500px}
+}
+.width0To500{
+	animation: width0To500 1s;
+}
+/*开始自己的样式--header*/
+header{
+	height: 60px;
+	background-color: #2189c0;
+	padding: 0 4%;
+	nav{
+		position: relative;
+		.logo-icon{
+			background-size: 390%;
+		    background-position: -6px -60px;
+		    display: inline-block;
+		    width: 50px;
+		    height: 50px;
+		    /*使logo垂直居中*/
+		    margin-top: 5px;
+		}
+		>.pull-right{
+			padding-top: 18px;
+			width: 90px;
+			.search-icon{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background-size: 700%;
+				background-position: -103px -23px;
+			}
+			a[href="/login"]{
+				/*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
+				position: absolute;
+				color: #fff;
+			    /*去除a标签默认的下划线*/
+			    text-decoration: none;
+			    font-size: 14px;
+	    		.user-icon{
+				    display: inline-block;
+				    width: 24px;
+				    height: 24px;
+				    vertical-align: middle;
+				    background-size: 850%;
+				    background-position: -154px -30px;
+				    margin-right: 6px;
+	    		}
+			}
+		}
+		.search-input{
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 60px;
+			width: 500px;
+			background: #2189c0;
+			padding-top: 15px;
+			box-sizing: border-box;
+			display: none;
+			.search-icon{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background-size: 700%;
+				background-position: -103px -23px;
+				vertical-align: middle;
+			}
+			input{
+				border: none;
+				background: none;
+				height: 30px;
+				//这用百分比布局，是为了动画效果
+				width: 36%;
+				//消除input元素在获取焦点的时候出现的边框
+				&:focus{
+					outline: none;
+				}
+			}
+			>.abs-right{
+				width: 43%;
+				position: absolute;
+				top: 18px;
+				right: 0;
+				//一定不能换行，要不动画效果就炸了
+				white-space: nowrap;
+				overflow: hidden;
+				span{
+					display: inline-block;
+					width: 50px;
+					height: 20px;
+					background: #eee;
+					border-radius: 2px;
+					margin-right: 10px;
+					font-size: 12px;
+					text-align: center;
+					cursor: pointer;
+				}
+				.x-icon{
+					width: 24px;
+					height: 24px;
+					display: inline-block;
+					vertical-align: middle;
+					background: url(../../images/sprite.png) no-repeat;
+					background-position: -209px -4px;
+					background-size: 1000%;
+				}
+			}
+		}
+	}
+}
+/*主体的样式*/
+.content{
+	/*熟悉的俩列布局*/
+	.content_right{
+		width: 100%;
+		float: left;
+		padding-left: 300px;
+		box-sizing: border-box;
+		.route{
+			height: 30px;
+			background: #fff;
+			padding-left: 20px;
+			color: #b9b9b9;
+			font-size: 14px;
+			> span{
+				line-height: 30px;
+				padding: 0 4px;
+				&:last-child{
+					color: #5a75ff;
+				}
+			}
+		}
+		.right-main{
+			background: #EDEDED;
+			padding: 20px 50px;
+			.search-setting{
+				background: #fff;
+				height: 80px;
+				font-size: 14px;
+				> div{
+					height: 80px;
+					padding-top: 15px;
+					select{
+						height: 25px;
+					}
+				}
+				.first-item{
+					padding-left: 30px;
+					> select{
+						width: 40%;
+						margin-left: 10px;
+					}
+				}
+				.sell-buy{
+					select{
+						margin-left: 10px;
+						width: 64%;
+					}
+					.sell-buy-container > div{
+						line-height: 30px;
+						margin-top: -4px;
+						display: inline-block;
+						width: 70%;
+					}
+					.revert-icon{
+						display: inline-block;
+						height: 40px;
+						width: 10% !important;
+						margin-left: -20px;
+					}
+				}
+				.date-select{
+					line-height: 33px;
+					margin-top: -9px;
+					> select, > input{
+						margin-left: 10px;
+					}
+					> input{
+						width: 36%;
+						height: 20px;
+						margin-right: 10px;
+					}
+					#people_num{
+						margin-right: 10px;
+					}
+				}
+				.col-md-2 button{
+					background: #2189c0;
+					border: none;
+					border-radius: 4px;
+					padding: 4px 12px;
+					//垂直居中按钮
+					margin-top: 12px;
+					color: #fff;
+					font-size: 15px;
+				}
+			}
+			.assginNum{
+				background-color: #fff;
+				height: 60px;
+				margin-top: 10px;
+				.padding{
+					padding: 0 30px;
+					position: relative;
+					.gray-left-icon, .gray-right-icon{
+						height: 58px;
+						width: 30px;
+						position: absolute;
+						border: 1px solid #cccccc;
+					}
+					.gray-left-icon{
+						//right和left不要搞反
+						right: 0;
+						background-size: 900%;
+						background-position: -3px -157px;
+						//根据UI去掉左边框
+						border-left: none;
+					}
+					.gray-right-icon{
+						left: 0;
+						//去除之前的margin-right
+						margin-right: 0;
+						background-size: 900%;
+						background-position: -46px -157px;
+						border-right: none;
+					}
+					.col-sm-2{
+						background: #EDEDED;
+						> div{
+							text-align: center;
+							//处于active的div的样式
+							&.assginNum-active{
+								border-top: 4px solid #2189c0;
+							}
+							margin-left: 6px;
+							height: 60px;
+							//消除当有active类的时候边框带来的撑大效果
+							box-sizing: border-box;
+							border: 1px solid #cccccc;
+							background: #fff;
+							> p{
+								line-height: 30px;
+								font-size: 14px;
+								&:last-child{
+									margin-top: -5px;
+									.num{
+										font-size: 18px;
+										color: sandybrown;
+									}
+								}
+							}
+						}
+					}
+					.last > div{
+						//给最后一个col-sm-2下的div加上margin-right
+						margin-right: 6px;
+					}
+
+				}
+				.display-none{
+					display: none;
+				}
+				.col-sm-3{
+					.hostory-icon{
+						display: inline-block;
+						width: 60px;
+						height: 60px;
+						background-size: 300%;
+						background-position: -55px -48px;
+						vertical-align: middle;
+						margin-left: 16px;
+					}
+				}
+			}
+		}
+	}
+	.content_left{
+		float: left;
+		width: 300px;
+		box-sizing: border-box;
+		margin-left: -100%;
+		background-color: #2b2e3d;
+		/*等高布局*/
+		padding-bottom: 9999px;
+		margin-bottom: -9999px;
+		overflow: hidden;
+		padding-left: 60px;
+		.content_left_user{
+			color: #fff;
+			padding: 20px 0px;
+			.circle_out{
+				width: 60px;
+				height: 60px;
+				border: 2px solid #b9babe;
+				border-radius: 30px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+				.circle-inside{
+					background-color: #b9babe;
+					width: 50px;
+					height: 50px;
+					margin: 5px;
+					border-radius: 25px;
+				}
+			}
+			.user_info{
+				margin-top: 10px;
+				span{
+					display: inline-block;
+					font-size: 14px;
+					width: 60px;
+					text-align: left;
+					color: #727b8c;
+					.num{
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.content_left_ul{
+			list-style: none;
+			color: #6c7b8e;
+			>li{
+				padding: 10px 0;
+			}
+			li.hasSubUl{
+				color: #fff;
+				.personalTable-icon{
+					background-size: 900%;
+					background-position: -30px -1px;
+				}
+				ul.subUl{
+					list-style: none;
+					margin-left: 20px;
+					.gray-right-icon{
+						margin-right: 2px;
+					}
+					.white-down-icon{
+						margin-right: 2px;
+					}
+					li{
+						padding: 5px;
+					}
+					.subSubUl{
+						margin-left: 40px;
+						list-style: none;
+					}
+					//初始化不显示子目录的li下设置subSubUl不显示
+					.not_show > .subSubUl{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

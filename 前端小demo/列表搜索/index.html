@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>列表搜索</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>
+            <!--::before-->
+            列表搜索
+            <!--::after-->
+        </h1>
+        <p>列表搜索，很常用的功能</p>
+    </header>
+    <div class="content">
+        <input id="searcher" type="search" placeholder="请输入要搜索的内容"/>
+        <button type="button">顺序</button>
+        <ul id="con">
+            <h5>共有<span class="num">11</span>条结果</h5>
+            <li data-name=tx,qq">腾讯</li>
+            <li data-name='wy'>网易</li>
+            <li data-name='sina'>新浪</li>
+            <li data-name='google'>谷歌</li>
+            <li data-name='baidu'>百度</li>
+            <li data-name="txy">腾讯云</li>
+            <li data-name="wyyy">网易音乐</li>
+            <li data-name='wyxw'>网易新闻</li>
+            <li data-name='txxw'>TX新闻</li>
+            <li data-name='QQyy'>QQ音乐</li>
+            <li data-name='yy'>音乐</li>
+        </ul>
+    </div>
+    <footer>
+        <p>© 2016 <a href="https://github.com/Andyliwr">lidikang</a> and <a href="https://github.com/wispyoureyes">wuyanqian</a>
+            Design. All Right Reserved.</p>
+    </footer>
+    <!--引入前端开发js工具--zeptoJS或者Jquery-->
+    <script type="text/javascript" src="scripts/lib/zepto.1.6.min.js"></script>
+    <!--<script type="text/javascript" src="scripts/lib/jquery-2.1.4.min.js"></script>-->
+    <!--引入搜索的js-->
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script>
+        $(function () {
+            var search = new $.jqz_searcher({
+                obj: '#searcher',
+                cell: '#con li',
+                valueObj: '',
+                dataType: 'data-name',
+                fun: function (n) {
+                    $('.num').text(n);
+                }
+            });
+            $('button').click(function () {
+                search.data_reverse();
+            })
+        })
+    </script>
+</div>
+</body>
+</html>
