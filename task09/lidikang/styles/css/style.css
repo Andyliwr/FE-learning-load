@@ -153,15 +153,71 @@ body {
 	background-position: center top;*/ }
 
 /*雪碧图样式*/
-.logo-icon, .search-icon, .user-icon, .personalTable-icon, .gray-right-icon {
+.logo-icon, .search-icon, .x-icon, .user-icon, .personalTable-icon, .gray-right-icon, .gray-left-icon, .white-down-icon, .white-file-icon, .gray-file-icon, .gray-fileSet-icon, .white-fileSet-icon, .collect-icon, .share-icon, .gallery-icon, .grownHistory-icon, .myInfo-icon, .revert-icon, .hostory-icon {
   background: url("../../images/sprite.png") no-repeat; }
 
-.personalTable-icon, gray-right-icon, white-down-icon {
+.search-icon {
+  background-size: 900%;
+  background-position: -30px -1px; }
+
+.personalTable-icon, .gray-right-icon, .white-down-icon, .white-file-icon, .gray-file-icon, .gray-fileSet-icon, .white-fileSet-icon, .collect-icon, .share-icon, .gallery-icon, .grownHistory-icon, .myInfo-icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   vertical-align: text-bottom;
   margin-right: 6px; }
+
+.personalTable-icon {
+  background-size: 900%;
+  background-position: -30px -1px; }
+
+.gray-right-icon {
+  background-size: 900%;
+  background-position: -84px -2px; }
+
+.white-down-icon {
+  background-size: 800%;
+  background-position: -74px -25px; }
+
+.gray-fileSet-icon {
+  background-size: 900%;
+  background-position: -30px -27px; }
+
+.white-fileSet-icon {
+  background-size: 900%;
+  background-position: -59px -27px; }
+
+.white-file-icon {
+  background-size: 900%;
+  background-position: -4px -3px; }
+
+.gray-file-icon {
+  background-size: 900%;
+  background-position: -60px -3px; }
+
+.collect-icon {
+  background-size: 1000%;
+  background-position: -155px -5px; }
+
+.share-icon {
+  background-size: 900%;
+  background-position: -4px -27px; }
+
+.gallery-icon {
+  background-size: 1100%;
+  background-position: -173px -85px; }
+
+.grownHistory-icon {
+  background-size: 1000%;
+  background-position: -125px -77px; }
+
+.myInfo-icon {
+  background-size: 700%;
+  background-position: -107px -19px; }
+
+.revert-icon {
+  background-size: 700%;
+  background-position: -125px -94px; }
 
 /*公共样式*/
 .pull-right {
@@ -171,52 +227,104 @@ body {
     content: "";
     clear: both; }
 
+/*动画专属地带*/
+@keyframes width0To500 {
+  from {
+    width: 0; }
+  to {
+    width: 500px; } }
+
+.width0To500 {
+  animation: width0To500 1s; }
+
 /*开始自己的样式--header*/
 header {
   height: 60px;
   background-color: #2189c0;
   padding: 0 4%; }
-  header nav .logo-icon {
-    background-size: 390%;
-    background-position: -6px -60px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    /*使logo垂直居中*/
-    margin-top: 5px; }
-  header nav .pull-right {
-    width: 400px;
-    /*去除google浏览器给获取了焦点的input加的默认边框*/ }
-    header nav .pull-right input.search-icon {
-      width: 300px;
-      height: 30px;
-      border: none;
-      border-radius: 20px;
-      background-color: #fff;
-      background-size: 60%;
-      background-position: -100px -23px;
-      padding: 4px 10%;
-      margin-top: 15px;
-      margin-right: 28px; }
-    header nav .pull-right input.search-icon:focus {
-      outline: none; }
-    header nav .pull-right a[href="/login"] {
-      /*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
-      position: absolute;
-      height: 60px;
+  header nav {
+    position: relative; }
+    header nav .logo-icon {
+      background-size: 390%;
+      background-position: -6px -60px;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      /*使logo垂直居中*/
+      margin-top: 5px; }
+    header nav > .pull-right {
       padding-top: 18px;
-      color: #fff;
-      /*去除a标签默认的下划线*/
-      text-decoration: none;
-      font-size: 14px; }
-      header nav .pull-right a[href="/login"] .user-icon {
+      width: 90px; }
+      header nav > .pull-right .search-icon {
         display: inline-block;
         width: 24px;
         height: 24px;
-        vertical-align: middle;
-        background-size: 850%;
-        background-position: -154px -30px;
-        margin-right: 6px; }
+        background-size: 700%;
+        background-position: -103px -23px; }
+      header nav > .pull-right a[href="/login"] {
+        /*为了将a和input放在一行，先设置父级元素pull-right的width为400px，然后将a绝对定位*/
+        position: absolute;
+        color: #fff;
+        /*去除a标签默认的下划线*/
+        text-decoration: none;
+        font-size: 14px; }
+        header nav > .pull-right a[href="/login"] .user-icon {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          vertical-align: middle;
+          background-size: 850%;
+          background-position: -154px -30px;
+          margin-right: 6px; }
+    header nav .search-input {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 60px;
+      width: 500px;
+      background: #2189c0;
+      padding-top: 15px;
+      box-sizing: border-box;
+      display: none; }
+      header nav .search-input .search-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-size: 700%;
+        background-position: -103px -23px;
+        vertical-align: middle; }
+      header nav .search-input input {
+        border: none;
+        background: none;
+        height: 30px;
+        width: 36%; }
+        header nav .search-input input:focus {
+          outline: none; }
+      header nav .search-input > .abs-right {
+        width: 43%;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        white-space: nowrap;
+        overflow: hidden; }
+        header nav .search-input > .abs-right span {
+          display: inline-block;
+          width: 50px;
+          height: 20px;
+          background: #eee;
+          border-radius: 2px;
+          margin-right: 10px;
+          font-size: 12px;
+          text-align: center;
+          cursor: pointer; }
+        header nav .search-input > .abs-right .x-icon {
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          vertical-align: middle;
+          background: url(../../images/sprite.png) no-repeat;
+          background-position: -209px -4px;
+          background-size: 1000%; }
 
 /*主体的样式*/
 .content {
@@ -224,11 +332,126 @@ header {
   .content .content_right {
     width: 100%;
     float: left;
-    padding-left: 250px;
+    padding-left: 300px;
     box-sizing: border-box; }
+    .content .content_right .route {
+      height: 30px;
+      background: #fff;
+      padding-left: 20px;
+      color: #b9b9b9;
+      font-size: 14px; }
+      .content .content_right .route > span {
+        line-height: 30px;
+        padding: 0 4px; }
+        .content .content_right .route > span:last-child {
+          color: #5a75ff; }
+    .content .content_right .right-main {
+      background: #EDEDED;
+      padding: 20px 50px; }
+      .content .content_right .right-main .search-setting {
+        background: #fff;
+        height: 80px;
+        font-size: 14px; }
+        .content .content_right .right-main .search-setting > div {
+          height: 80px;
+          padding-top: 15px; }
+          .content .content_right .right-main .search-setting > div select {
+            height: 25px; }
+        .content .content_right .right-main .search-setting .first-item {
+          padding-left: 30px; }
+          .content .content_right .right-main .search-setting .first-item > select {
+            width: 40%;
+            margin-left: 10px; }
+        .content .content_right .right-main .search-setting .sell-buy select {
+          margin-left: 10px;
+          width: 64%; }
+        .content .content_right .right-main .search-setting .sell-buy .sell-buy-container > div {
+          line-height: 30px;
+          margin-top: -4px;
+          display: inline-block;
+          width: 70%; }
+        .content .content_right .right-main .search-setting .sell-buy .revert-icon {
+          display: inline-block;
+          height: 40px;
+          width: 10% !important;
+          margin-left: -20px; }
+        .content .content_right .right-main .search-setting .date-select {
+          line-height: 33px;
+          margin-top: -9px; }
+          .content .content_right .right-main .search-setting .date-select > select, .content .content_right .right-main .search-setting .date-select > input {
+            margin-left: 10px; }
+          .content .content_right .right-main .search-setting .date-select > input {
+            width: 36%;
+            height: 20px;
+            margin-right: 10px; }
+          .content .content_right .right-main .search-setting .date-select #people_num {
+            margin-right: 10px; }
+        .content .content_right .right-main .search-setting .col-md-2 button {
+          background: #2189c0;
+          border: none;
+          border-radius: 4px;
+          padding: 4px 12px;
+          margin-top: 12px;
+          color: #fff;
+          font-size: 15px; }
+      .content .content_right .right-main .assginNum {
+        background-color: #fff;
+        height: 60px;
+        margin-top: 10px; }
+        .content .content_right .right-main .assginNum .padding {
+          padding: 0 30px;
+          position: relative; }
+          .content .content_right .right-main .assginNum .padding .gray-left-icon, .content .content_right .right-main .assginNum .padding .gray-right-icon {
+            height: 58px;
+            width: 30px;
+            position: absolute;
+            border: 1px solid #cccccc; }
+          .content .content_right .right-main .assginNum .padding .gray-left-icon {
+            right: 0;
+            background-size: 900%;
+            background-position: -3px -157px;
+            border-left: none; }
+          .content .content_right .right-main .assginNum .padding .gray-right-icon {
+            left: 0;
+            margin-right: 0;
+            background-size: 900%;
+            background-position: -46px -157px;
+            border-right: none; }
+          .content .content_right .right-main .assginNum .padding .col-sm-2 {
+            background: #EDEDED; }
+            .content .content_right .right-main .assginNum .padding .col-sm-2 > div {
+              text-align: center;
+              margin-left: 6px;
+              height: 60px;
+              box-sizing: border-box;
+              border: 1px solid #cccccc;
+              background: #fff; }
+              .content .content_right .right-main .assginNum .padding .col-sm-2 > div.assginNum-active {
+                border-top: 4px solid #2189c0; }
+              .content .content_right .right-main .assginNum .padding .col-sm-2 > div > p {
+                line-height: 30px;
+                font-size: 14px; }
+                .content .content_right .right-main .assginNum .padding .col-sm-2 > div > p:last-child {
+                  margin-top: -5px; }
+                  .content .content_right .right-main .assginNum .padding .col-sm-2 > div > p:last-child .num {
+                    font-size: 18px;
+                    color: sandybrown; }
+          .content .content_right .right-main .assginNum .padding .last > div {
+            margin-right: 6px; }
+        .content .content_right .right-main .assginNum .display-none {
+          display: none; }
+        .content .content_right .right-main .assginNum .col-sm-3 .hostory-icon {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          background-size: 300%;
+          background-position: -55px -48px;
+          vertical-align: middle;
+          margin-left: 16px; }
   .content .content_left {
     float: left;
-    width: 250px;
+    width: 300px;
+    box-sizing: border-box;
     margin-left: -100%;
     background-color: #2b2e3d;
     /*等高布局*/
@@ -266,10 +489,24 @@ header {
     .content .content_left .content_left_ul {
       list-style: none;
       color: #6c7b8e; }
+      .content .content_left .content_left_ul > li {
+        padding: 10px 0; }
       .content .content_left .content_left_ul li.hasSubUl {
         color: #fff; }
         .content .content_left .content_left_ul li.hasSubUl .personalTable-icon {
           background-size: 900%;
           background-position: -30px -1px; }
         .content .content_left .content_left_ul li.hasSubUl ul.subUl {
-          list-style: none; }
+          list-style: none;
+          margin-left: 20px; }
+          .content .content_left .content_left_ul li.hasSubUl ul.subUl .gray-right-icon {
+            margin-right: 2px; }
+          .content .content_left .content_left_ul li.hasSubUl ul.subUl .white-down-icon {
+            margin-right: 2px; }
+          .content .content_left .content_left_ul li.hasSubUl ul.subUl li {
+            padding: 5px; }
+          .content .content_left .content_left_ul li.hasSubUl ul.subUl .subSubUl {
+            margin-left: 40px;
+            list-style: none; }
+          .content .content_left .content_left_ul li.hasSubUl ul.subUl .not_show > .subSubUl {
+            display: none; }
