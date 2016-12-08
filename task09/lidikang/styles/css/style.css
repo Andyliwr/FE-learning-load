@@ -158,7 +158,8 @@ body {
 
 .search-icon {
   background-size: 900%;
-  background-position: -30px -1px; }
+  background-position: -30px -1px;
+  cursor: pointer; }
 
 .personalTable-icon, .gray-right-icon, .white-down-icon, .white-file-icon, .gray-file-icon, .gray-fileSet-icon, .white-fileSet-icon, .collect-icon, .share-icon, .gallery-icon, .grownHistory-icon, .myInfo-icon {
   display: inline-block;
@@ -393,9 +394,9 @@ header {
           padding: 4px 12px;
           margin-top: 12px;
           color: #fff;
-          font-size: 15px; }
+          font-size: 15px;
+          cursor: pointer; }
       .content .content_right .right-main .assginNum {
-        background-color: #fff;
         height: 60px;
         margin-top: 10px; }
         .content .content_right .right-main .assginNum .padding {
@@ -405,7 +406,8 @@ header {
             height: 58px;
             width: 30px;
             position: absolute;
-            border: 1px solid #cccccc; }
+            border: 1px solid #cccccc;
+            background-color: #fff; }
           .content .content_right .right-main .assginNum .padding .gray-left-icon {
             right: 0;
             background-size: 900%;
@@ -440,6 +442,9 @@ header {
             margin-right: 6px; }
         .content .content_right .right-main .assginNum .display-none {
           display: none; }
+        .content .content_right .right-main .assginNum .col-sm-3 .margin-left {
+          margin-left: 6px;
+          background-color: #fff; }
         .content .content_right .right-main .assginNum .col-sm-3 .hostory-icon {
           display: inline-block;
           width: 60px;
@@ -448,6 +453,230 @@ header {
           background-position: -55px -48px;
           vertical-align: middle;
           margin-left: 16px; }
+      .content .content_right .right-main .stat-header {
+        margin-top: 20px;
+        margin-bottom: 2px;
+        font-size: 14px; }
+      .content .content_right .right-main .stat .green {
+        border-left: 4px solid #43b29f !important; }
+        .content .content_right .right-main .stat .green .right-div {
+          background-color: #43b29f; }
+      .content .content_right .right-main .stat .blue {
+        border-left: 4px solid #398ac1 !important; }
+        .content .content_right .right-main .stat .blue .right-div {
+          background-color: #398ac1; }
+      .content .content_right .right-main .stat .red {
+        border-left: 4px solid #cf4b36 !important; }
+        .content .content_right .right-main .stat .red .right-div {
+          background-color: #cf4b36; }
+      .content .content_right .right-main .stat .yellow {
+        border-left: 4px solid #e1cd46 !important; }
+        .content .content_right .right-main .stat .yellow .right-div {
+          background-color: #e1cd46; }
+      .content .content_right .right-main .stat .col-md-3 {
+        height: 70px; }
+        .content .content_right .right-main .stat .col-md-3 .margin-right {
+          position: relative;
+          margin-right: 30px;
+          border: 1px solid #eee;
+          border-radius: 2px;
+          background-color: #fff;
+          height: 100%;
+          text-align: left; }
+          .content .content_right .right-main .stat .col-md-3 .margin-right.last {
+            margin-right: 0; }
+          .content .content_right .right-main .stat .col-md-3 .margin-right .text {
+            line-height: 20px;
+            font-size: 12px;
+            padding-top: 13px;
+            padding-left: 10px; }
+          .content .content_right .right-main .stat .col-md-3 .margin-right .chengjiao {
+            color: #999; }
+          .content .content_right .right-main .stat .col-md-3 .margin-right .right-div {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 10px;
+            right: 10px; }
+      .content .content_right .right-main .detail {
+        margin-top: 20px; }
+        .content .content_right .right-main .detail h1 {
+          background-color: #f4f5f7;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #aaabad;
+          padding: 0 20px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px; }
+        .content .content_right .right-main .detail .detail-table {
+          height: 350px;
+          border: 1px solid #999;
+          border-radius: 10px;
+          margin-right: 15px;
+          background-color: #fff; }
+          .content .content_right .right-main .detail .detail-table .detail-table-tab {
+            padding: 10px 20px; }
+            .content .content_right .right-main .detail .detail-table .detail-table-tab .tab-ul {
+              width: 100%; }
+              .content .content_right .right-main .detail .detail-table .detail-table-tab .tab-ul > li {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 14px;
+                width: 15%;
+                border-radius: 5px 5px 0 0;
+                box-sizing: border-box;
+                background-color: #edecf1; }
+                .content .content_right .right-main .detail .detail-table .detail-table-tab .tab-ul > li.active-tab {
+                  border: 1px solid #999;
+                  border-bottom: none;
+                  background-color: #fff;
+                  height: 31px;
+                  position: relative;
+                  top: 1px; }
+          .content .content_right .right-main .detail .detail-table .tab-content {
+            display: none;
+            border: 1px solid #999;
+            min-height: 240px; }
+            .content .content_right .right-main .detail .detail-table .tab-content.active {
+              display: block; }
+            .content .content_right .right-main .detail .detail-table .tab-content table {
+              width: 88%;
+              margin: 20px 6%;
+              border-collapse: collapse; }
+              .content .content_right .right-main .detail .detail-table .tab-content table td {
+                border: 1px solid #999;
+                border-collapse: collapse;
+                font-size: 14px;
+                color: #666;
+                padding: 6px 10px;
+                text-align: center; }
+        .content .content_right .right-main .detail .detail-info {
+          height: 350px;
+          border: 1px solid #999;
+          border-radius: 10px;
+          background-color: #fff; }
+          .content .content_right .right-main .detail .detail-info .search-div {
+            padding: 20px 8% 0 8%; }
+            .content .content_right .right-main .detail .detail-info .search-div .des {
+              color: #999;
+              font-size: 14px; }
+            .content .content_right .right-main .detail .detail-info .search-div h2 {
+              font-size: 14px;
+              padding: 10px 0;
+              font-weight: normal; }
+            .content .content_right .right-main .detail .detail-info .search-div .col-xs-4 {
+              border: 1px solid #999;
+              border-left: 0;
+              padding: 4px 0px;
+              font-size: 13px; }
+              .content .content_right .right-main .detail .detail-info .search-div .col-xs-4 .des {
+                font-size: 14px; }
+            .content .content_right .right-main .detail .detail-info .search-div .col-xs-8 {
+              border-top: 1px solid #999;
+              border-bottom: 1px solid #999;
+              padding: 4px 0px 4px 10px;
+              font-size: 13px; }
+              .content .content_right .right-main .detail .detail-info .search-div .col-xs-8 .des {
+                font-size: 14px; }
+            .content .content_right .right-main .detail .detail-info .search-div .more-info textarea {
+              width: 100%;
+              height: 100px;
+              border: none;
+              border-bottom: 1px solid #999; }
+            .content .content_right .right-main .detail .detail-info .search-div .search-start {
+              height: 40px;
+              line-height: 40px;
+              font-size: 14px; }
+              .content .content_right .right-main .detail .detail-info .search-div .search-start input[type="checkbox"] {
+                vertical-align: middle;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                -moz-appearance: none;
+                     appearance: none;
+                -webkit-appearance: none;
+                cursor: pointer;
+                background: #fff;
+                border: 1px solid #999; }
+                .content .content_right .right-main .detail .detail-info .search-div .search-start input[type="checkbox"]:checked {
+                  outline: none;
+                  background-color: #eee; }
+                  .content .content_right .right-main .detail .detail-info .search-div .search-start input[type="checkbox"]:checked:after {
+                    content: url("../../images/checked.png");
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    left: -1px;
+                    top: -1px; }
+              .content .content_right .right-main .detail .detail-info .search-div .search-start button.pull-right {
+                height: 30px;
+                width: 60px;
+                border: none;
+                background-color: #2189c0;
+                margin-top: 5px;
+                border-radius: 4px;
+                color: #fff; }
+      .content .content_right .right-main .riliAndrank {
+        margin-top: 20px; }
+        .content .content_right .right-main .riliAndrank h1 {
+          background-color: #f4f5f7;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #aaabad;
+          padding: 0 20px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px; }
+        .content .content_right .right-main .riliAndrank .rili {
+          background-color: #fff;
+          height: 444px;
+          border: 1px solid #999;
+          border-radius: 10px;
+          overflow-y: hidden; }
+        .content .content_right .right-main .riliAndrank .rank .margin-left {
+          margin-left: 20px;
+          background-color: #fff;
+          height: 444px;
+          border: 1px solid #999;
+          border-radius: 10px; }
+        .content .content_right .right-main .riliAndrank .rank #rankTable {
+          width: 88%;
+          margin: 20px 6%;
+          text-align: center;
+          border-collapse: collapse; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable th, .content .content_right .right-main .riliAndrank .rank #rankTable td {
+            border: 1px solid #999;
+            height: 30px; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable thead th:first-child, .content .content_right .right-main .riliAndrank .rank #rankTable tbody > tr > td:first-child {
+            width: 14%; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable thead th:nth-child(2), .content .content_right .right-main .riliAndrank .rank #rankTable tbody > tr > td:nth-child(2) {
+            width: 22%; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable thead th:last-child, .content .content_right .right-main .riliAndrank .rank #rankTable tbody > tr > td:last-child {
+            width: 64%;
+            text-align: left;
+            padding-left: 20px; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable tbody > tr > td:last-child {
+            font-size: 10px; }
+          .content .content_right .right-main .riliAndrank .rank #rankTable .progress {
+            display: inline-block;
+            height: 6px;
+            margin-left: 10px;
+            width: 160px;
+            background-color: #dcdcdc;
+            vertical-align: middle;
+            border-radius: 3px; }
+            .content .content_right .right-main .riliAndrank .rank #rankTable .progress .loaded {
+              display: inline-block;
+              height: 6px;
+              position: relative;
+              top: -6px;
+              border-radius: 3px; }
   .content .content_left {
     float: left;
     width: 300px;

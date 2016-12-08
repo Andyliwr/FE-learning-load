@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="./lib/almanac/src/almanac.css"/>
     <title>百度前端技术Task_009</title>
 </head>
 <body>
@@ -90,164 +91,181 @@
                 </div>
                 <div class="assginNum row">
                     <div class="col-sm-9 padding row">
-                        <div class="gray-right-icon"></div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div id="timeTunbo-left" class="gray-right-icon"></div>
+                        <div class="col-xs-4 col-sm-2" data-index="0">
                             <div class="assginNum-active">
                                 <p class="padding_time">10:00am</p>
                                 <p class="padding_amount">￥<span class="num">1800</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-2" data-index="1">
                             <div>
                                 <p class="padding_time">11:00am</p>
                                 <p class="padding_amount">￥<span class="num">1100</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-2" data-index="2">
                             <div>
                                 <p class="padding_time">12:00am</p>
                                 <p class="padding_amount">￥<span class="num">1200</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-2" data-index="3">
                             <div>
                                 <p class="padding_time">01:00pm</p>
                                 <p class="padding_amount">￥<span class="num">1400</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-2" data-index="4">
                             <div>
                                 <p class="padding_time">02:00pm</p>
                                 <p class="padding_amount"><span class="num">1500</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 last">
+                        <div class="col-xs-4 col-sm-2 last" data-index="5">
                             <!--其实你如果不用col，每个右边界其实挺好实现的，col是连在一起的无法实现margin-right，所以间隔效果只能在div内部实现-->
                             <div>
                                 <p class="padding_time">03:00pm</p>
                                 <p class="padding_amount">￥<span class="num">1800</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none">
+                        <div class="col-xs-4 col-sm-2 display-none" data-index="6">
                             <div class="assginNum-active">
                                 <p class="padding_time">10:00am</p>
                                 <p class="padding_amount">￥<span class="num">1800</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none">
+                        <div class="col-xs-4 col-sm-2 display-none" data-index="7">
                             <div>
                                 <p class="padding_time">11:00am</p>
                                 <p class="padding_amount">￥<span class="num">1100</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none">
+                        <div class="col-xs-4 col-sm-2 display-none" data-index="8">
                             <div>
                                 <p class="padding_time">12:00am</p>
                                 <p class="padding_amount">￥<span class="num">1200</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none">
+                        <div class="col-xs-4 col-sm-2 display-none" data-index="9">
                             <div>
                                 <p class="padding_time">01:00pm</p>
                                 <p class="padding_amount">￥<span class="num">1400</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none">
+                        <div class="col-xs-4 col-sm-2 display-none" data-index="10">
                             <div>
                                 <p class="padding_time">02:00pm</p>
                                 <p class="padding_amount"><span class="num">1500</span></p>
                             </div>
                         </div>
-                        <div class="col-xs-4 col-sm-2 display-none last">
+                        <div class="col-xs-4 col-sm-2 display-none last" data-index="11">
                             <!--其实你如果不用col，每个右边界其实挺好实现的，col是连在一起的无法实现margin-right，所以间隔效果只能在div内部实现-->
                             <div>
                                 <p class="padding_time">03:00pm</p>
                                 <p class="padding_amount">￥<span class="num">1800</span></p>
                             </div>
                         </div>
-                        <div class="gray-left-icon"></div>
+                        <div id="timeTunbo-right" class="gray-left-icon"></div>
                     </div>
-                    <div class="col-sm-3"><span class="hostory-icon"></span>历史查询</div>
+                    <div class="col-sm-3">
+                        <div class="margin-left"><span class="hostory-icon"></span>历史查询</div>
+                    </div>
                 </div>
+                <p class="stat-header">2016年4月份统计</p>
                 <div class="stat row">
-                    <div class="col-xs-6 col-md-3 green">133311<br/>成交量
-                        <div class="pull-right"></div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="margin-right green">
+                            <div class="text">133311<br/><span class="chengjiao">成交量</span></div>
+                            <div class="right-div"></div>
+                        </div>
                     </div>
-                    <div class="col-xs-6 col-md-3 blue">133311<br/>成交量
-                        <div class="pull-right"></div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="margin-right blue">
+                            <div class="text">133311<br/><span class="chengjiao">成交量</span></div>
+                            <div class="right-div"></div>
+                        </div>
                     </div>
-                    <div class="col-xs-6 col-md-3 red">133311<br/>成交量
-                        <div class="pull-right"></div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="margin-right red">
+                            <div class="text">133311<br/><span class="chengjiao">成交量</span></div>
+                            <div class="right-div"></div>
+                        </div>
                     </div>
-                    <div class="col-xs-6 col-md-3 yellow">133311<br/>成交量
-                        <div class="pull-right"></div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="margin-right yellow last">
+                            <div class="text">133311<br/><span class="chengjiao">成交量</span></div>
+                            <div class="right-div"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="detail row">
-                    <div class="col-md-7 detail-table">
-                        <h1>第一组项目</h1>
-                        <div class="detail-table-tab">
-                            <ul class="tab-ul">
-                                <li data-index='1'>项目一</li>
-                                <li data-index='2'>项目二</li>
-                                <li data-index='3'>项目三</li>
-                                <li data-index='4'>项目四</li>
-                                <li data-index='5'>项目五</li>
-                            </ul>
-                            <div class="tab-content" data-index="1">
-                                <table>
-                                    <thead></thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>购买材料一</td>
-                                        <td>购买材料一</td>
-                                        <td>购买材料一</td>
-                                        <td>购买材料一</td>
-                                    </tr>
-                                    <tr>
-                                        <td>购买材料二</td>
-                                        <td>购买材料二</td>
-                                        <td>购买材料二</td>
-                                        <td>购买材料二</td>
-                                    </tr>
-                                    <tr>
-                                        <td>购买材料四</td>
-                                        <td>购买材料四</td>
-                                        <td>购买材料四</td>
-                                        <td>购买材料四</td>
-                                    </tr>
-                                    <tr>
-                                        <td>购买材料六</td>
-                                        <td>购买材料六</td>
-                                        <td>购买材料六</td>
-                                        <td>购买材料六</td>
-                                    </tr>
-                                    <tr>
-                                        <td>购买材料十三</td>
-                                        <td>购买材料十三</td>
-                                        <td>购买材料十三</td>
-                                        <td>购买材料十三</td>
-                                    </tr>
-                                    <tr>
-                                        <td>购买材料二十</td>
-                                        <td>购买材料二十</td>
-                                        <td>购买材料二十</td>
-                                        <td>购买材料二十</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tab-content" data-index="2">
-                                我是tab2
-                            </div>
-                            <div class="tab-content" data-index="3">
-                                我是tab3
-                            </div>
-                            <div class="tab-content" data-index="4">
-                                我是tab4
-                            </div>
-                            <div class="tab-content" data-index="5">
-                                我是tab5
+                    <div class="col-md-7">
+                        <div class="detail-table">
+                            <h1>第一组项目</h1>
+                            <div class="detail-table-tab">
+                                <ul class="tab-ul">
+                                    <li data-index='1' class="active-tab">项目一</li>
+                                    <li data-index='2'>项目二</li>
+                                    <li data-index='3'>项目三</li>
+                                    <li data-index='4'>项目四</li>
+                                    <li data-index='5'>项目五</li>
+                                </ul>
+                                <div class="tab-content active" data-index="1">
+                                    <table>
+                                        <thead></thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                            <td>购买材料一</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                            <td>购买材料二</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                            <td>购买材料四</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                            <td>购买材料六</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                            <td>购买材料十三</td>
+                                        </tr>
+                                        <tr>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                            <td>购买材料二十</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-content" data-index="2">
+                                    我是tab2
+                                </div>
+                                <div class="tab-content" data-index="3">
+                                    我是tab3
+                                </div>
+                                <div class="tab-content" data-index="4">
+                                    我是tab4
+                                </div>
+                                <div class="tab-content" data-index="5">
+                                    我是tab5
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,72 +286,82 @@
                             </div>
                             <div class="more-info">
                                 <p class="des">详细描述</p>
-                                <p>该项目的前负责人是.....</p>
+                                <textarea>该项目的前负责人是.....</textarea>
                             </div>
                             <div class="search-start">
-                                <input type="checkbox" name="agree"/><span>遵守保密协议</span>
-                                <button>搜索</button>
+                                <input type="checkbox" name="agree" checked/><span>遵守保密协议</span>
+                                <button class="pull-right">搜索</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="riliAndrank row">
-                    <div class="col-md-7 rili">
+                    <div class="col-md-6 rili">
                         <h1>日历</h1>
-                        <div class="options">
-                            <select name="rili_year" id="rili_year">
-                                <option value="2016">2016年</option>
-                                <option value="2015">2015年</option>
-                                <option value="2014">2014年</option>
-                                <option value="2013">2013年</option>
-                                <option value="2012">2012年</option>
-                            </select>
-                            <select name="rili_month" id="rili_month">
-                                <option value="1">1月</option>
-                                <option value="2">2月</option>
-                                <option value="3">3月</option>
-                                <option value="4">4月</option>
-                                <option value="5">5月</option>
-                            </select>
-                            <select name="rili_day" id="rili_day">
-                                <option value="1">1日</option>
-                                <option value="2">2日</option>
-                                <option value="3">3日</option>
-                                <option value="4">4日</option>
-                                <option value="5">5日</option>
-                            </select>
-                            <button>返回今天</button>
-                        </div>
-                        <div class="rili-everyday">
-                            <!-- 自己用js生成 -->
-                            <table>
-                                <!-- <thead>
-                                    <td>一</td>
-                                    <td>二</td>
-                                    <td>三</td>
-                                    <td>四</td>
-                                    <td>五</td>
-                                    <td>六</td>
-                                    <td>日</td>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>1<br />愚人节</td>
-                                        <td>2</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody> -->
-                            </table>
+                        <div class="master" id="id_container">
+                            <!-- 假日方案 -->
+                            <div class="zh-almanac" id="id_almanac" data-id="2">
+                                <div class="hint-bar clearfix">
+                                    <div class="control-bar">
+                                        <div class="control-module year-control">
+                                            <a class="prev" id="nianjian" action="prev" href="javascript:;"></a>
+                                            <div class="control"><i class="trigger"></i>
+                                                <div val="2015" class="field year">2015年</div>
+                                            </div>
+                                            <a class="next" id="nianjia" action="next" href="javascript:;"></a>
+                                            <ul class="list year-list hidden">
+                                            </ul>
+                                        </div>
+                                        <div class="control-module month-control">
+                                            <a class="prev" id="yuejian" action="prev" href="javascript:;"></a>
+                                            <div class="control"><i class="trigger"></i>
+                                                <div val="7" class="field month">7月</div>
+                                            </div>
+                                            <a class="next" id="yuejia"  action="next" href="javascript:;"></a>
+                                            <ul class="list month-list hidden">
+                                            </ul>
+                                        </div>
+                                        <div class="control-module day-control">
+                                            <a class="prev" id="rijian" action="prev" href="javascript:;"></a>
+                                            <div class="control"><i class="trigger"></i>
+                                                <div val="1" class="field day">1日</div>
+                                            </div>
+                                            <a class="next" id="rijia"  action="next" href="javascript:;"></a>
+                                            <ul class="list day-list hidden">
+                                            </ul>
+                                        </div>
+                                        <div class="btn-today">返回今天</div>
+                                    </div>
+                                </div>
+                                <div class="alc-container">
+                                    <div class="left">
+                                        <ul class="dates-hd clearfix">
+                                            <li data-id="6" class="days-title last ">日</li>
+                                            <li data-id="0" class="days-title ">一</li>
+                                            <li data-id="1" class="days-title ">二</li>
+                                            <li data-id="2" class="days-title ">三</li>
+                                            <li data-id="3" class="days-title ">四</li>
+                                            <li data-id="4" class="days-title ">五</li>
+                                            <li data-id="5" class="days-title ">六</li>
+                                        </ul>
+                                        <ol class="dates-bd clearfix">
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-5 rank">
-                        <h1>汽车行业品牌榜</h1>
-                        <!-- 自己用js生成 -->
-                        <table></table>
+                    <div class="col-md-6 rank">
+                        <div class="margin-left">
+                            <h1>汽车行业品牌榜</h1>
+                            <!-- 自己用js生成 -->
+                            <table id="rankTable">
+                                <thead><th>排名</th><th>品牌</th><th>搜索指数</th></thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,6 +412,7 @@
 </div>
 <!--这里引入jquery,一定要记得写，不然写的js不会执行的-->
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script type="text/javascript" src="lib/almanac/src/almanac.js"></script>
 <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>
