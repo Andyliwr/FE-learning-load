@@ -44,7 +44,7 @@
 	}
 }
 
-@media (min-width:1220){
+@media (min-width:1220px){
 	@for $i from 1 to 12{
 		col-lg-#{$i} {
 			width: $i * 8.333%;

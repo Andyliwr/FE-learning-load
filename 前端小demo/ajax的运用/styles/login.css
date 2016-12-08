@@ -39,6 +39,7 @@ html,body{
 	
 }
 .login>p>a{
+	font-size: 14px;
 	text-decoration: none;
 }
 .login input{

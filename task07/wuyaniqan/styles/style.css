@@ -391,7 +391,7 @@ h5{
 	box-sizing: border-box;
 }
 .lunbo-div{
-display: none;
+	display: none;
 }
 .lunbo-div:first-child{
 	display: block;
@@ -411,7 +411,8 @@ display: none;
 	font-size: 12px;
 	line-height: 2.2rem;
 	text-align: left;
-
+	display: inline-block;
+	height: 150px;
 }
 .nw-lunbo button{
 	cursor: pointer;
@@ -420,7 +421,7 @@ display: none;
 	font-size: 2rem;
 	color: #e74f4d;
 	background: #fff;
-	margin-top: 5rem;
+	margin-top: 2rem;
 	border: 1px solid #e74f4d;
 }
 .lunbo-control>span{
@@ -438,7 +439,6 @@ display: none;
 }
 /*新时代*/
 .newtime{
-	height: 5.2rem;
 	width: 100%;
 }
 .newtime1{
@@ -580,7 +580,9 @@ display: none;
 	font-family: "宋体";
 	color: #666;
 	text-align: right;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
+	display: inline-block;
+	position: absolute;
 }
 .volunleft-more>img{
 	cursor: pointer;
@@ -609,6 +611,7 @@ form{
 	box-sizing: border-box;
 }
 .des{
+	vertical-align: top;
 	width:98%;
 	height:160px;
 	color: #444;
