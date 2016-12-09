@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+	<meta charset="utf-8" >
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="style-test.css">
+	<script type="text/javascript" src="js-test.js"></script>
+	<!--<script type="text/javascript" src="app.js"></script>-->
+	<script type="text/javascript">
+		function getInfo(){
+			var s = "";
+			s += " 屏幕分辨率的高："+ window.screen.height+"\n";
+			s += " 屏幕分辨率的宽："+ window.screen.width+"\n";
+			s += " 屏幕可用工作区高度："+ window.screen.availHeight+"\n";
+			s += " 屏幕可用工作区宽度："+ window.screen.availWidth+"\n";
+			s += " 你的屏幕设置是 "+ window.screen.colorDepth +" 位彩色"+"\n";
+			s += " 你的屏幕分辨率 "+ window.devicePixelRatio +"\n";
+			alert (s);
+		}
+		getInfo();
+	</script>
+</head>
+<body>
+	<div id="test">
+		<img src="qqlogo_2x.png" />
+		<div>测试div1</div>
+		<img src="qqlogo_1x.png" />
+		<div>测试div2</div>
+		<img src="qqlogo_2x.png" />
+	</div>
+</body>
+</html>

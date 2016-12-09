@@ -1,0 +1,6 @@
+1、客户端存储的两种形式：
+	A、localStorage--没有时间限制的数据存储
+	B、sessionStorage--针对一个session的数据存储
+2、HTML5 Web存储和cookie的对比
+	A、cookie由每个对服务器的请求来传递，这使得cookie的速度很慢而且效率也不高，cookie不太适合大量数据的存储
+	B、cookie有一个用户可以自己设定的时间限定

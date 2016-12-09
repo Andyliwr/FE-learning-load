@@ -1,0 +1,109 @@
+#content {
+    background-color: white;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#daohang {
+    list-style-type: none;
+    position: absolute;
+}
+
+#daohang li {
+    font-size: 15px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 78.4px;
+    background-color: #4bb8b6;
+    border: 1px solid black;
+}
+
+#black {
+    color: black;
+}
+
+.clear {
+    clear: both;
+}
+
+#down {
+    float: left;
+    position: relative;
+    top: 57px;
+    left: 201px;
+    background-color: #62b8b7;
+    display: none;
+}
+
+#down ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 70px;
+}
+
+#down ul li:hover {
+    background-color: #3399ff;
+}
+
+#login {
+    background-color: #d2cfe5;
+    height: 230px;
+    width: 400px;
+    padding-top: 40px;
+    /*使div居中的方法*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.icon-user, .icon-key {
+    font-size: 25px;
+}
+
+#checkbox {
+    margin-left: 20px;
+    position: relative;
+    top: 3px;
+    left: -144px;
+}
+
+.inputclass {
+    height: 23px;
+    width: 200px;
+}
+
+#tip {
+    font-size: 10px;
+    position: relative;
+    top: 0px;
+    left: -144px;
+}
+
+#loginbutton {
+    padding: 0px;
+    margin: 0px;
+    background: url("button.png") no-repeat;
+    width: 180px;
+    height: 40px;
+    border: 0px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: auto;
+    display: block;
+    z-index: 0;
+}
+
+#tipdiv {
+    background-color: #4eb84a;
+    width: 150px;
+    height: 50px;
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 114px;
+    z-index: 1;
+}

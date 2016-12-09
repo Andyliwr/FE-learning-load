@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 测试浏览器的localStorage，本实例运行之后可以在chrome开发者工具中->Resource->Local Storage中看到相关的记录 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS position实例</title>
+    <link rel="stylesheet" href="../Canvas/Createjs/css/share.css">
+    <link rel="stylesheet" href="cssposition.css">
+    <script src="csspst.js"></script>
+</head>
+<body>
+<header class="EODream">
+    <h1>
+        <!-- ::before -->
+        css position
+        <!-- ::after -->
+    </h1>
+
+    <p>
+        详细展示<code>css position</code>的四个选项--<code>static、fixed、absolute、relative</code>对div位置的影响
+    </p>
+</header>
+<div id="content">
+    <h3>展示板</h3>
+    <!-- content内容已设定为居中，height为400px -->
+    <div id="display">
+
+    </div>
+    <h3>控制板</h3>
+    <table id="table1">
+        <tr>
+            <th id="th1">div名</th>
+            <th id="th2">position</th>
+            <th id="th3">四个位置属性</th>
+            <th id="th4">z—index</th>
+        </tr>
+        <tr>
+            <td>div1</td>
+            <td id="td1">
+                <input type="checkbox" id="checkbox1" />absolute <br/>
+                <input type="checkbox" id="checkbox2"/>relative <br/>
+                <input type="checkbox" id="checkbox3"/>static <br/>
+                <input type="checkbox" id="checkbox4"/>fixed <br/>
+            </td>
+            <td>
+                <table id="table2">
+                    <tr>
+                        <td>top</td>
+                        <td><input type="range" id="points1" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>bottom</td>
+                        <td><input type="range" id="points2" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>left</td>
+                        <td><input type="range" id="points3" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>right</td>
+                        <td><input type="range" id="points4" min="1" max="10" />
+                    </tr>
+                    <tr><td></td></tr>
+                </table>
+            </td>
+            <td id="td2">
+                <input type="checkbox" id="checkbox5" />z-index = 1 <br/>
+                <input type="checkbox" id="checkbox6" />z-index = 2 <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>div2</td>
+            <td id="td3">
+                <input type="checkbox" id="checkbox7" />absolute <br/>
+                <input type="checkbox" id="checkbox8"/>relative <br/>
+                <input type="checkbox" id="checkbox9"/>static <br/>
+                <input type="checkbox" id="checkbox10"/>fixed <br/>
+            </td>
+            <td>
+                <table id="table3">
+                    <tr>
+                        <td>top</td>
+                        <td><input type="range" id="points5" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>bottom</td>
+                        <td><input type="range" id="points6" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>left</td>
+                        <td><input type="range" id="points7" min="1" max="10" />
+                    </tr>
+                    <tr>
+                        <td>right</td>
+                        <td><input type="range" id="points8" min="1" max="10" />
+                    </tr>
+                    <tr><td></td></tr>
+                </table>
+            </td>
+            <td>
+                <input type="checkbox" id="checkbox11" />z-index = 1 <br/>
+                <input type="checkbox" id="checkbox12" />z-index = 2 <br/>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    <p>© 2016 Andyliwr Design. All Right Reserved.</p>
+</footer>
+</body>
+</html>

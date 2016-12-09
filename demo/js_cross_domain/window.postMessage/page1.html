@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh_CN">
+	<meta charset="utf-8">
+	<title>通过document.domain方法跨域</title>
+	
+</head>
+	<script type="text/javascript">
+		function onLoad() {
+			var iframe = document.getElementById('iframe');
+			var win = iframe.contentWindow;
+			win.postMessage('哈哈，我是来自page2.html的消息', '*');
+		}
+	</script>
+	<iframe id="iframe" src="http://www.andylistudio.com/page2.html" onload="onLoad()" width="500px" height="500px"></iframe>
+</html>

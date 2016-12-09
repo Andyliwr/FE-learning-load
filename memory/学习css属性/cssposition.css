@@ -1,0 +1,47 @@
+#content {
+    background-color: white;
+    height: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+#content h3{
+    background-color: white;
+}
+#display{
+    width: 600px;
+    height: 400px;
+    background-color: honeydew;
+    border: 1px solid;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#table1{
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    box-shadow: dimgrey 7px 7px;
+    border-radius: 10px;
+}
+#table1 tr th, #table1 tr td{
+    text-align: left;
+}
+#table1 tr td span{
+    width: 40px;
+    height: auto;
+    text-align: left;
+}
+
+#table1 tr #th1{
+    width:50px;
+}
+#table1 tr #th2{
+    width:100px;
+}
+#table1 tr #th3{
+    width:200px;
+}
+#table1 tr #th4{
+    width:100px;
+}

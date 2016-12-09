@@ -1,0 +1,104 @@
+Ctrl + 数字键来打开第N个标签页这种还要先数完再到键盘上找数字
+Ctrl + Page Up = 激活左边一个标签页
+Ctrl + Page Down = 激活右边一个标签页
+Ctrl + Tab = 切换标签页（从左向右）
+Ctrl + Shift + Tab = 切换标签页（从右向左）
+Ctrl + Shift + T = 重新载入关闭的标签页
+Alt + 左箭头 或 Backspace = 转到上一页
+Alt + 右箭头 或 Shift + Backspace = 转到下一页
+Esc = 停止读入页面（相当于按导航栏上的X）
+Space Bar (空白键) = 向下滚动页面（Google Reader里很实用）
+Ctrl + L 或 Alt + D = 移动光标至地址栏
+Ctrl + E 或 Ctrl + K = 移动光标至搜索栏
+Ctrl + D = 将当前页保存为书签
+Ctrl + Shift + D = 将所有页面保存为书签
+Ctrl + I 或 Ctrl + B = 在侧边栏打开书签
+Ctrl + Shift + B = 管理书签
+Ctrl + H = 在侧栏打开历史记录
+Ctrl + Shift + H = 打开“我的足迹”中的历史记录
+Ctrl + J = 打开下载列表
+Ctrl + F = 打开查找栏
+/ = 快速查找 （这个也很方便，但要注意按之前要切到半角，而且不能在文本输入的框体里）
+Ctrl + U = 查看源文件
+Ctrl + S = 打开“页面另存为…”
+Ctrl + Shift + Del = 清除隐私数据库
+Ctrl + Shift + J = Firefox的错误控制台
+Ctrl + Shift + X = 改变当前文字输入框的对齐方式
+
+firefox快捷键导航类：
+
+后退： Alt+左方向键 或 Backspace
+前进： Shift+Backspace 或 Alt+右方向键
+首页： Alt+Home
+停止： Esc
+
+firefox 快捷键编辑类：
+删除： Del
+重做： Ctrl+Y
+全选： Ctrl+A
+
+firefox快捷键当前页：
+到页面底部： End
+到页面顶部： Home
+放大文字： Ctrl++缩小文字： Ctrl+-
+恢复文本大小： Ctrl+0
+
+firefox 快捷键窗口和标签类：
+新建标签页： Ctrl+T
+新建窗口： Ctrl+N
+下一个标签页： Ctrl+Tab 或 Ctrl+PageDown
+在新标签页打开网址： Alt+Enter
+前一个标签页： Ctrl+Shift+Tab 或 Ctrl+PageUp
+撤销关闭标签页： Ctrl+Shift+T
+选择标签页 [1 to 8]： Ctrl+[1 到 8]
+选择最后标签页： Ctrl+9
+
+firefox快捷键工具类：
+下载： Ctrl+J
+历史： Ctrl+H
+
+firefox快捷键其他：
+补全 .com 地址： Ctrl+Enter
+补全 .net 地址： Shift+Enter
+补全 .org 地址： Ctrl+Shift+Enter
+全屏： F11
+选择地址条： Alt+D 或 F6 或 Ctrl+L
+选择或管理搜索引擎： Alt+上方向键 或 Alt+下方向键 或 F4
+
+1 加入收藏夹：ctrl-D
+2 书签：ctrl-B
+3 保存：ctrl-S
+4 定位到搜索框（百度）：ctrl-K
+5 关闭tab：ctrl-W
+6 浏览历史：ctrl-H
+7 清除上网记录：ctrl-shift-Del
+8 查看网页源代码：ctrl-U
+9 刷新：F5
+10 打开最近关闭的一个tab：ctrl-shift-T
+11 退出firefox：ctrl-Q
+12 新建一个tab：ctrl-T
+13 打开一个文件：ctrl-O
+14 定位到每一个tab：alt-N（N是tab自左向右的序号，从1开始，此功能使用于linux版）
+15 切换tab：ctrl-TAB
+
+
+F3
+查找下一处（向下）
+SHIFT + F3
+查找上一处（向上）
+
+
+3. 浏览操作
+CTRL + B
+打开书签侧栏
+CTRL + D
+当前页加入书签收藏
+CTRL + H
+打开历史侧栏
+CTRL + -缩小字体
+CTRL + +
+加大字体
+CTRL + 0（零）
+默认字体大小
+ALT + F4
+关闭当前浏览器
