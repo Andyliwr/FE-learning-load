@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <link rel="stylesheet" type="text/css" href="shuangfeiyi_Layout.css">
+</head>
+<body>
+<div class="Header">我是头部</div>
+<div class="Content">
+    <div class="center">
+        <div class="inner">我是中间，我在inner里</div>
+    </div>
+    <div class="left">我是左</div>
+    <!-- left的float是left， right的float是right，此时这两个div都是脱离文档流的，
+    main放在right的下面就随着文档流放在了这一行的中间 -->
+    <div class="right">我是右</div>
+
+</div>
+<div class="Footer">我是尾部</div>
+</body>
+</html>

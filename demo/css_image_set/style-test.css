@@ -1,0 +1,24 @@
+#test{
+	height: 44px;
+	width: 134px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -67px;
+	margin-top: -22px;
+}
+
+.qqlogo {
+  display: block;
+  width: 134px;
+  height: 44px;
+  background-image: url(qqlogo_1x.png); 
+  background-image: -webkit-image-set(url(qqlogo_1x.png) 1x,url(qqlogo_2x.png) 2x);
+  background-image: -moz-image-set(url(qqlogo_1x.png) 1x,url(qqlogo_2x.png) 2x);
+  background-image: -o-image-set(url(qqlogo_1x.png) 1x,url(qqlogo_2x.png) 2x);
+  background-image: -ms-image-set(url(qqlogo_1x.png) 1x,url(qqlogo_2x.png) 2x);
+ /* background-image: image-set( url(qqlogo_1x.png) 1x, url(qqlogo_2x.png) 2x, url(qqlogo_2x.png) 600dpi );*/
+  /*background-image: url(qqlogo_1x.png);
+  background-image: -webkit-image-set(url(qqlogo_1x.png) 1x,url(qqlogo_2x.png) 2x); 
+  background-repeat: no-repeat;*/
+}

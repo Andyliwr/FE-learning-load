@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var cloneObj = function(obj) {
+				var str, newobj = obj.constructor === Array ? [] : {};
+				if (typeof obj !== 'object') {
+					return;
+				} else if (window.JSON) {
+					str = JSON.stringify(obj), //系列化对象,把对象转化成字符串
+					newobj = JSON.parse(str); //还原
+				} else {
+					for (var i in obj) {
+						newobj[i] = typeof obj[i] === 'object' ?
+							cloneObj(obj[i]) : obj[i];
+					}
+				}
+				return newobj;
+			};
+			//测试
+			var obj = {
+				a: 0,
+				b: 1,
+				c: 2
+			};
+			var arr = [0, 1, 2];
+			//执行深度克隆
+			var newobj = cloneObj(obj);
+			var newarr = cloneObj(arr);
+			//对克隆后的新对象进行成员删除
+			delete newobj.a;
+			newarr.splice(0, 1);
+			console.log(obj);
+			console.log(arr);
+			console.log(newobj);
+			console.log(newarr);
+			var it = 2;
+			//var newit = cloneObj(newit);
+			//console.log(newit);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+###测试window.name跨域

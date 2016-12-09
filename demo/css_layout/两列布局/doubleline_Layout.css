@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.Header{
+    background-color: #eaebee;
+    height: 150px;
+}
+.Content{
+    background-color: #62b8b7;
+    height: 300px;
+}
+.Footer{
+    background-color: #0066cc;
+    height: 100px;
+}
+
+.Content .left{
+    background-color: #555555;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+.Content .right{
+    background-color: #da4901;
+    /*当left的float是left时，设置right的margin-left是没有用的，你可以选择设置left的margin-right*/
+    margin-left: 20px;
+}

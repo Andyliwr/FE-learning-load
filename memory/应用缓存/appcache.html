@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+    In this example, we will use the appcache to save the webpage's cache.That will help us use it without network.
+    Please run the example after setting the Tomcat server and use the server to run it
+-->
+<html lang="en" manifest="manifest.appcache"> <!-- Bring manifest in HTML, and create manifest.appcache later. -->
+<head>
+    <meta charset="UTF-8">
+    <title>Appcache</title>
+    <link rel="stylesheet" href="../Canvas/Createjs/css/share.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="local.js"></script>
+</head>
+<body>
+<header class="EODream">
+    <h1>
+        <!-- ::before -->
+        Appcache
+        <!-- ::after -->
+    </h1>
+
+    <p>
+        使用<code>appcache</code>文件定义网页需要存储的内容，然后再<code>tomcat</code>上运行网页，关掉tomcat，清除浏览器的历史纪录
+        并重新打开网页，网页可以在离线下访问。这个实例的appcache文件如下：<br>
+        <img src="appcache.png">
+        所有的文件除了share.css都缓存了，在关闭tomcat后再打开这个网页页面可以显示文字部分，但share.css控制的样式无法显示。
+        我们可以在chrome的web控制台->Resource->Application Cache中看到我们缓存的文件。
+        <img src="cache.png">
+        tomcat没有启动下的网页：
+        <img src="after.png" width="900px">
+    </p>
+</header>
+<div id="content">
+    <!-- content内容已设定为居中，height为400px -->
+    <iframe src="svg.svg" frameborder="0"></iframe>
+</div>
+<footer>
+    <p>© 2016 Andyliwr Design. All Right Reserved.</p>
+</footer>
+</body>
+</html>

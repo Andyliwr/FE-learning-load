@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示时钟</title>
+</head>
+<style type="text/css">
+    #clock{
+        background-color: #333333;
+        margin: 0 auto;
+        width: 600px;
+        height: 300px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        var otime = document.getElementById("time");
+        var date = document.getElementById("date");
+        var ospan1= date.getElementsByTagName("span");
+        var ospan2 = otime.getElementsByTagName("span");
+        var date1 = new Date();
+
+        ospan1[0].innerHTML = date1.getFullYear();
+        ospan1[1].innerHTML = date1.getMonth() + 1;
+        ospan1[2].innerHTML = date1.getDate();
+        ospan1[3].innerHTML = date1.getDay();
+
+        function tick(){
+            //timestr用作最终时间显示
+            var timestr = getNowTime();
+            //循环把6个span的内容设置为timestr对应位置的内容
+            for (var i = 0; i < ospan2.length; i++) {
+                //ospan2[i].innerHTML = timestr[i];
+                ospan2[i].innerHTML = timestr.charAt(i);
+                //timestr[i]取字符串的某个位置的字符的方法只能兼容高版本的浏览器，IE7不兼容，适用charAt的方法更好
+            }
+        }
+        setInterval(tick, 1000);
+        tick();
+    }
+    //获取当前时间字符串
+    function getNowTime(){
+        var odate = new Date();
+        var timestr = toDouble(odate.getHours())+toDouble(odate.getMinutes())+toDouble(odate.getSeconds());
+        return timestr;
+    }
+    //把getHours，getMinutes，getSecond得到的数字按照不同情况转化成01格式的字符串
+    function toDouble(num){
+        if(num<10){
+            return "0"+num;
+        }else {
+            return ""+num;
+        }
+    }
+</script>
+<body>
+    <div id="clock">
+        <div id="date">
+            <span>0</span>年
+            <span>0</span>月
+            <span>0</span>日
+            星期<span>0</span>
+        </div>
+        <br />
+        <div id="time">
+            <span>0</span>
+            <span>0</span>:
+            <span>0</span>
+            <span>0</span>:
+            <span>0</span>
+            <span>0</span>
+        </div>
+    </div>
+</body>
+</html>

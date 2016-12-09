@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh_CN">
+	<meta charset="utf-8">
+	<title>通过document.domain方法跨域</title>
+	
+</head>
+<body>
+	<iframe id="iframe" src="http://andylistudio.com/page2.html" onload="onload()" width="500px" height="500px"></iframe>
+	<script type="text/javascript">
+		function onload() {
+			// body...
+			//设置document.domain
+			document.domain = 'andylistudio.com'
+			var iframe = document.getElementById('iframe');
+			var win = iframe.contentWindow;
+			var doc = win.document;
+			var name = win.name;
+			console.log("window.document: "+ doc);
+			console.log("window.name: "+ name);
+		}
+	</script>
+</body>
+</html>
