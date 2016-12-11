@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 测试浏览器的localStorage，本实例运行之后可以在chrome开发者工具中->Resource->Local Storage中看到相关的记录 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="../Canvas/Createjs/css/share.css">
+    <link rel="stylesheet" href="example4.css">
+    <script src="app.js"></script>
+</head>
+<body>
+<header class="EODream">
+    <h1>
+        <!-- ::before -->
+        LocalStorage
+        <!-- ::after -->
+    </h1>
+
+    <p>
+        利用浏览器的<code>localStorage</code>永久性存储数据。
+    </p>
+</header>
+<div id="content">
+    <p>LocalStorage测试(尝试刷新和关闭浏览器再重新打开)：</p>
+    <textarea name="text" id="textarea1" cols="30" rows="10"></textarea>
+    <br/>
+    <button id="btn1" type="submit">Save</button>
+    <p>SessionStorage测试（尝试刷新和关闭浏览器再重新打开）：</p>
+    <br/>
+    <span id="span">0</span>
+    <button id="btn2">Add</button>
+</div>
+<footer>
+    <p>© 2016 Andyliwr Design. All Right Reserved.</p>
+</footer>
+</body>
+</html>

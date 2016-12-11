@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <script type="text/javascript">
+    onload=function(){
+     //把所有内容全部设置到层中。
+     document.getElementById('btn1').onclick=function(){
+           document.getElementById('dv').innerText='<h1>标题</h1>';
+     };
+        //把效果直接显示出来
+     document.getElementById('btn2').onclick=function(){
+           document.getElementById('dv').innerHTML='<h1>标题</h1>';
+     };
+        //只获取文字内容
+     document.getElementById('btn3').onclick=function(){
+      alert( document.getElementById('dv').innerText);
+     };
+        //获取该效果的所有标签和文本
+     document.getElementById('btn4').onclick=function(){
+      alert( document.getElementById('dv').innerHTML);
+     };           
+    };
+  </script>
+</head>
+<body>
+  <div id="dv">
+  </div>
+  <input type="button" id="btn1" value="设置innerText"/>
+  <input type="button" id="btn2" value="设置innerHtml"/>
+  <input type="button" id="btn3" value="获取innerText"/>
+  <input type="button" id="btn4" value="获取innerHtml"/>
+</body>
+</html>

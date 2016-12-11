@@ -1,0 +1,21 @@
+
+.icon-user:before {
+    content: '\e800';
+}
+
+/* '' */
+.icon-key:before {
+    content: '\e801';
+}
+
+/* '' */
+.icon-phone:before {
+    content: '\e802';
+}
+
+/* '' */
+.icon-mail-alt:before {
+    content: '\e803';
+}
+
+/* '' */

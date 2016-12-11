@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh_CN">
+	<meta charset="utf-8">
+    <title>table顺序颠倒</title>
+    <style type="text/css">
+    	input{
+    		margin-top: 20px;
+    	}
+    </style>
+    <script type="text/javascript">
+    	window.onload = function (argument) {
+    		 var btn = document.getElementById('btn');
+    		 var table = document.getElementById('table');
+    		 var tbody = document.getElementsByTagName('tbody')[0];
+    		 var trArray = tbody.getElementsByTagName('tr');
+    		 var temp = trArray;
+
+    		 btn.onclick = 	function () {
+    		 	//Use appendChild
+    		 	for (var i = 0; i < trArray.length; i++) {
+    		 		tbody.appendChild(trArray[i]);
+    		 	}
+    		 } 
+    	}
+    </script>
+</head>
+
+<body>
+    <table border="1px" id="table">
+        <caption>table顺序颠倒</caption>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>mail</th>
+                <th>tel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>李迪康</td>
+                <td>121960425@qq.com</td>
+                <td>18883339779</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>周露</td>
+                <td>121960425@qq.com</td>
+                <td>1231231241</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>龙训英</td>
+                <td>121960425@qq.com</td>
+                <td>12545564435</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>吴梅</td>
+                <td>121960425@qq.com</td>
+                <td>2353453423</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" id="btn" name="" value="颠倒顺序">
+</body>
+
+</html>

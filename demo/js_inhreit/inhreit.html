@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function add(a, b) {
+				console.log("add计算的a+b等于" + (a + b));
+			}
+
+			function sub(a, b) {
+				console.log("sub计算的a-b等于" + (a - b));
+			}
+			add.apply(sub, [3, 1]);
+			add.call(sub, 1, 3);
+
+			function Animal(name) {
+				this.name = name;
+				this.showName = function() {
+					console.log("我的名字叫做" + this.name);
+				}
+			}
+
+			function Cat(name) {
+				Animal.apply(this, [name]);
+				//Animal.call(this, name);  
+			}
+			var cat = new Cat("Black Cat");
+			cat.showName();
+			//JS实现继承之对象冒充
+			function Parent(username) {
+				this.username = username;
+				this.hello = function() {
+					console.log("我的名字叫" + this.username);
+				}
+			}
+
+			function Child(username, password) {
+				//通过以下3行实现将Parent的属性和方法追加到Child中，从而实现继承
+				//第一步：this.method是作为一个临时的属性，并且指向Parent所指向的对象，
+				//第二步：执行this.method方法，即执行Parent所指向的对象函数
+				//第三步：销毁this.method属性，即此时Child就已经拥有了Parent的所有属性和方法
+				this.method = Parent;
+				this.method(username); //最关键的一行
+				delete this.method;
+				this.password = password;
+				this.world = function() {
+					console.log("密码是:" + this.password);
+				}
+			}
+			var parent = new Parent("李迪康");
+			var child = new Child("杨洋", "123456");
+			parent.hello();
+			child.hello();
+			child.world();
+			//JS实现继承之call和apply
+			function Child2(username, password, mail) {
+				/*Parent.call(this, username);*/
+				Parent.apply(this, [username]);
+				this.password = password;
+				this.mail = mail;
+				this.printUserInfo = function() {
+					console.log("My name is:" + this.username + ";My password is:" + this.password + ";My mail is:" + this.mail);
+				}
+			}
+			var child2 = new Child2("张雨潇", "121960425db", "121960425@qq.com");
+			child2.hello();
+			child2.printUserInfo();
+			//JS实现继承之prototype（通过原型链扩展类）
+			function Child3(username, password, mail, tel) {
+				/*Child2.apply(this, [username, password, mail]);*/
+				this.username = username;
+				this.password = password;
+				this.mail = mail;
+				this.tel = tel;
+			}
+			Child3.prototype = new Child2();
+			Child3.prototype.constructor = Child3;
+			var child3 = new Child3("陈康", "121960425db", "121960425@qq.com", "18883339779");
+			child3.hello();
+			child3.printUserInfo();
+			//JS之prototype
+			function func() {
+				func.prototype.name = "prototype of func";
+			}
+			var f = new func();
+			console.log(f.name);
+			//通过prototype扩展Number
+			Number.prototype.add = function(num) {
+				return (this + num);
+			}
+			console.log("Number.prototype.add是：" + Number.prototype.add);
+			var i = 3;
+			console.log(i.add(15));
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

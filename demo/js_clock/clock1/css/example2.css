@@ -1,0 +1,21 @@
+#containcanvas {
+    background-color: #71ee6d;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#clock {
+    background-color: #71ee6d;
+    width: 400px;
+}
+
+#screen {
+    display: block;
+    width: auto;
+    height: 101px;
+}
+
+footer {
+    margin-top: 165px;
+
+}

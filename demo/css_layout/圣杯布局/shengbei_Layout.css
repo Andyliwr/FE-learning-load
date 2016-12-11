@@ -1,0 +1,56 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.Header{
+    background-color: #eaebee;
+    height: 150px;
+}
+.Content{
+    background-color: #62b8b7;
+    height: 300px;
+    /*把左div和右div的位置挪出来*/
+    padding-left: 200px;
+    padding-right: 100px;
+}
+.Footer{
+    background-color: #0066cc;
+    height: 100px;
+}
+
+.Content .left{
+    background-color: #555555;
+    color: white;
+    width: 200px;
+    height:20px;
+    float: left;
+    margin-right: 20px;
+    /*双飞翼还有一个重要的点就是leftdiv的margin-left属性的值设置为-100%，这样本来中间div独占一行，
+    现在左div骑到了中间div的头上*/
+    margin-left: -100%;
+    /*把左div移到正确的位置*/
+    position: relative;
+    left: -200px;
+
+}
+.Content .right{
+    background-color: #0c0bda;
+    /*当left的float是left时，设置right的margin-left是没有用的，你可以选择设置left的margin-right*/
+    margin-left: 20px;
+    width: 100px;
+    height:20px;
+    /*对于右div首先要把它的float从right改为letf，然后把他的margin-left设置为他自己的宽度*/
+    float: left;
+    margin-left: -100px;
+    /*把右div移到正确的位置，relative相对于自己*/
+    position: relative;
+    right: -100px
+}
+.Content .center{
+    background-color: #e74c3c;
+    height:20px;
+    /*双飞翼布局最重要的两点，第一让中间div左浮动，这样才能和左div浮动到一起，第二让中间div有块级
+    元素的特性，想独占一行，即width：100%*/
+    width: 100%;
+    float: left;
+}

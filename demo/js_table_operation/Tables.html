@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style type="text/css">
+        body table{
+            border: 1px solid;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            //隔行变色，并且移入移出效果不一样
+            var oTbl = "";
+            function changeColor(){
+                oTbl = document.getElementById("tbl1");
+                var oldColor = "";
+                for (var i = 0; i < oTbl.tBodies[0].rows.length; i++) {
+
+                    oTbl.tBodies[0].rows[i].onmouseover = function(){
+                        oldColor = this.style.background;
+                        this.style.background = "#555555";
+                    };
+                    oTbl.tBodies[0].rows[i].onmouseout = function(){
+                        this.style.background = oldColor;
+                    }
+                    if(i%2){
+
+                        oTbl.tBodies[0].rows[i].style.background = "#4bb8b6";
+                    }else{
+                        oTbl.tBodies[0].rows[i].style.background = "#71ee6d";
+                    }
+                }
+            }
+
+            changeColor();
+            addDelect();
+
+            var oBtn1 = document.getElementById("add");
+            var id = document.getElementById("id");
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            var email = document.getElementById("email");
+            //为提交按钮添加动作
+            oBtn1.onclick = function(){
+                var tbody = document.getElementsByTagName("tbody")[0];
+                var tr = document.createElement("tr");
+                //如果用户没有输入数据
+                if(id.value == "" | username.value == "" | password.value == "" | email.value == ""){
+                    alert("你没有输入任何数据，请重新输入！");
+                    return;
+                }
+                tr.innerHTML = "<td>"+id.value+"</td>"+"<td>"+username.value+"</td>"+"<td>"+password.value+"</td>"
+                        +"<td>"+email.value+"</td>"+"<td><a href='JavaScript:;'>删除</a></td>";
+
+                tbody.appendChild(tr);
+                changeColor();
+                addDelect();
+            }
+            //为每行增加删除操作
+            function addDelect(){
+                var oA = document.getElementsByTagName("a");
+                for (var i = 0; i < oA.length; i++) {
+                    oA[i].onclick = function(){
+                        oA[0].parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)
+                    }
+                }
+            }
+
+            //为search按钮添加事件
+            var oBtn2 = document.getElementById("search");
+            oBtn2.onclick = function(){
+                //每次执行search前先初始化每行的颜色
+                changeColor();
+                search();
+            }
+            function search(){
+                var rowlength = oTbl.tBodies[0].rows.length;
+
+                for (var i=0; i<rowlength; i++){
+                    var existedName = oTbl.tBodies[0].rows[i].cells[1].innerHTML;
+                    //alert(username.value.toLowerCase() == existedName);
+                    //alert(existedName.search(username.value) >= 0);
+                    //筛选功能，现将所有行的display属性设置为none，符合要求的那一行在设置为block
+                    //筛选：oTbl.tBodies[0].rows[i].style.display = "none";
+                    //多关键词搜索
+                    var arr = username.value.split(" ");
+                    for(var j=0; j<arr.length; j++){
+                        if(existedName.search(arr[j])!= -1){
+                            //筛选：oTbl.tBodies[0].rows[i].style.display = "block";
+                            oTbl.tBodies[0].rows[i].style.background = "yellow";
+                        }
+                    }
+                    if(username.value.toLowerCase() == existedName | existedName.search(username.value) >= 0){
+                        //筛选：oTbl.tBodies[0].rows[i].style.display = "block";
+                        oTbl.tBodies[0].rows[i].style.background = "yellow";
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    用户Id:<input type="text" placeholder="id" id="id" size="20"/><br />
+    用户名:<input type="text" placeholder="username" id="username" size="20"/><br />
+    密码:&nbsp&nbsp&nbsp&nbsp<input type="password" placeholder="password" id="password" size="20"/><br />
+    邮箱:&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="email" id="email" size="20"/><br /><br />
+    <input value="add" id="add" type="button"/>&nbsp&nbsp&nbsp<input value="searchByName" id="search" type="button"/><br /><br />
+    <table border="1" id="tbl1">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>username</td>
+                <td>password</td>
+                <td>email</td>
+                <td>operation</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>123456</td>
+                <td>121960425@qq.com</td>
+                <td><a href="JavaScript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>lidikang</td>
+                <td>123456</td>
+                <td>121960425@qq.com</td>
+                <td><a href="JavaScript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>zhoulu</td>
+                <td>123456</td>
+                <td>121960425@qq.com</td>
+                <td><a href="JavaScript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>longxuanying</td>
+                <td>123456</td>
+                <td>121960425@qq.com</td>
+                <td><a href="JavaScript:;">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

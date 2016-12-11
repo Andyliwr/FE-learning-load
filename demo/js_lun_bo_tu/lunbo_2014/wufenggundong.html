@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动</title>
+    <link rel="stylesheet" href="img/fontIcon/style.css" type="text/css">
+</head>
+<style>
+    body,div,ul,li,a{
+         padding:0px;
+         margin:0px;
+    }
+    #div1{
+        width: 870px;
+        height: 100px;
+        margin: 100px auto;
+    }
+    #div2{
+        width: 900px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        background-color: #0066cc;
+    }
+    #div1 span{
+        float:left;
+        font-size: 35px;
+    }
+    #div2 ul{
+        position: absolute;
+        width: 800px;
+        height: 100px;
+        left: 0px;
+        top:0px;
+    }
+    #div2 ul li{
+        list-style: none;
+        float: left;
+    }
+    #div2 ul li img{
+        width: 200px;
+        height: 100px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        var oDiv = document.getElementById("div2");
+        //oUl没有设置id，只能这样取了
+        var oUl = document.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        var oSpan = document.getElementsByTagName("span");
+        var speed = 0;//设置图片组是向又还是像左，以及滚动的速度
+        //将ul中的内容复制一份在赋值给ul，保证两组图片能够衔接
+        oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+        //保证ul的宽度能容纳两组图片的宽度
+        oUl.style.width = oLi[0].offsetWidth*oLi.length+"px";
+        //move函数
+        function move(){
+            //向左走的情况下，当第一组图片走完了之后oUl.offsetLeft<(-oUl.offsetWidth/2，把oUl的left属性的值设为0
+            if(oUl.offsetLeft<(-oUl.offsetWidth/2)){
+                oUl.style.left = "0";
+            }
+            //向右走的情况下，当第一组图片的offsetLeft属性值为0，即第一组图片在最左边的时候，oUl.style.left=(-oUl.offsetWidth/2)+"px";这里必须用px
+            if(oUl.offsetLeft>0){
+                oUl.style.left=(-oUl.offsetWidth/2)+"px";
+            }
+            //offsetLeft是综合考虑各种影响因素（margin，padding）之后的left的值
+            oUl.style.left = oUl.offsetLeft+speed+"px";
+        }
+        //设置间隔执行move
+        var timer = setInterval(move, 30);
+
+        //为无缝滚动添加移入移出事件
+        oDiv.onmouseover = function(){
+            clearInterval(timer);
+        };
+        oDiv.onmouseout = function(){
+            timer = setInterval(move, 30);
+        };
+
+        //添加向左向右事件
+        oSpan[0].onclick = function(){
+            speed = -2;
+        };
+        oSpan[1].onclick = function(){
+            speed = 2;
+        };
+    }
+</script>
+<body>
+    <div id="div1" class="vertical-container">
+        <span class="icon-circle-left"></span>
+        <div id="div2">
+            <ul>
+                <li><img src="img/1.jpg"/></li>
+                <li><img src="img/2.jpg"/></li>
+                <li><img src="img/3.jpg"/></li>
+                <li><img src="img/4.jpg"/></li>
+            </ul>
+        </div>
+        <span class="icon-circle-right"></span>
+    </div>
+</body>
+</html>
