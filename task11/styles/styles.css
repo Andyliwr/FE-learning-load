@@ -1,0 +1,81 @@
+html, body, div, ul, li, span, p{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	font-size: .14rem;
+}
+.container > header{
+	height: 1.14rem;
+	line-height: 1.14rem;
+	text-align: center;
+	background-color: #91d4da;
+	color: #fff;
+}
+header .backBtn{
+	float: left;
+	margin-left: .3rem;
+}
+/*清除浮动*/
+header .backBtn:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+/*绘制左箭头*/
+header .backBtn:before{
+	display: inline-block;
+	content: "";
+	width: .3rem;
+	height: .3rem;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(-45deg);
+}
+/*使用绝对定位保证p居中不受到backBtn的影响*/
+header > p{
+	position: absolute;
+    width: 100%;
+}
+
+.nav{
+	width: 96%;
+	height: 1.19rem;
+	margin: 0 auto;
+}
+.nav > li{
+	display: inline-block;
+	height: 100%;
+	line-height: 1.19rem;
+	/*虽然是5个等分但是这里不能是20%，css有规定子集元素宽度总和应该小于100%*/
+	width: 19%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.nav > li.active{
+	border-bottom: 2px solid #91d4da;
+}
+/*下面的iconSet就使用刚学的flex布局*/
+.iconSet{
+	display: flex;
+	/*居中对齐*/
+	justify-content: space-between;
+	/*方向为横向，可以换行*/
+	flex-flow: row wrap;
+	width: 88%;
+    margin: 0 auto;
+    padding: .44rem 0;
+}
+.iconSet-item{
+	width: 1.2rem;
+	text-align: center;
+}
+.iconSet-item > img{
+	width: 100%;
+	margin-bottom: .2rem;
+}
+.module hr{
+	width: 94%;
+	margin: 0 auto;
+	border: 1px solid #e5e5e5;
+}
