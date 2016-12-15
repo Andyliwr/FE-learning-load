@@ -1,0 +1,18 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+<html>
+<head lang="zh_CN">
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var testDiv = document.getElementById('testDiv');
+			var p = document.getElementById('info');
+			p.innerHTML = "浏览器使用的模式是："+document.compatMode+"<br/>"+"testDiv在quirk模式下宽度是"+testDiv.style.width+"<br/>";
+		}
+	</script>
+</head>
+<body>
+ 	<div id="testDiv" style="width: 200px; height: 200px; background-color: red; padding: 20px; border: 5px solid black"></div>
+ 	<p id="info"></p>
+</body>
+</html>

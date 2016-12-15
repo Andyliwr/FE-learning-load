@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中</title>
+    <style type="text/css">
+        #case1{
+            width:200px;
+            height: 100px;
+            margin: 0px auto;
+            background-color: #4bb8b6;
+            text-align: center;/*//inline元素居中直接text-align：center*/
+
+        }
+        #case2{
+            padding-top: 20px;
+            text-align: center;
+        }
+        #case3{
+            margin: 20px auto;
+            padding: 10px;
+        }
+        #case3_div1, #case3_div2, #case3_div3{
+            background: black;
+            color: white;
+            padding: 15px;
+            max-width: 125px;
+            margin: 5px;
+        }
+        .inline-block-center {
+            text-align: center;
+        }
+        .inline-block-center div {
+            display: inline-block;/*把block元素变成inline元素，然后作为text居中*/
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="case1">Is it a block level element?</div>
+    <div id="case2">Is it inline or inline-* elements (like text or links)?</div>
+    <main id="case3" class="inline-block-center">
+        <div id="case3_div1">I'm an element that is block-like with my siblings and we're centered in a row.</div>
+        <div id="case3_div2">I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.</div>
+        <div id="case3_div3">I'm an element that is block-like with my siblings and we're centered in a row.</div>
+    </main>
+</body>
+</html>

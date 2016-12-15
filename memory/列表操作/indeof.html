@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indexof</title>
+    <script>
+        window.onload = function(){
+            var arr = [1, 2, 3, 4, 5, 3, 4, 5, 3, 6, 3];
+            var item = 3;
+            document.write("arr数组为："+ arr.join()+"<br />");
+            document.write("term为："+ item+"<br />");
+            document.write("indexOF算出来的结果为："+indexOF(arr, item) + "<br />");
+            document.write("remove算出来的结果为："+remove(arr,item)+ "<br />");
+            var arr = [1, 2, 3, 4, 5, 3, 4, 5, 3, 6, 3];
+            document.write("duplicates算出来的结果为："+duplicates(arr)+"<br  />");
+            document.write("findAllOccurrences算出来的结果为："+findAllOccurrences(arr, 3));
+
+        }
+        function indexOF(arr, item) {
+            var count = 0;
+            for(var i=0; i<arr.length; i++){
+                if(arr[i] == item){
+                   return i;
+                }else{
+                    count++;
+                }
+            }
+            if(count == arr.length){
+                return -1;
+            }
+        }
+
+        function remove(arr, item) {
+            var brr = arr;
+            var recoder = new Array();
+            var num = 0;
+            for(var i=0; i<brr.length; i++){
+                if(item == brr[i]){
+                    recoder[num] = i;
+                    num++;
+                    continue;
+                }
+            }
+            for(var j=0; j<num; j++){
+                brr.splice(recoder[j],1);
+                des(recoder);
+            }
+            function des(recoder){
+                for(var k=0; k<num; k++){
+                    recoder[k]--;
+                }
+            }
+            return brr;
+
+        }
+
+        function duplicates(arr) {
+            var recoder = new Array();
+            for(var i=0; i<arr.length; i++){
+                for(var j=0; j<arr.length; j++){
+                    if(arr[i] == arr[j]){
+                        if(i != j){
+                            recoder[i] = arr[i];
+                        }
+                    }
+                }
+            }
+            return recoder;
+        }
+
+        function findAllOccurrences(arr, target) {
+            var recoder = new Array();
+            var num = 0;
+            for(var i=0; i<arr.length; i++){
+                if(target == arr[i]){
+                    recoder[num] = arr[i];
+                    num++;
+                }
+            }
+            return recoder;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

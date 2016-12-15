@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加Li</title>
+</head>
+<script type="text/javascript">
+    window.onload = function(){
+        var oOl = document.getElementById("ol");
+        var oText = document.getElementById("text");
+        var oButton = document.getElementById("submit");
+
+        oButton.onclick = function (){
+            function addElement(){
+                var oLi = document.createElement("li");
+                var aLi = oOl.getElementsByTagName("li");
+
+                oLi.innerHTML = "<input type='text' size='30' value='"+oText.value+"' />"+ "&nbsp<a href='JavaScript::'>删除</a>"+"&nbsp <a href='JavaScript::'>置顶</a>"+"&nbsp <a href='JavaScript::'>增加</a>";
+
+                var oA = oLi.getElementsByTagName("a");
+                oA[0].onclick = function(){
+                    oOl.removeChild(this.parentNode);
+                }
+                oA[1].onclick = function () {
+                    oOl.removeChild(this.parentNode);
+                    oOl.insertBefore(this.parentNode, aLi[0]);
+                }
+                oA[2].onclick = function(){
+                    addElement();
+                }
+                //需要判断下，如果oUl一开始没有任何li元素（aLi[0]不存在），适用appendChild插到最后，如果有元素存在就使用insertBefore插入到aLi[0]的前面
+                if(aLi.length > 0){
+                    oOl.insertBefore(oLi, aLi[0]);
+                }else{
+                    oOl.appendChild(oLi);
+                }
+            }
+           addElement();//凡是类似的都可以写成函数
+        }
+    }
+</script>
+<body>
+    <input type="text" placeholder="words you want to say." id="text" size="100" /><br />
+    <input type="button" value="提交" id="submit"/>
+    <p>已提交的内容：</p>
+    <ol id="ol">
+    </ol>
+</body>
+</html>

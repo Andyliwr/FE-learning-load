@@ -1,0 +1,14 @@
+#content {
+    background-color: white;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    alignment: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
