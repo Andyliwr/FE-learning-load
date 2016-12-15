@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax的运用--注册</title>
+	<link rel="stylesheet" type="text/css" href="styles/signup.css">
+</head>
+<body>
+	<div class="container">
+		<div class="login">
+			<p>注册</p>
+			<div>
+				<input class="lo1" type="text" name="username" placeholder="用户名" onfocus="this.removeAttribute('readonly');" autocomplete="off" />
+				<p class="username-err error-tips">用户名必须大于八位的字母或数据组合</p>
+				<input class="lo2" type="text" name="name" placeholder="姓名" onfocus="this.removeAttribute('readonly');" autocomplete="off" required />
+				<p class="name-err error-tips">用户名不为空</p>
+				<input class="lo2" type="email" name="email" placeholder="邮箱" onfocus="this.removeAttribute('readonly');" autocomplete="off" required />
+				<p class="email-err error-tips">邮箱不合法</p>
+				<input class="lo2" type="password" name="password" placeholder="密码" onfocus="this.removeAttribute('readonly');" autocomplete="off" />
+				<input class="lo3" type="password" name="pwconfirm" placeholder="确认密码" onfocus="this.removeAttribute('readonly');" autocomplete="off" />
+				<p class="password-err error-tips">请确保两次输入的密码一一致</p>
+				<button id="signup_btn">注&nbsp&nbsp&nbsp&nbsp册</button>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/registe.js"></script>
+</body>
+</html>
