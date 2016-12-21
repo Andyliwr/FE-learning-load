@@ -2,6 +2,10 @@ html, body, div, ul, li, span, p{
 	padding: 0;
 	margin: 0;
 }
+.clearfix{
+	clear: both;
+	display: none;
+}
 .container{
 	font-size: .14rem;
 }
@@ -11,6 +15,9 @@ html, body, div, ul, li, span, p{
 	text-align: center;
 	background-color: #91d4da;
 	color: #fff;
+}
+.container .main{
+	background-color: #f5f1f1;
 }
 header .backBtn{
 	float: left;
@@ -78,4 +85,163 @@ header > p{
 	width: 94%;
 	margin: 0 auto;
 	border: 1px solid #e5e5e5;
+}
+.banner{
+	height: 5.4rem;
+}
+.banner > img{
+	height: 100%;
+	width: 100%;
+}
+/*col也使用flex*/
+.module .col{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	padding: .7rem 0 .5rem 0;
+}
+.col .col-item{
+	text-align: center;
+	flex: 1;
+	line-height: .3rem;
+	border-right: 2px solid #e5e5e5;
+}
+.col .col-item:last-child{
+	border-right: none;
+}
+.col .col-item > div{
+	height: 1.9rem;
+}
+.col .col-item > div > img{
+	width: 50%;
+}
+.col .col-item > div > img.last{
+	width: 70%;
+}
+.col .col-item h2{
+	font-size: .4rem;
+	margin-top: .4rem;
+}
+.col .col-item h3{
+	font-size: .14rem;
+	font-weight: normal;
+}
+.module{
+	margin-bottom: .3rem;
+	background-color: #fff;
+}
+.module:last-child{
+	margin-bottom: 0;
+}
+.module.padding{
+	padding: .3rem;
+}
+.module.padding > hr{
+	width: 100%;
+}
+.module > h1{
+	font-size: .4rem;
+	color: #777;
+}
+.module .row{
+	clear: both;
+	width: 100%;
+	margin-top: .3rem;
+}
+/*清除浮动，避免高度塌陷*/
+.module .row:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.module .row .left{
+	float: left;
+    width: 30%;
+    padding: 0 .3rem 0 0;
+    box-sizing: border-box;
+}
+.module .row .left > img{
+	width: 100%;
+} 
+.module .row .right{
+	float: left;
+	width: 70%;
+}
+.module .row .right .right-item{
+	display: inline-block;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    width: 48%;
+    text-align: center;
+    background-color: #f5f1f1;
+}
+.module .row .right .right-item:first-child{
+	margin-right: 2%;
+	margin-bottom: .2rem;
+}
+.module .row .right .right-item:nth-child(2){
+	margin-bottom: .2rem;
+}
+.module .row .right .right-item:nth-child(3){
+	margin-right: 2%;
+}
+.module.article-conatiner{
+	padding: 0;
+	background-color: #eee;
+}
+.article{
+	/*为了将文字说明置低*/
+	position: relative;
+	margin-bottom: .1rem;
+	padding: .3rem;
+	background-color: #fff;
+}
+.article:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.article .left{
+	float: left;
+	width: 36%;
+}
+.article .right{
+	float: left;
+	width: 64%;
+	height: 100%;
+}
+.article .right .title{
+	font-size: .45rem;
+	font-weight: 400;
+}
+.article .right > div{
+	padding-left: .2rem;
+	padding-top: .1rem;
+}
+.article .right .more-info{
+	position: absolute;
+	bottom: .4rem;
+	color: #999;
+}
+.article .right .more-info .publish-time{
+	padding-left: .3rem;
+}
+.article .left > img{
+	width: 100%;
+}
+.article > h1{
+	color: #777;
+	font-size: .4rem;
+}
+.article .img-container > img{
+	display: inline-block;
+	margin-right: .1rem;
+	width: 31.5%;
+}
+.article .img-container > img:after{
+	margin-right: 0;
+}
+.article .more-info .publish-time{
+	padding-left: .3rem;
 }
