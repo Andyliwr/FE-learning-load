@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="styles/styles.css" />
+	<title>百度前端技术Task_011</title>
+	<!-- 设置rem -->
+	<script type="text/javascript">
+	// 代码源至http://web.jobbole.com/89031/
+	function adapt(designWidth, rem2px){
+	  var d = window.document.createElement('div');
+	  d.style.width = '1rem';
+	  d.style.display = "none";
+	  var head = window.document.getElementsByTagName('head')[0];
+	  head.appendChild(d);
+	  var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
+	  d.remove();
+	  document.documentElement.style.fontSize = window.innerWidth / designWidth * rem2px / defaultFontSize * 100 + '%';
+	  var st = document.createElement('style');
+	  var portrait = "@media screen and (min-width: "+window.innerWidth+"px) {html{font-size:"+ ((window.innerWidth/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}";
+	  var landscape = "@media screen and (min-width: "+window.innerHeight+"px) {html{font-size:"+ ((window.innerHeight/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}"
+	  st.innerHTML = portrait + landscape;
+	  head.appendChild(st);
+	  return defaultFontSize
+	};
+	var defaultFontSize = adapt(1000, 100);
+	</script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="backBtn">返回</div>
+			<p>这是标题</p>
+		</header>
+		<div class="main">
+			<ul class="nav">
+				<li>导航</li>
+				<li class="active">导航</li>
+				<li>导航</li>
+				<li>导航</li>
+				<li>导航</li>
+			</ul>
+			<div class="module">
+				<div class="iconSet">
+					<div class="iconSet-item"><img src="images/item.png" />标签</div>
+					<div class="iconSet-item"><img src="images/item.png" />标签</div>
+					<div class="iconSet-item"><img src="images/item.png" />标签</div>
+					<div class="iconSet-item"><img src="images/item.png" />标签</div>
+					<div class="iconSet-item"><img src="images/item.png" />标签</div>
+				</div>
+				<hr />
+				<div class="col">
+					<div class="col-item">
+						<img src="images/xiong1.png" />
+						<h2>分栏一</h2>
+						<h3>分栏小标题</h3>
+					</div>
+					<div class="col-item">
+						<img src="images/xiong2.png" />
+						<h2>分栏二</h2>
+						<h3>分栏小标题</h3>
+					</div>
+					<div class="col-item">
+						<img src="images/xiong3.png" />
+						<h2>分栏三</h2>
+						<h3>分栏小标题</h3>
+					</div>
+				</div>
+			</div>
+			<div class="module">
+				<h1>模块一</h1>
+				<hr />
+				<div class="row">
+					<div class="left"><img src="images/xiong4.png" /></div>
+					<div class="right">
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="left"><img src="images/xiong4.png" /></div>
+					<div class="right">
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+					</div>
+				</div>
+			</div>
+			<div class="module">
+				<h1>模块二</h1>
+				<hr />
+				<div class="row">
+					<div class="left"><img src="images/xiong4.png" /></div>
+					<div class="right">
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="left"><img src="images/xiong4.png" /></div>
+					<div class="right">
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+						<span class="right-item">这是文案</span>
+					</div>
+				</div>
+			</div>
+			<div class="module article-conatiner">
+				<div class="article">
+					<div class="left"><img src="images/xiong5.png" /></div>
+					<div class="right">
+						<div class="title">这是文章标题字号是22的文章标题</div>
+						<div><span class="resource">文章来源</span><span class="publish-time">6分钟之前</span></div>
+					</div>
+				</div>
+				<div class="article">
+					<div class="left"><img src="images/xiong5.png" /></div>
+					<div class="right">
+						<div class="title">这是另一个文章标题</div>
+						<div class="more-info"><span class="resource">文章来源</span><span class="publish-time">7分钟之前</span></div>
+					</div>
+				</div>
+				<div class="article big-article">
+					<h1>这也是个文章标题，字号是22的文章标题</h1>
+					<div class="img-container">
+						<img src="images/xiong5.png" />
+						<img src="images/xiong5.png" />
+						<img src="images/xiong5.png" />
+					</div>
+					<div class="more-info"><span class="resource">文章来源</span><span class="publish-time">7分钟之前</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 引入移动端的jquery——zeptoJS -->
+	<script type="text/javascript" src="http://cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>
+	<script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
+<html>
