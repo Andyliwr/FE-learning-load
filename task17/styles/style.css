@@ -1,0 +1,56 @@
+/* task04 stylesheet, created by lidikang on 2016/11/01 */
+/* reset styles */
+html, body, div, span, p{
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+body{
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+}
+.container{
+	width: 600px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.container	h1{
+	font-size:  24px;
+	font-weight: normal;
+	text-align: center;
+}
+.container .chart-div .control{
+	height: 30px;
+}
+.container .chart-div .control-date{
+	float: left;
+	height: 100%;
+}
+.container .chart-div .control-date > span{
+	display: inline-block;
+	height: 100%;
+	width: 60px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-right: 4px;
+	background-color: #dadada;
+}
+.container .chart-div .control-date > span.active{
+	background-color: #70ff90;
+}
+.container .chart-div .control-right{
+	float: right;
+}
+.container .chart-div .control-right #city-select{
+	height: 30px;
+	width: 60px;
+}

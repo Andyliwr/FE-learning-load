@@ -27,6 +27,22 @@ var initData = [{
     rank: '第7名',
     zhishu: '90'
 }];
+//输入空气指数，返回排名
+function returnRank(newitem, array){
+	if(typeof newitem == 'number' && array instanceof Array){
+		array.push(newitem).sort();
+		for(var i=0; i<array.length; i++){
+			if(array[i] <= newitem){
+				if(i == array.length)
+				continue;
+			}else{
+				return i+1;
+			}
+		}
+	}else{
+		return 0;
+	}
+}
 // 决定要用那种颜色的函数
 function whichColor(zhishu) {
     if (zhishu < 0) {
@@ -45,67 +61,66 @@ function whichColor(zhishu) {
         return '#FFFFFF';
     }
 }
-
 /* 封装弹框组件
  * @param title 弹窗的标题
  * @param content 弹窗提示的内容
  */
-function showAlert(title, content){
-	$('<div class="alert"><div class="fadeDiv"></div><div class="alertDiv"><div class="title">'+ title +'</div><div class="content">'+ content +'</div><div class="control"><button>确认</button></div></div></div>').appendTo('body');
-	$('.control button').click(function(){
-		$('.alert').remove();
-	});
+function showAlert(title, content) {
+    $('<div class="alert"><div class="fadeDiv"></div><div class="alertDiv"><div class="title">' + title + '</div><div class="content">' + content + '</div><div class="control"><button>确认</button></div></div></div>').appendTo('body');
+    $('.control button').click(function() {
+        $('.alert').remove();
+    });
 }
-
 $(document).ready(function() {
     var tableStr = '';
     for (var i = 0; i < initData.length; i++) {
-        var tmp = '<tr><td>' + initData[i].city + '</td><td>' + initData[i].rank + ': ' + initData[i].zhishu + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + initData[i].zhishu*2 + 'px; background-color: '+ whichColor(parseInt(initData[i].zhishu)) +'"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr>';
+        var tmp = '<tr><td>' + initData[i].city + '</td><td>' + initData[i].rank + ': ' + initData[i].zhishu + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + initData[i].zhishu * 2 + 'px; background-color: ' + whichColor(parseInt(initData[i].zhishu)) + '"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr>';
         tableStr += tmp;
     }
     //写icon的点击事件，采用事件委托
-    $('.rank tbody').delegate('tr > td:last-child > span', 'click', function(event){
-    	var className = $(this).attr('class');
-    	var parentNode = $(this).parents('tr'); //tbody
-    	switch (className){
-    		case 'up-icon':
-    			if(parentNode.index() != 0){
-    				 // parentNode.fadeOut().fadeIn(); 
-            		 parentNode.prev().before(parentNode);
-    			}else{
-    				showAlert('错误操作', '您当前点击的元素已经是顶级元素了');
-    			}
-    			break;
-    		case 'down-icon':
-    			//判断是不是最后一个tr
-    			var trLenght = $('.rank tbody tr').length;
-    			if(parentNode.index() != (trLenght-1)){
-    				 // parentNode.fadeOut().fadeIn(); 
-            		 parentNode.next().after(parentNode);
-    			}else{
-    				showAlert('错误操作', '您当前点击的元素已经是最后一个元素了');
-    			}
-    			break;
-    		case 'delete-icon':
-    			parentNode.fadeOut().remove();
-    	}
+    $('.rank tbody').delegate('tr > td:last-child > span', 'click', function(event) {
+        var className = $(this).attr('class');
+        var parentNode = $(this).parents('tr'); //tbody
+        switch (className) {
+            case 'up-icon':
+                if (parentNode.index() != 0) {
+                    // parentNode.fadeOut().fadeIn(); 
+                    parentNode.prev().before(parentNode);
+                } else {
+                    showAlert('错误操作', '您当前点击的元素已经是顶级元素了');
+                }
+                break;
+            case 'down-icon':
+                //判断是不是最后一个tr
+                var trLenght = $('.rank tbody tr').length;
+                if (parentNode.index() != (trLenght - 1)) {
+                    // parentNode.fadeOut().fadeIn(); 
+                    parentNode.next().after(parentNode);
+                } else {
+                    showAlert('错误操作', '您当前点击的元素已经是最后一个元素了');
+                }
+                break;
+            case 'delete-icon':
+                parentNode.fadeOut().remove();
+        }
     });
     $('.rank tbody').append(tableStr);
-
     // 提交按钮点击事件
-    $('#submit').click(function(){
-    	// 输入值合法性检测
-    	var chineseExp = /^[\u4e00-\u9fa5]{2,5}$/g;
-    	var numExp = /^\d{1,2}$/;
-    	if(!chineseExp.test($('input[name="city_name"]'))){
-			showAlert('错误提示', '您输入的城市名不正确，请输入2-5个汉字的城市名');
-    		return false;
-    	}
-    	if(!numExp.test($('input[name="city_zhishu"]'))){
-			showAlert('错误提示', '您输入的城市空气质量指数不正确，请输入1-100以内的整数');
-    		return false;
-    	}
-    	// 以上都执行完，代表输入合法，接下来执行dom插入
-
+    $('#submit').click(function() {
+        // 输入值合法性检测
+        var chineseExp = /^[\u4e00-\u9fa5]{2,5}$/g,
+        	numExp = /^\d{1,2}$/,
+        	city_name = $('input[name="city_name"]').value(),
+        	city_zhishu = $('input[name="city_zhishu"]').value();
+        if (!chineseExp.test()) {
+            showAlert('错误提示', '您输入的城市名不正确，请输入2-5个汉字的城市名');
+            return false;
+        }
+        if (!numExp.test($('input[name="city_zhishu"]'))) {
+            showAlert('错误提示', '您输入的城市空气质量指数不正确，请输入1-100以内的整数');
+            return false;
+        }
+        // 以上都执行完，代表输入合法，接下来执行dom插入
+        $('<tr><tr><td>' + city_name + '</td><td>' + initData[i].rank + ': ' + city_zhishu + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + initData[i].zhishu * 2 + 'px; background-color: ' + whichColor(parseInt(initData[i].zhishu)) + '"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr></tr>')
     });
 });
