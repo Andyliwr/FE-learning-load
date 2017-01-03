@@ -1,13 +1,5 @@
-/* 数据格式演示
-var aqiSourceData = {
-  "北京": {
-    "2016-01-01": 10,
-    "2016-01-02": 10,
-    "2016-01-03": 10,
-    "2016-01-04": 10
-  }
-};
-*/
+var defaultCity = "上海";
+var defaultDateType = "day";
 
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
@@ -25,7 +17,8 @@ function randomBuildData(seed) {
   var datStr = ''
   for (var i = 1; i < 92; i++) {
     datStr = getDateStr(dat);
-    returnData[datStr] = {num: 0, height: 0,color: ''};
+    returnData[datStr] = {index: 0, num: 0, height: 0,color: ''};
+    returnData[datStr].index = (i-1);
     returnData[datStr].num = Math.ceil(Math.random() * seed);
     returnData[datStr].height = (returnData[datStr].num*100/seed).toFixed(2);
     returnData[datStr].color = whichColor(returnData[datStr].num*100/seed);
@@ -74,10 +67,29 @@ function whichColor(zhishu) {
     }
 }
 
+//日的数据转化成月
+function convertDayToMonth{
+  var startDate = new Date('2016-01-01');
+  var weekNum = startDate.getDay();
+}
+
 /**
  * 渲染图表
  */
 function renderChart(cdata) {
+  var svgObj = document.getElementById('chart-svg');
+  var currentData = chartData.data[defaultCity];
+  var svgHTML = '';
+  swicth (defaultDateType){
+    case 'day':
+
+  }
+ 
+  for(var i in currentData){
+    svgHTML += '<line x1="'+ (5+currentData[i].index*10) +'" y1="300" x2="'+ (5+currentData[i].index*10) +'" y2="'+ (300*(currentData[i].height/100)).toFixed(2) +'" style="stroke:'+ currentData[i].color +';stroke-width:5"/>'
+  }  
+  var svgObj = document.getElementById('chart-svg');
+  svgObj.innerHTML = svgHTML;
 
 }
 
@@ -96,11 +108,29 @@ function graTimeChange() {
  * select发生变化时的处理函数
  */
 function citySelectChange() {
-  // 确定是否选项发生了变化 
+  // 确定是否选项发生了变化，先获取当期选中的值
+  var obj = document.getElementById("city-select");
+  var index = obj.selectedIndex; // 选中索引
+  var selectValue = obj.options[index].value; // 选中值
+  if(defaultCity != selectValue){
+    var svgObj = document.getElementById('chart-svg');
+    var currentData = chartData.data[selectValue];
+    var svgHTML = '';
+    for(var i in currentData){
+      svgHTML += '<line x1="'+ (5+currentData[i].index*10) +'" y1="300" x2="'+ (5+currentData[i].index*10) +'" y2="'+ (300*(currentData[i].height/100)).toFixed(2) +'" style="stroke:'+ currentData[i].color +';stroke-width:5"/>'
+    }  
+    var svgObj = document.getElementById('chart-svg');
+    svgObj.innerHTML = svgHTML;
+    //更新defaultCity
+    defaultCity = selectValue;
+  }else{
+    return;
+  }
 
   // 设置对应数据
 
   // 调用图表渲染函数
+
 }
 
 /**
@@ -120,7 +150,12 @@ function initCitySelector() {
   for(var item in aqiSourceData){
     selectHTML += '<option value="'+ item +'">'+ item +'</option>';
   }
-  document.querySelector('#city-select').innerHTML = '<select id="city-select">' + selectHTML + '</select>';
+  var selectObj = document.querySelector('#city-select');
+  selectObj.innerHTML = '<select id="city-select">' + selectHTML + '</select>';
+  //监听点击事件
+  selectObj.addEventListener('click', function(){
+    citySelectChange();
+  });
 }
 
 /**
@@ -145,6 +180,7 @@ function init() {
   initCitySelector();
   initAqiChartData();
   renderChart(chartData);
+  citySelectChange();
 }
 
 init();
