@@ -29,11 +29,10 @@ var initData = [{
 }];
 //输入空气指数，返回排名
 function returnRank(newitem, array){
-	if(typeof newitem == 'number' && array instanceof Array){
-		array.push(newitem).sort();
+	if(typeof newitem == 'object' && array instanceof Array){
+        array.sort(function(a, b){return a.zhishu-b.zhishu});
 		for(var i=0; i<array.length; i++){
-			if(array[i] <= newitem){
-				if(i == array.length)
+			if(array[i].zhishu <= newitem.zhishu){
 				continue;
 			}else{
 				return i+1;
@@ -77,6 +76,8 @@ $(document).ready(function() {
         var tmp = '<tr><td>' + initData[i].city + '</td><td>' + initData[i].rank + ': ' + initData[i].zhishu + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + initData[i].zhishu * 2 + 'px; background-color: ' + whichColor(parseInt(initData[i].zhishu)) + '"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr>';
         tableStr += tmp;
     }
+    $('.rank tbody').append(tableStr);
+
     //写icon的点击事件，采用事件委托
     $('.rank tbody').delegate('tr > td:last-child > span', 'click', function(event) {
         var className = $(this).attr('class');
@@ -104,23 +105,28 @@ $(document).ready(function() {
                 parentNode.fadeOut().remove();
         }
     });
-    $('.rank tbody').append(tableStr);
+
     // 提交按钮点击事件
     $('#submit').click(function() {
         // 输入值合法性检测
         var chineseExp = /^[\u4e00-\u9fa5]{2,5}$/g,
         	numExp = /^\d{1,2}$/,
-        	city_name = $('input[name="city_name"]').value(),
-        	city_zhishu = $('input[name="city_zhishu"]').value();
-        if (!chineseExp.test()) {
+        	city_name = $('input[name="city_name"]').val(),
+        	city_zhishu = $('input[name="city_zhishu"]').val();
+        if (!chineseExp.test(city_name)) {
             showAlert('错误提示', '您输入的城市名不正确，请输入2-5个汉字的城市名');
             return false;
         }
-        if (!numExp.test($('input[name="city_zhishu"]'))) {
+        if (!numExp.test(city_zhishu)) {
             showAlert('错误提示', '您输入的城市空气质量指数不正确，请输入1-100以内的整数');
             return false;
         }
         // 以上都执行完，代表输入合法，接下来执行dom插入
-        $('<tr><tr><td>' + city_name + '</td><td>' + initData[i].rank + ': ' + city_zhishu + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + initData[i].zhishu * 2 + 'px; background-color: ' + whichColor(parseInt(initData[i].zhishu)) + '"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr></tr>')
+        var insertObj = {city: city_name, rank: 'unknow', zhishu: city_zhishu};
+        var rank = returnRank(insertObj, initData);
+        insertObj.rank = '第'+rank+'名';
+        initData.push(insertObj);
+        var insertNodeSelector = "table tbody tr:nth-child("+ (rank-1) +")"
+        $('<tr><tr><td>' + city_name + '</td><td>第' + rank + '名: ' + '</td><td><div class="progress"><div class="bg"></div><div class="other" style="width:' + city_zhishu * 2 + 'px; background-color: ' + whichColor(parseInt(city_zhishu)) + '"></div></div></td><td><span class="up-icon"></span><span class="down-icon"></span><span class="delete-icon"></span></td></tr></tr>').insertAfter($(insertNodeSelector));
     });
 });
