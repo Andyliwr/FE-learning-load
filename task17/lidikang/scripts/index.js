@@ -68,9 +68,24 @@ function whichColor(zhishu) {
 }
 
 //日的数据转化成月
-function convertDayToMonth{
-  var startDate = new Date('2016-01-01');
-  var weekNum = startDate.getDay();
+function convertDayToMonth(){
+ 
+}
+
+//讲startDate到endDate中间的日期按照星期分类成数组
+function weekFenlei(startDate, endDate){
+
+}
+
+//日期加1函数
+function dateIncreace(startDate, increaseNum){
+  var currentDate = new Date(startDate);
+  var newDate = new Date(currentDate.getTime() + 24*60*60*1000*increaseNum);
+  var month = newDate.getMonth() + 1;
+  month = month>=10? month: '0'+month;
+  var day = newDate.getDate();
+  day = day>=10? day: '0'+day;
+  return newDate.getFullYear() + '-' + month + '-' + day;
 }
 
 /**
@@ -80,10 +95,9 @@ function renderChart(cdata) {
   var svgObj = document.getElementById('chart-svg');
   var currentData = chartData.data[defaultCity];
   var svgHTML = '';
-  swicth (defaultDateType){
-    case 'day':
-
-  }
+  // swicth (defaultDateType){
+    // case 'day':
+  // }
  
   for(var i in currentData){
     svgHTML += '<line x1="'+ (5+currentData[i].index*10) +'" y1="300" x2="'+ (5+currentData[i].index*10) +'" y2="'+ (300*(currentData[i].height/100)).toFixed(2) +'" style="stroke:'+ currentData[i].color +';stroke-width:5"/>'
