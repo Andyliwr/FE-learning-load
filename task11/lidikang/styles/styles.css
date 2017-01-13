@@ -1,0 +1,247 @@
+html, body, div, ul, li, span, p{
+	padding: 0;
+	margin: 0;
+}
+.clearfix{
+	clear: both;
+	display: none;
+}
+.container{
+	font-size: .14rem;
+}
+.container > header{
+	height: 1.14rem;
+	line-height: 1.14rem;
+	text-align: center;
+	background-color: #91d4da;
+	color: #fff;
+}
+.container .main{
+	background-color: #f5f1f1;
+}
+header .backBtn{
+	float: left;
+	margin-left: .3rem;
+}
+/*清除浮动*/
+header .backBtn:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+/*绘制左箭头*/
+header .backBtn:before{
+	display: inline-block;
+	content: "";
+	width: .3rem;
+	height: .3rem;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(-45deg);
+}
+/*使用绝对定位保证p居中不受到backBtn的影响*/
+header > p{
+	position: absolute;
+    width: 100%;
+}
+
+.nav{
+	width: 96%;
+	height: 1.19rem;
+	margin: 0 auto;
+}
+.nav > li{
+	display: inline-block;
+	height: 100%;
+	line-height: 1.19rem;
+	/*虽然是5个等分但是这里不能是20%，css有规定子集元素宽度总和应该小于100%*/
+	width: 19%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.nav > li.active{
+	border-bottom: 2px solid #91d4da;
+}
+/*下面的iconSet就使用刚学的flex布局*/
+.iconSet{
+	display: flex;
+	/*居中对齐*/
+	justify-content: space-between;
+	/*方向为横向，可以换行*/
+	flex-flow: row wrap;
+	width: 88%;
+    margin: 0 auto;
+    padding: .44rem 0;
+}
+.iconSet-item{
+	width: 1.2rem;
+	text-align: center;
+}
+.iconSet-item > img{
+	width: 100%;
+	margin-bottom: .2rem;
+}
+.module hr{
+	width: 94%;
+	margin: 0 auto;
+	border: 1px solid #e5e5e5;
+}
+.banner{
+	height: 5.4rem;
+}
+.banner > img{
+	height: 100%;
+	width: 100%;
+}
+/*col也使用flex*/
+.module .col{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	padding: .7rem 0 .5rem 0;
+}
+.col .col-item{
+	text-align: center;
+	flex: 1;
+	line-height: .3rem;
+	border-right: 2px solid #e5e5e5;
+}
+.col .col-item:last-child{
+	border-right: none;
+}
+.col .col-item > div{
+	height: 1.9rem;
+}
+.col .col-item > div > img{
+	width: 50%;
+}
+.col .col-item > div > img.last{
+	width: 70%;
+}
+.col .col-item h2{
+	font-size: .4rem;
+	margin-top: .4rem;
+}
+.col .col-item h3{
+	font-size: .14rem;
+	font-weight: normal;
+}
+.module{
+	margin-bottom: .3rem;
+	background-color: #fff;
+}
+.module:last-child{
+	margin-bottom: 0;
+}
+.module.padding{
+	padding: .3rem;
+}
+.module.padding > hr{
+	width: 100%;
+}
+.module > h1{
+	font-size: .4rem;
+	color: #777;
+}
+.module .row{
+	clear: both;
+	width: 100%;
+	margin-top: .3rem;
+}
+/*清除浮动，避免高度塌陷*/
+.module .row:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.module .row .left{
+	float: left;
+    width: 30%;
+    padding: 0 .3rem 0 0;
+    box-sizing: border-box;
+}
+.module .row .left > img{
+	width: 100%;
+} 
+.module .row .right{
+	float: left;
+	width: 70%;
+}
+.module .row .right .right-item{
+	display: inline-block;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    width: 48%;
+    text-align: center;
+    background-color: #f5f1f1;
+}
+.module .row .right .right-item:first-child{
+	margin-right: 2%;
+	margin-bottom: .2rem;
+}
+.module .row .right .right-item:nth-child(2){
+	margin-bottom: .2rem;
+}
+.module .row .right .right-item:nth-child(3){
+	margin-right: 2%;
+}
+.module.article-conatiner{
+	padding: 0;
+	background-color: #eee;
+}
+.article{
+	/*为了将文字说明置低*/
+	position: relative;
+	margin-bottom: .1rem;
+	padding: .3rem;
+	background-color: #fff;
+}
+.article:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.article .left{
+	float: left;
+	width: 36%;
+}
+.article .right{
+	float: left;
+	width: 64%;
+	height: 100%;
+}
+.article .right .title{
+	font-size: .45rem;
+	font-weight: 400;
+}
+.article .right > div{
+	padding-left: .2rem;
+	padding-top: .1rem;
+}
+.article .right .more-info{
+	position: absolute;
+	bottom: .4rem;
+	color: #999;
+}
+.article .right .more-info .publish-time{
+	padding-left: .3rem;
+}
+.article .left > img{
+	width: 100%;
+}
+.article > h1{
+	color: #777;
+	font-size: .4rem;
+}
+.article .img-container > img{
+	display: inline-block;
+	margin-right: .1rem;
+	width: 31.5%;
+}
+.article .img-container > img:after{
+	margin-right: 0;
+}
+.article .more-info .publish-time{
+	padding-left: .3rem;
+}
