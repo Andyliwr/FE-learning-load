@@ -5,7 +5,7 @@ window.onload = function(){
 		if (target && target.nodeName == "A") {
 			var aActive = document.querySelector('.navright > a.linkactive');
 			aActive.className = "";
-			target.className="linkactive";
+			target.className = "linkactive";
 		}
 	},false);
 	var spanArray = document.querySelectorAll('.lunbo-control > span');
@@ -29,3 +29,4 @@ window.onload = function(){
 		});
 	}
 };
+

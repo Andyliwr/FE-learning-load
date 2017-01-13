@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify": "^0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0"
+  },
+  "name": "wuyanqian",
+  "version": "1.0.0",
+  "description": "百度前端task09",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "task09"
+  ],
+  "author": "wuyanqian (541989418@qq.com)",
+  "license": "ISC"
+}

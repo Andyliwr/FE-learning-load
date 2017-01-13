@@ -1,0 +1,53 @@
+.container{
+	width:100%;
+	max-width:1400px;
+	box-sizing:borderbox;
+	padding:0 10px;
+}
+.row{
+	width:100%;
+	margin:0 -10px 10px -10px;
+}
+.row:before,.row:after{
+	content:"";
+	clear:both;
+	display:table;
+}
+[class*='col-xs-',class*='col-sm-',class*='col-md-',class*='col-lg-']{
+//最重要的左浮
+	float:left;
+	height：50px;
+	border:1px solid #ff8b00;
+//col不能有margin
+	padding:0 10px;
+
+}
+@for $i from 1 thtough 12{
+	.col-xs-#{$i} {
+	width:$i * 8.333%;
+	}
+}
+
+@media( min-width:768px){
+	@for $i from 1 to 12{
+	col-sm-#{$i} {
+		width:$i * 8.333%;
+	}
+	}
+}
+
+@media( min-with:992px){
+	@for $i from 1 to 12 {
+	col-md-#{$i} {
+		width: $i * 8.333%;
+	}
+	}
+}
+
+@media (min-width:1220px){
+	@for $i from 1 to 12{
+		col-lg-#{$i} {
+			width: $i * 8.333%;
+		}
+	}
+}
