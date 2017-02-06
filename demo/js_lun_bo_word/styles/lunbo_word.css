@@ -1,0 +1,34 @@
+.content .text-lunbo{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    z-index: 200;
+    /*height: 0.4rem;*/
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.content .text-lunbo .scroll_box{
+    margin: 0;
+    padding: 0;
+}
+.content #text-lunbo-left.text-lunbo .scroll_box{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+}
+.content .text-lunbo .scroll_box > li{
+    /*保持和text-lunbo-up高度一致*/
+    line-height: 40px;
+    list-style: none;
+}
+.content #text-lunbo-left.text-lunbo .scroll_box > li{
+    display: inline;
+    white-space: nowrap;
+    width: 100px;
+}
