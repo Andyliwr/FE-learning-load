@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/lunbo_word.css" />
+    <title>文字轮播</title>
+    <script type="text/javascript">
+        /* 自适应字体 */
+        function autoFontSize(){
+            var font_size = document.documentElement.clientWidth/640.0*100;
+            font_size = font_size >= 50 ? font_size : 50;
+            var html = document.getElementsByTagName('html')[0];
+            html.style.fontSize = font_size+'px';
+        }
+        window.onresize = function(){autoFontSize()};
+        autoFontSize();//设置初始字体：root em
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>
+            <!--::before-->
+            文字轮播
+            <!--::after--></!--::after-->
+        </h1>
+        <p>使用文字轮播时，现将js里的函数复制进去，然后在html中创建对应结构的html，最后在js中初始化轮播插件，js代码在原来的基础上做了兼容性改动，并且在具体使用的时候可以根据轮播文字滚动的方向删除不必要的代码，比如如果是横向滚动，那么就没必要做纵向滚动的判断。</p>
+    </header>
+    <div class="content">
+        <div class="padding">
+            <h2>纵向文字轮播：</h2>
+            <div class="lunbo-container">
+                    <div id="text-lunbo-up" class="text-lunbo">
+                        <ol class="scroll_box">
+                            <li>mx_18*****68获得50元红包</li>
+                            <li>mx_03*****19获得30元红包</li>
+                            <li>mx_15*****71获得200元红包</li>
+                            <li>mx_21*****97获得50元红包</li>
+                            <li>mx_17*****49获得100元红包</li>
+                            <li>mx_16*****03获得30元红包</li>
+                            <li>mx_12*****39获得30元红包</li>
+                            <li>mx_08*****35获得2017元红包</li>
+                            <li>mx_19*****57获得30元红包</li>
+                            <li>mx_06*****42获得50元红包</li>
+                        </ol>
+                    </div>
+            </div>
+            <h2>纵向文字轮播：</h2>
+            <div class="lunbo-container">
+                <div id="text-lunbo-left" class="text-lunbo">
+                    <ol class="scroll_box">
+                        <li>mx_18*****68获得50元红包</li>
+                        <li>mx_03*****19获得30元红包</li>
+                        <li>mx_15*****71获得200元红包</li>
+                        <li>mx_21*****97获得50元红包</li>
+                        <li>mx_17*****49获得100元红包</li>
+                        <li>mx_16*****03获得30元红包</li>
+                        <li>mx_12*****39获得30元红包</li>
+                        <li>mx_08*****35获得2017元红包</li>
+                        <li>mx_19*****57获得30元红包</li>
+                        <li>mx_06*****42获得50元红包</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2016 <a href="https://github.com/Andyliwr">lidikang</a> and <a href="https://github.com/wispyoureyes">wuyanqian</a> Design. All Right Reserved.</p>
+    </footer>
+</div>
+<!-- 基于zepto的轮播插件 -->
+<script type="text/javascript" src="scripts/zepto.js"></script>
+<script type="text/javascript" src="scripts/lunbo_word.js"></script>
+</body>
+</html>
