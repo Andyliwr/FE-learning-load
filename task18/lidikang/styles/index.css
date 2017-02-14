@@ -1,0 +1,31 @@
+.container{
+	text-align: center;
+	padding-top: 60px;
+}
+.container .control input{
+	width: 150px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.container .control button{
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+.container .display{
+	margin-top: 30px;
+}
+.container .display span{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	background: #fd4b4b;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	box-shadow: 2px 2px #a0a0a0;
+    border: none;
+    border-radius: 5px;
+}

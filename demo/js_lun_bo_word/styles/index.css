@@ -11,7 +11,7 @@ body{
     font-weight: normal;
     color: #333;
     line-height: 1.4em;
-    overflow: auto;
+    overflow: hidden;
 }
 /*body {
     width: 960px;
@@ -31,23 +31,23 @@ a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
-h1, h2{
+header h1, header h2{
     color: #fff;
     font-size: 1.6em;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
     padding: 1.5em 1.5em 1.5em 1.2em;
     background: #374252;
     /*text-transform: uppercase;*/
 }
-h1 em{
+header h1 em{
     font-weight: 200;
     font-style: normal;
 }
-h2{
+header h2{
     font-size: 1.3em;
     padding: 1em 1em 1em 0.8em;
 }
-h3{
+header h3{
     background: #e0e1e5;
     color: #374252;
     font-size:1.25em;
@@ -55,13 +55,12 @@ h3{
     margin-top: 1.25em;
     margin-bottom: -0.5em;
     position: relative;
-    
 }
 header {
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
 }
 header h1{
-    position: relative;
+  position: relative;
 }
 header h1:before{
     content: "FE_Learning_load 之";
@@ -86,9 +85,9 @@ code{
     font-weight: bold;
 }
 
-h1 {
+header h1 {
     font-weight: 200;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
 }
 
 header p {
@@ -111,28 +110,15 @@ footer {
     display: block;
     height: 70px;
     background-color: #374252;
-    position: fixed;
-    bottom: 0;
-    width: 80%;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 footer p {
     color: white;
     margin: 0;
 }
-
-/*.loading {
-    position: relative;
-}
-
-.loading:after {
-    content: url("../img/loading.gif");
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -13px 0 0 -51px;
-    opacity: 0.8;
-}*/
 
 #error {
     display: none;
@@ -158,10 +144,17 @@ body.embedded {
 
 /* about content */
 .container .content{
+    height: 100%;
     position: absolute;
-    background: #fff;
     width: 100%;
-    height: auto;
-    padding: 1em 1em 70px 1em;
+    padding: 10px 0;
     box-sizing: border-box;
+}
+.container .content .padding{
+    background: #fff;
+    overflow-y: auto;
+    padding: 15px 15px;
+}
+.container .content .padding h2{
+    font-size: 16px;
 }

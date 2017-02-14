@@ -1,0 +1,173 @@
+/* reset styles */
+
+html, body, header, nav, div, a, img, h1, h2, p, section, footer, table, ol, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    display: table;
+    min-width: 100%;
+    height: 100%;
+}
+
+body {
+    display: table-cell;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Arial";
+    position: relative;
+}
+
+/* css sprite */
+.delete-icon, .up-icon, .down-icon{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 4px;
+	background: url('../images/icon.png') no-repeat;
+}
+.down-icon{
+	background-size: 300%;
+    background-position: 0;
+}
+.up-icon{
+	background-size: 300%;
+    background-position: -30px -3px;
+}
+.delete-icon{
+	background-size: 270%;
+    background-position: -53px -3px;
+    margin-right: 0px;
+}
+
+.container{
+	padding: 60px;
+}
+.container .input-container input {
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.container .input-container input:focus {
+    border-color: green;
+}
+
+.container .input-container input[name="city_zhishu"] {
+    width: 60px;
+}
+
+.container .input-container span {
+    margin-right: 10px;
+}
+
+.container .input-container button {
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    width: 100px;
+    background-color: #47ADCB;
+    color: #fff;
+}
+
+.container .input-container button:hover {
+    background-color: #1b6d86;
+}
+
+
+/*进度条样式*/
+
+.container .progress {
+    position: relative;
+    height: 5px;
+    border: none;
+    width: 200px;
+}
+
+.container .progress .bg, .progress .other {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.container .progress .bg {
+    background-color: #eee;
+}
+
+.container .progress .other {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* table样式 */
+
+.container .rank {
+	margin-left: -12px;
+}
+
+.container .rank td {
+    padding: 4px 10px;
+}
+
+/* 弹出框的样式 */
+
+.fadeDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.alertDiv{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 320px;
+	height: 180px;
+	z-index: 999;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.alertDiv .title{
+	height: 40px;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	background: #eee;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.alertDiv .content{
+	padding: 10px 20px;
+	height: 100px;
+	box-sizing: border-box;
+	font-size: 14px;
+    text-align: center;
+}
+.alertDiv .control{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.alertDiv .control button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	color: #0BB20C;
+	font-size: 20px;
+	background-color: transparent;
+	outline: none;
+	border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; 
+}
+.alertDiv .control button:active{
+	background-color: #EEEEEE;
+}

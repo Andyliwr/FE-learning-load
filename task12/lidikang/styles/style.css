@@ -1,0 +1,147 @@
+/*task12 stylesheet created by andyliwr(andyliwr@outlook.com)*/
+/* reset styles */
+html, body, header, nav, div, a , img, h1, h2, p, section, footer, table, ol, ul, li{
+	padding: 0;
+	margin: 0;
+}
+
+.container table{
+	width: 30%;
+	margin: 40px auto;
+}
+.table{
+	border-collapse: collapse;
+}
+.table td{
+	border: 1px solid #666;
+}
+/*标题的样式*/
+.table > thead td{
+	background-color: #2c2c2c;
+	color: #fff;
+}
+/*前三行显示不一样的样式*/
+.table > tbody > tr:first-child, .table > tbody > tr:nth-child(2), .table > tbody > tr:nth-child(3){
+	color: red;
+}
+/*偶数行背景为灰色*/
+.table > tbody > tr:nth-child(2n){
+	background-color: #eee;
+}
+/*hover效果*/
+.table > tbody > tr:hover{
+	background-color: #d1ead1;
+}
+
+/*输入框的动效*/
+@keyframes widthIncrease{
+	from {width: 150px;}
+	to {width: 200px;}
+}
+.d-input{
+	text-align: center;	
+}
+.d-input input{
+	width: 150px;
+	padding: 4px;
+	border: 1px solid #666;
+	border-radius: 4px;
+}
+.d-input input:focus{
+	/*这里记得加上width:200px，不然动画执行完，他又会回到应用原来的样式150px*/
+	width: 200px;
+	animation: widthIncrease 2s;
+}
+
+
+/*纯css轮播，自己想的方法，蹩脚就蹩脚吧。其实js和css动画并不难，有时候自己都可以创造，关键你需要懂得它们的变化原理^_^*/
+.lunbo{
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 40px;
+	height: 200px;
+	/*超出的直接不显示，否则机关全露馅了*/
+	overflow: hidden;
+}
+.lunbo .items{
+	position: relative;
+	width: 2000px;
+	/*不换行*/
+	white-space: nowrap;
+	/*允许边界重合*/
+	border-collapse: collapse;
+	/*让动画无限循环*/
+	animation: infinity 9s infinite;
+}
+.lunbo .lunbo-item{
+	position: relative;
+	height: 200px;
+	width: 500px;
+	text-align: center;
+	line-height: 200px;
+	display: inline-block;
+	border: 1px solid #eee;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 24px;
+}
+/*加个颜色*/
+.lunbo .lunbo-item:first-child, .lunbo .lunbo-item:last-child{
+	background-color: #1976d2;
+}
+.lunbo .lunbo-item:nth-child(2){
+	background-color: #fdd835;
+}
+.lunbo .lunbo-item:nth-child(3){
+	background-color: #43a047;
+}
+.lunbo .lunbo-item.active{
+	display: block;
+}
+.lunbo .lunbo-item:first-child .control-item:first-child, .lunbo .lunbo-item:last-child .control-item:first-child{
+	background-color: #127714;
+}
+.lunbo .lunbo-item:nth-child(2) .control-item:nth-child(2){
+	background-color: #127714;
+}
+.lunbo .lunbo-item:nth-child(3) .control-item:last-child{
+	background-color: #127714;
+}
+/*分为三阶段，0%的时候显示第一张，33%的时候显示第二张，66%的时候显示第三张
+，每显示完应该做短暂的停留，这里left用负值是希望轮播左滑动, 100%的蛋糕是由
+3个等待时间和2个切换时间组成的，假设切换时间我们设定占6%，那么等待时间是就
+是（100-3*6）/3 = 27.33, 所以动画如下：*/
+@keyframes infinity{
+	0% {left: -1500px;}
+	27.33% {left: -1500px;} /* + 27.33 */
+
+	33.33% {left: -1000px;} /* + 6 */
+	60.66% {left: -1000px;}
+
+	66.66% {left: -500px;}
+	93.99% {left: -500px;}
+
+	100% {left: 0;}
+}
+
+/*控制器样式*/
+.lunbo .control{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	line-height: 30px;
+}
+.lunbo .control-item{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border: 1px solid #ccc;
+	border-right: none;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background-color: rgba(255,255,255,0.4);
+}
+.lunbo .control-item:last-child{
+	border-right: 1px solid #ccc;
+}
