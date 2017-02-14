@@ -1,57 +1,14 @@
 # FE_learning_load
-狂刷百度前端技术学院的悬赏任务，合作者：吴艳倩、李迪康
+前端之路，合作者：吴艳倩、李迪康
 
-####状态
-
-吴艳倩 ------ ready  <br>
-李迪康 ------ ready
-
-####任务
-
-#####[task01 ------ 零基础HTML编码](https://github.com/Andyliwr/FE_learning_load/tree/master/task01)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-
-#####[task02 ------ 零基础HTML及CSS编码（一）](https://github.com/Andyliwr/FE_learning_load/tree/master/task02)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-
-#####[task03 ------ 三栏式布局](https://github.com/Andyliwr/FE_learning_load/tree/master/task03)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-#####[task04 ------ 定位和居中问题](https://github.com/Andyliwr/FE_learning_load/tree/master/task04)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-
-#####[task05 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task05)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-#####[task06 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task06)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-#####[task07 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task07)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-#####[task08 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task08)
-
-吴艳倩 ------ done  <br>
-李迪康 ------ done
-
-#####[task09 ------ 零基础HTML及CSS编码（二）](https://github.com/Andyliwr/FE_learning_load/tree/master/task09)
-
-吴艳倩 ------ ready to do  <br>
-李迪康 ------ done
+有时候这种感觉没有人能了解<br>
+我暗自哭泣却不知道为了什么<br>
+这里的生活把我变得盲目<br>
+我凝视着却看不到自己的灵魂<br>
+这是一段很长很长的旅程<br>
+用尽所有的时光永无止境<br>
+我不停地奔跑、呼喊和追寻<br>
+在我的路上寻找生命的意义<br>
+   ---《我的路》
+   
+### 新的一年，新的目标
