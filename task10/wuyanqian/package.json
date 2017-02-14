@@ -1,0 +1,22 @@
+{
+  "name": "wuyanqian",
+  "version": "1.0.0",
+  "description": "task10",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "task10"
+  ],
+  "author": "wuyanqian",
+  "license": "ISC",
+    "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0"
+  }
+}

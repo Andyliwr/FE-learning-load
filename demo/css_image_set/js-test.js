@@ -3,11 +3,11 @@ window.onload = function(){
     var allNotes = testDiv.getElementsByTagName('*');
 	var imgObj = testDiv.getElementsByTagName('img');
     var imgLength = imgObj.length;
-        /*alert("testDiv中有"+imgObj.length+"个img元素");*/
+        alert("testDiv中有"+imgObj.length+"个img元素");
 	for(var i=0; i<imgLength*imgObj.length; i++){
 
 		var elementIndexNum = findElementPlace(testDiv, imgObj[0]);
-        /*alert("第"+i+"次循环找到的img的位置是"+elementIndexNum);*/
+        alert("第"+i+"次循环找到的img的位置是"+elementIndexNum);
 		if(elementIndexNum >=0 ){
 			var newDiv = document.createElement('div');
 			testDiv.insertBefore(newDiv,allNotes[elementIndexNum+1]);
