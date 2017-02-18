@@ -9,3 +9,5 @@ task09/wuyanqian/node_modules/
 task10/wuyanqian/node_modules/
 task11/wuyanqian/node_modules/
 task10/test/node_modules/
+.project
+.settings/
