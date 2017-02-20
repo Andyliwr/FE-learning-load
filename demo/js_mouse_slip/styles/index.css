@@ -20,7 +20,7 @@ body{
 .container{
     margin: 0 10%;
     min-height: 100%;
-    height: auto !important;
+    height: auto;
     position: relative;
     /*margin-bottom: 70px;*/
 }
@@ -170,4 +170,52 @@ body.embedded {
 ul,li{list-style:none;}
 ul li{float:left;}
 ul li .outer{width:200px; height:180px;position: relative}
-ul li .outer .inner{width:200px; height:180px; background:rgba(0, 0, 0, .3);text-align: center;line-height:100%;position: absolute;top:0;;left:0}
+ul li .outer .inner{background:rgba(0, 0, 0, .3);text-align: center;line-height:100%;position: absolute;top:0;;left:0}
+.inner{
+    width:200px;
+    height:180px; 
+}
+/* 动画 */
+@keyframes TopToBottom{
+    from {height: 0px;}
+    to {height: 180px;}
+}
+@keyframes RightToLeft{
+    from {width: 200px;}
+    to {height: 0px;}
+}
+@keyframes BottomToTop{
+    from {height: 180px;}
+    to {height: 0px;}
+}
+@keyframes LefToRight{
+    from{width: 0px;}
+    to{width: 200px;}
+}
+
+.topToBottom{
+    animation: TopToBottom 1s;
+}
+.rightToLeft{
+    animation: RightToLeft 1s;
+}
+.bottomToTop{
+    animation: BottomToTop 1s;
+}
+.lefToRight{
+    animation: LefToRight 1s;
+}
+
+@keyframes mymove
+{
+from {height:0px;}
+to {height:200px;}
+}
+.animation
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation:mymove 5s infinite;
+}

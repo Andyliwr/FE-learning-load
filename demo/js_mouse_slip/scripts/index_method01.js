@@ -18,27 +18,38 @@ var mouse_direction = (function () {
         var subObj = document.querySelector(self.selector+' .inner');
         operationObj.addEventListener('mouseenter', function (e) {
             var directionNumber = self.main(e); //返回数字  返回0:上方进入， 返回1:右方进入，返回2：下方进入，返回3：左方进入
-            var funArray = [enterObj.top, enterObj.right, enterObj.bottom, enterObj.left];
             switch(directionNumber){
                 case 0:
-                    subObj.className += " .TopToBottom";
+                    subObj.className = "inner topToBottom";
                     break;
                 case 1:
-                    subObj.className += " .RightToLeft";
+                    subObj.className = "inner rightToLeft";
                     break;
                 case 2:
-                    subObj.className += " .BottomToTop";
+                    subObj.className = "inner bottomToTop";
                     break;
                 case 3:
-                    subObj.className += " .TopToBottom";
+                    subObj.className = "inner lefToRight";
                     break;
             }
-            funArray[directionNumber]();
         }, false);
         operationObj.addEventListener('mouseleave', function (e) {
             var directionNumber = self.main(e); //返回数字  返回0:上方离开， 返回1:右方离开，返回2：下方离开，返回3：左方离开
-            var funArray = [leaveObj.top, leaveObj.right, leaveObj.bottom, leaveObj.left];
-            funArray[directionNumber]();
+            switch(directionNumber){
+                case 0:
+                    subObj.className = "inner bottomToTop";
+                    break;
+                case 1:
+                    subObj.className = "inner lefToRight";
+                    break;
+                case 2:
+                    subObj.className = "inner topToBottom";
+                    break;
+                case 3:
+                    subObj.className = "inner rightToLeft";
+                    break;
+            }
+            setTimeout(function(){subObj.className = "inner"}, 1000);
         }, false);
     };
 
