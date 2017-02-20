@@ -1,7 +1,0 @@
-1、HTML5 File API简介
-	HTML5 File API是一个协议簇，包括Directories and System(文件系统和目录读取)、FileWriter(写入文件)、FileReader(读取文件) File API(页面选择文件处理)。
-	W3C FileAPI地址：https://www.w3.org/TR/FileAPI/
-2、HTML5 File API使用场景和方法
-3、flexbox盒模型布局
-4、用webfont实现图标
-5、对话框的实现
