@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>关于赋值表达式的值</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a;
+	console.log(a=10);  // => 输出  10
+	if(a=20){
+		console.log('ok');
+	}  // => 输出  ok
+	/**
+	 *第一个输出的是10，因为该赋值操作的右操作数是一个Number直接量，于是赋值表达式值*就是10.第二个输出结果是ok，是因为条件表达式发生了两件事：
+	 *1）运行赋值表达式，整个表达式的值为20
+	 *2）类型转换，将数值类型 20  转换为 布尔类型，结果为 true
+	 *于是运行该条件语句。而不是像作者说的“只要相应的赋值操作取得成功，那个条件的 求*值结果就将是true”。而并非只要相应的赋值操作取得成功，那个条件的求值结果就将是t*rue
+	 */
+	var a;
+	if(a=0){
+		console.log('ok');
+	}else{
+		console.log('shit');
+	}  // => 输出  shit
+	</script>
+</body>
+</html>
