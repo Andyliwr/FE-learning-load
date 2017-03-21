@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://olpkwt43d.qnssl.com/fe_learning_load/common.css" />
+    <link rel="stylesheet" href="styles/xxx.css" />
+    <title>loading</title>
+    <style type="text/css">
+        .loading {
+          display: table;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          z-index: 5;
+        }
+        .loading .progress {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>
+            <!--::before-->
+            loading
+            <!--::after--></!--::after-->
+        </h1>
+        <p>页面加载进度一直以来都是一个常见而又晦涩的需求，常见是因为它在某些“重”网页（特别是网页游戏）的应用特别重要；晦涩是因为web的特性，各种零散资源决定它很难是“真实”的进度，只能是一种“假”的进度，至少在逻辑代码加载完成之前，我们都不能统计到进度，而逻辑代码自身的进度也无法统计。另外，我们不可能监控到所有资源的加载情况。所以页面的加载进度都是“假”的，它存在的目的是为了提高用户体验，使用户不至于在打开页面之后长时间面对一片空白，导致用户流失</p>
+    </header>
+    <div class="content">
+        <div class="loading" id="loading">
+            <div class="progress" id="progress">0%</div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2016 <a href="https://github.com/Andyliwr">lidikang</a> and <a href="https://github.com/wispyoureyes">wuyanqian</a> Design. All Right Reserved.</p>
+    </footer>
+    <script type="text/javascript">
+        var loadingObj = document.getElementById('loading');
+        var progressObj = document.getElementById('progress');
+
+        var prg = 0;  // 初始化进度
+        var timer = window.setInterval(function(){  // 设置定时器
+          if (prg >= 100) {  // 到达终点，关闭定时器
+            window.clearInterval(timer);
+            prg = 100;
+          } else {  // 未到终点，进度自增
+            prg++
+          }
+          progressObj.innerHTML = prg + '%';
+          console.log(prg);
+        }, 100);
+
+        window.onload = function(){
+          loadingObj.style.display = 'none';
+        };
+    </script>
+</div>
+</body>
+</html>
