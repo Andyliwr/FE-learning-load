@@ -23,7 +23,6 @@ window.onload = function(){
 			spanArray[dataIndex-1].style.border = "1px solid #333";
 		});
 	}
-	
 	//计时器
 	var timer = setInterval(function(){
 	  currentIndex = ++currentIndex%3;
@@ -37,7 +36,6 @@ window.onload = function(){
 					spanArray[j].style.border = "none";
 			  }
 		}
-		
 		divArray[currentIndex].setAttribute('class', classArray[currentIndex] +' active');
 		spanArray[currentIndex].style.backgroundColor = "#60ea6b";
 		spanArray[currentIndex].style.border = "1px solid #333";

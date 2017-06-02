@@ -1,11 +1,16 @@
 #忽略idea的配置文件夹
 .idea/
+
 #忽略task08下的node_modules
+
 task08/lidikang/styles/node_modules/
 task09/lidikang/node_modules/
 demo/es6Toes5/node_modules/
 demo/js_echarts/node_modules/
 task09/wuyanqian/node_modules/
+task09/lidikang/node_modules/
 task10/wuyanqian/node_modules/
 task11/wuyanqian/node_modules/
 task10/test/node_modules/
+.project
+.settings/
