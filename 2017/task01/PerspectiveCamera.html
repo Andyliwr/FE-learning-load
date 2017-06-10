@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>测试透视相机的构造参数</title>
+    <script type="text/javascript" src="lib/three.js"></script>
+
+    <script type="text/javascript">
+        function init() {
+            var render01 = new THREE.WebGLRenderer({
+                canvas: document.getElementById('mainCanvas')
+            });
+            
+            // 动态生成渲染器
+            // var render01 = new THREE.WebGLRenderer();
+            // render01.setSize(400, 300);
+            // render01.setClearColor(0x000000);
+            // document.getElementsByTagName('body')[0].appendChild(render01.domElement);
+
+            // scene
+            var scene = new THREE.Scene();
+
+            // 基本设置, 透视投影可以看到全部的12条边，而且有近大远小的效果
+            // var camera = new THREE.PerspectiveCamera(45, 400/300, 1, 10);
+            // camera.position.set(0, 0, 5);
+            // scene.add(camera);
+
+            // 改变fov，虽然正方体的实际大小并未改变，但是将照相机的竖直张角设置得更大时，视景体变大了，虽然正方体的实际大小并未改变，但是将照相机的竖直张角设置得更大时，视景体变大
+            // var camera = new THREE.PerspectiveCamera(45, 400/300, 1, 10);
+            // camera.position.set(0, 0, 5);
+            // scene.add(camera);
+
+            // 改变fov并不会引起画面横竖比例的变化，而改变aspect则会改变横竖比例
+            var camera = new THREE.PerspectiveCamera(45, 400/400, 1, 10);
+            camera.position.set(0, 0, 5);
+            scene.add(camera);
+
+            // a cube in the scene
+            
+            var cube = new THREE.Mesh(new THREE.CubeGeometry(1, 1, 1),
+              new THREE.MeshBasicMaterial({
+                color: 0xff0000,
+                wireframe: true
+              })
+            );
+            // 使用boxHelper去掉正方体的对角线
+            var box = new THREE.BoxHelper(cube);
+            scene.add(box);
+
+            // render
+            render01.render(scene, camera);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="mainCanvas" width="400px" height="300px"></canvas>
+</body>
+
+</html>
