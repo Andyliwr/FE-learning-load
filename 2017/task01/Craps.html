@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="lib/three.min.js"></script>
+
+  <script type="text/javascript">
+    var camera, scene, renderer;
+    var geometry, materials, cube;
+
+    function init() {
+
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+      camera.position.z = 1000;
+
+      scene = new THREE.Scene();
+
+      // cube
+      var names = ['red', 'blue', 'green', 'yellow', 'white', 'black'];
+      var colors = [0xff0000, 0x0000ff, 0x00ff00, 0xffff00, 0xffffff, 0x000000];
+      materials = [];
+      for (var i = 0; i < 6; i++) {
+        var src = 'images/' + names[i] + '.png';
+        var img = new Image();
+        img.src = src;
+        var tex = new THREE.Texture(img);
+        tex.needsUpdate = true;
+        img.tex = tex;
+        var mat = new THREE.MeshLambertMaterial({ map: tex });
+        mat.overdraw = true;
+        img.onload = function () {
+          this.tex.needsUpdate = true;
+        };
+        materials.push(mat);
+      }
+      geometry = new THREE.CubeGeometry(200, 200, 200, 1, 1, 1, materials);
+      cube = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial());
+      cube.position.z += 200;
+      scene.add(cube);
+
+      var pointLight = new THREE.PointLight(0xff0000);
+
+      // set its position
+      pointLight.position.x = 10;
+      pointLight.position.y = 50;
+      pointLight.position.z = 450;
+
+      // add to the scene
+      scene.add(pointLight);
+
+      renderer = new THREE.CanvasRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      document.body.appendChild(renderer.domElement);
+
+    }
+
+    function animate() {
+
+      // note: three.js includes requestAnimationFrame shim
+      requestAnimationFrame(animate);
+
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+      cube.rotation.z += 0.01;
+
+      renderer.render(scene, camera);
+
+    }
+
+    window.onload = function () {
+      init();
+      animate();
+    };
+  </script>
+</head>
+
+<body>
+  <canvas id="mainCanvas" width="400px" height="300px"></canvas>
+</body>
+
+</html>

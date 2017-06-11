@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="lib/three.js"></script>
+
+    <script type="text/javascript">
+        function init() {
+            var render01 = new THREE.WebGLRenderer({
+                canvas: document.getElementById('mainCanvas')
+            });
+            
+            // scene
+            var scene = new THREE.Scene();
+
+            // camera
+            var camera = new THREE.OrthographicCamera(-4, 4, 3, -3, 1, 10);
+            camera.position.set(4, -3, 5); // 只设置相机位置看到的是一片黑，因为相机是沿着负z轴看的
+            camera.lookAt(new THREE.Vector3(0, 0, 0)); // 通过lookAt函数设置它看原点的方向
+            scene.add(camera);
+
+            //添加光照
+            var light = new THREE.PointLight(0xffffff, 1, 100);
+            light.position.set(10, 15, 5);
+            scene.add(light);
+
+            // 球体
+            var sphere = new THREE.Mesh(new THREE.SphereGeometry(2, 18, 18),
+                new THREE.MeshLambertMaterial({
+                  color: 0xffff00,
+                  emissive: 0xff0000,
+                  wireframe: true
+                })
+            );
+            scene.add(sphere);
+            
+            // render
+            render01.render(scene, camera);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="mainCanvas" width="400px" height="300px"></canvas>
+</body>
+
+</html>
