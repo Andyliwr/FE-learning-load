@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="lib/three.js"></script>
+  <script type="text/javascript">
+    function init() {
+      var render01 = new THREE.WebGLRenderer({
+        canvas: document.getElementById('mainCanvas'),
+        antialias: true,   //  开启消除锯齿,默认false
+        precision: "highp"   // 渲染精度  highp/mediump/lowp
+      });
+
+      // scene
+      var scene = new THREE.Scene();
+
+      // camera
+      var camera = new THREE.OrthographicCamera(-5, 5, 3.75, -3.75, 0.1, 100);
+      camera.position.set(25, 25, 25);
+      camera.lookAt(new THREE.Vector3(0, 0, 0));
+      scene.add(camera);
+
+      //坐标系， x轴红色，y轴绿色，z轴蓝色
+      drawAxes(scene);
+
+      
+      var cube = new THREE.Mesh(new THREE.CubeGeometry(2, 1.5, 4, 2, 1.5, 3),
+        new THREE.MeshBasicMaterial({
+          color: 0xff0000,
+          wireframe: true 
+        })
+      );
+      cube.position.set(0, 0, 0);
+
+      // 车轮01
+      var torus01 = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.2, 12, 18),
+        new THREE.MeshBasicMaterial({
+          color: 0x9932CC
+        })
+      );
+      torus01.position.set(5.6, 4, 6);
+      torus01.rotation.y += Math.PI/2;
+
+      // 车轮02
+      var torus02 = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.2, 12, 18),
+        new THREE.MeshBasicMaterial({
+          color: 0x9932CC
+        })
+      );
+      torus02.position.set(3, 4, 6);
+      torus02.rotation.y += Math.PI/2;
+
+      // 车轮02
+      var torus03 = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.2, 12, 18),
+        new THREE.MeshBasicMaterial({
+          color: 0x9932CC
+        })
+      );
+      torus03.position.set(1, -0.6, -1.8);
+      torus03.rotation.y += Math.PI/2;
+
+
+      // 车轮02
+      var torus04 = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.2, 12, 18),
+        new THREE.MeshBasicMaterial({
+          color: 0x9932CC
+        })
+      );
+      torus04.position.set(-1.2, -0.6, -1.8);
+      torus04.rotation.y += Math.PI/2;
+
+      // 旋转 跳跃 我闭上眼 （来点灯光）
+      var ambientLight = new THREE.AmbientLight(0x666666);   // 添加环境光
+      scene.add(ambientLight);
+
+      var directionalLight = new THREE.DirectionalLight(0x989898);  // 添加平行光
+      directionalLight.position.set(5, 6, 4);   // 设置平行光光源位置
+      scene.add(directionalLight);
+
+      scene.add(cube);
+      scene.add(torus01);
+      scene.add(torus02);
+      scene.add(torus03);
+      scene.add(torus04);
+
+      // render
+      render01.render(scene, camera);
+    }
+    function drawAxes(scene) {
+      // x-axis
+      var xGeo = new THREE.Geometry();
+      xGeo.vertices.push(new THREE.Vector3(0, 0, 0));
+      xGeo.vertices.push(new THREE.Vector3(3, 0, 0));
+      var xMat = new THREE.LineBasicMaterial({
+        color: 0xff0000
+      });
+      var xAxis = new THREE.Line(xGeo, xMat);
+      scene.add(xAxis);
+
+      // y-axis
+      var yGeo = new THREE.Geometry();
+      yGeo.vertices.push(new THREE.Vector3(0, 0, 0));
+      yGeo.vertices.push(new THREE.Vector3(0, 3, 0));
+      var yMat = new THREE.LineBasicMaterial({
+        color: 0x00ff00
+      });
+      var yAxis = new THREE.Line(yGeo, yMat);
+      scene.add(yAxis);
+
+      // z-axis
+      var zGeo = new THREE.Geometry();
+      zGeo.vertices.push(new THREE.Vector3(0, 0, 0));
+      zGeo.vertices.push(new THREE.Vector3(0, 0, 3));
+      var zMat = new THREE.LineBasicMaterial({
+        color: 0x00ccff
+      });
+      var zAxis = new THREE.Line(zGeo, zMat);
+      scene.add(zAxis);
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <canvas id="mainCanvas" width="400px" height="300px"></canvas>
+</body>
+
+</html>

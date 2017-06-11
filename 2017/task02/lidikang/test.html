@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test01{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            background-clip:content-box;
+            background-size: 200%;
+            background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: streamer 5s infinite linear;
+        }
+        .test01 p{
+            font-family: Calibri;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        @keyframes streamer {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -100% 0
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test01">
+        <p>hello world!</p>
+    </div>
+</body>
+</html>
