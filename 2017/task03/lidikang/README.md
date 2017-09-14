@@ -15,3 +15,9 @@ MDN :checked: 了解input的:checked伪类的基本知识以及应用场景
 MDN :before:了解input的:before伪元素的基本知识
 MDN :after:了解input的:after伪元素的基本知识
 
+### 踩的坑
+- input元素不支持after和before这些伪元素
+- label和input应该是包含关系，label包含input元素
+- 好气呀，lable的for是和 input的id对应的，我一直以为是name，结果定义input的时候忘了写id，input在点击的时候就一直获取不到checked样式。后来给input加上id之后，点击lable就能使得input获得 checked样式。
+- 同时有 :bofore和:hover样式的时候应该将 hover写在before前面，:before:hover的hover效果是不生效的
+- 多个radio的 name属性一定要一样，否则不会形成互斥 ，即两个都可以选中，而不会是只有一个可以选中
