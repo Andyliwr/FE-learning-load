@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>自定义单选框和复选框样式</title>
-  <style>
-    .radio, .checkbox{
-      display: none;
-      position: absolute;
-    }
-    label[for="radio"]{
-      margin-right: 20px;
-    }
-    .radio+label, .checkbox+label{
-      position: relative;
-      display: block;
-      padding-left: 30px;
-      cursor: pointer;
-      vertical-align: middle;
-    }
-    .checkbox+label{
-      display: inline-block;
-    }
-    .radio+label:before, .checkbox+label:before {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      border-radius: 2px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .radio+label:hover:before, .checkbox+label:hover:before{
-      border: 1px solid #3e97eb;
-    }
-    .radio:checked+label:before, .checkbox:checked+label:before{
-      background: url(checked.png) no-repeat;
-      background-size: 80% 80%;
-      background-position: 20% 20%;
-      background-color: #3e97eb;
-      border: 1px solid #3e97eb;
-    }
-    .radio:disabled+label, .checkbox:disabled+label{
-      color: #ccc;
-      cursor: not-allowed;
-    }
-    .radio::disabled+label:before, .checkbox:disabled+label:before{
-      background: url(checked.png) no-repeat;
-      background-size: 80% 80%;
-      background-position: 20% 20%;
-      background-color: #3e97eb;
-      border: 1px solid #3e97eb;
-    }
-    .radio:disabled+label:hover:before, .checkbox:disabled+label:hover:before{
-      border: 1px solid #ccc;
-    }
+    <meta charset="UTF-8">
+    <title>自定义单选框和复选框样式</title>
+    <style>
+        .radio, .checkbox {
+            display: none;
+            position: absolute;
+        }
 
-  </style>
+        label[for="radio"] {
+            margin-right: 20px;
+        }
+
+        .radio + label, .checkbox + label {
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .checkbox + label {
+            display: inline-block;
+        }
+
+        .radio + label:before, .checkbox + label:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .radio + label:hover:before, .checkbox + label:hover:before {
+            border: 1px solid #3e97eb;
+        }
+
+        .radio:checked + label:before, .checkbox:checked + label:before {
+            background-size: 80% 80%;
+            background-repeat: no-repeat;
+            background-position: 20% 20%;
+            background-image: url(checked.png);
+            background-color: #3e97eb;
+            border: 1px solid #3e97eb;
+        }
+
+        .radio:disabled + label, .checkbox:disabled + label {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .radio:disabled + label:before, .checkbox:disabled + label:before {
+            background-size: 80% 80%;
+            background-repeat: no-repeat;
+            background-position: 20% 20%;
+            background-image: url(checked.png);
+            background-color: #3e97eb;
+            border: 1px solid #3e97eb;
+        }
+
+        .radio:disabled + label:hover:before, .checkbox:disabled + label:hover:before {
+            border: 1px solid #ccc;
+        }
+
+    </style>
 </head>
 <body>
-  <div class="cantainer">
-      <div class="form-group">
-        <p>单选框</p>
-        <input class="radio" type="radio" id="radio1" name="radio" /><label for="radio1">radiobox1</label>
-        <input class="radio" type="radio" id="radio2" name="radio" checked /><label for="radio2">radiobox2</label>
-        <input class="radio" type="radio" id="radio3" name="radio2" disabled /><label for="radio3">radiobox3</label>
-        <input class="radio" type="radio" id="radio4" name="radio3" checked disabled /><label for="radio4">radiobox4</label>
-      </div>
-      <div class="form-group">
-        <p>复选框</p>
-        <input class="checkbox" type="checkbox" name="checkbox1" id="checkbox1" /><label for="checkbox1">checkbox1</label>
-        <input class="checkbox" type="checkbox" name="checkbox2" id="checkbox2" checked /><label for="checkbox2">checkbox2</label>
-        <input class="checkbox" type="checkbox" name="checkbox3" id="checkbox3" disabled /><label for="checkbox3">checkbox3</label>
-        <input class="checkbox" type="checkbox" name="checkbox4" id="checkbox4" checked disabled /><label for="checkbox4">checkbox3</label>
-      </div>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <p>单选框</p>
+            <input class="radio" type="radio" id="radio1" name="radio"/><label for="radio1">radiobox1</label>
+            <input class="radio" type="radio" id="radio2" name="radio" checked/><label for="radio2">radiobox2</label>
+            <input class="radio" type="radio" id="radio3" name="radio2" disabled/><label for="radio3">radiobox3</label>
+            <input class="radio" type="radio" id="radio4" name="radio3" checked disabled/><label
+                for="radio4">radiobox4</label>
+        </div>
+        <div class="form-group">
+            <p>复选框</p>
+            <input class="checkbox" type="checkbox" name="checkbox1" id="checkbox1"/><label
+                for="checkbox1">checkbox1</label>
+            <input class="checkbox" type="checkbox" name="checkbox2" id="checkbox2" checked/><label for="checkbox2">checkbox2</label>
+            <input class="checkbox" type="checkbox" name="checkbox3" id="checkbox3" disabled/><label for="checkbox3">checkbox3</label>
+            <input class="checkbox" type="checkbox" name="checkbox4" id="checkbox4" checked disabled/><label
+                for="checkbox4">checkbox3</label>
+        </div>
     </form>
+</div>
 </body>
 </html>
