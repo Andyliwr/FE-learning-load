@@ -1,0 +1,76 @@
+body{
+  background: #e7eff4;
+  color: #39474b;
+  font-size: 12px;
+  font-family: "Lantinghei SC","Open Sans","Lucida Grande",Helvetica,STheiti,Verdana,"microsoft yahei","simsun",Geneva,sans-serif;
+}
+.container{
+  margin-bottom: 10px;
+  padding: 1px;
+  border: 0 solid #c5d2db;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(31,35,37,.08);
+  color: #518193;
+}
+.container .header{
+  padding: 12px 24px;
+  font-size: 18px;
+  border-bottom: 1px solid #e7eff4;
+  border-radius: 4px 4px 0 0;
+}
+.container .content{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-item: stretch;
+  padding: 10px 0;
+}
+.container .link-item{
+  flex: 0 0 140px;
+  padding: 0 10px;
+}
+.container .link-item>a{
+  display: block;
+  padding: 15px 15px 13px;
+  min-height: 81px;
+  max-height: 81px;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all .2s ease;
+  color: #00ad35;
+  text-decoration: none;
+}
+.container .link-item>a:hover{
+  background: #edf5fa;
+  color: #0065a9;
+}
+.container .link-item>a:hover>.des{
+  color: #0065a9;
+}
+.container .link-item .title{
+  display: block;
+  position: relative;
+  top: -2px;
+  padding-bottom: 2px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.container .link-item .des{
+  display: block;
+  font-size: 12px;
+  color: #a2a8a2;
+  line-height: 1.5em;
+}
+.container .icon-bookmark{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: center;
+  background: url(./static/img/bookmark.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top: 6px;
+  margin-right: 10px;
+}

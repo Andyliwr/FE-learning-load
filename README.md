@@ -14,3 +14,43 @@
 ### 新的一年，新的目标
 + 2016年 总共完成任务数`20`，这是2016年的老题目链接[2016](http://ife.baidu.com/2016/task/all)
 + 2017年继续完成余下任务，并同步新发布任务
+
+### 任务导航
+#### 2017
+
+<div class="container 2017">
+    <div class="header"><i class="icon-bookmark"></i>2017年</div> 
+    <div class="content">
+      <div class="link-item">
+        <a href="" target="_blank">
+          <span class="title">任务一</span>
+          <span class="des">使用threejs画一个3d小车</span>
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="" target="_blank">
+          <span class="title">任务二</span>
+          <span class="des">css文字的流光渐变动画</span>
+        </a> 
+      </div>
+      <div class="link-item">
+        <a href="" target="_blank">
+          <span class="title">任务三</span>
+          <span class="des">自定义checkbox和radiobox的样式</span>
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="" target="_blank">
+          <span class="title">任务四</span>
+          <span class="des">vuejs源码学习之动态数据绑定1</span>
+        </a>
+      </div>
+      <div class="link-item">
+        <a href="" target="_blank">
+          <span class="title">任务五</span>
+          <span class="des">vuejs源码学习之动态数据绑定2</span>
+        </a>
+      </div>
+    </div>
+</div>
+<script type="text/javascript" src="./static/js/index.js"></script>  
